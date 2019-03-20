@@ -1,0 +1,173 @@
+/* pages/discover/draw/draw.wxss */
+
+page {
+  background-color: #ffd900;
+}
+
+.main {
+  width: 690rpx;
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.draw-background {
+  width: 690rpx;
+  height: 626rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30rpx;
+}
+
+.draw-background image {
+  width: 690rpx;
+  height: 626rpx;
+}
+
+.draw-real {
+  margin-top: -626rpx;
+  width: 690rpx;
+  height: 626rpx;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+}
+
+.draw-list {
+  margin-top: 30rpx;
+  width: 570rpx;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 26rpx;
+  text-decoration: underline;
+  color: rgba(0, 78, 151, 1);
+  
+}
+
+.draw-img {
+  width: 257rpx;
+  height: 238rpx;
+}
+
+.draw-img image {
+  width: 257rpx;
+  height: 238rpx;
+}
+
+.draw-img-nozhong {
+width: 254rpx;
+  height: 248rpx;
+}
+
+.draw-img-nozhong image {
+width: 254rpx;
+  height: 248rpx;
+}
+
+.draw-info {
+  color: #222222;
+  font-size: 32rpx;
+  margin-top: 40rpx;
+  line-height: 52rpx;
+
+}
+
+.special-draw-info-text {
+  color: #FF3C3C;
+  font-weight: bold;
+}
+
+/* .special-draw-info-two {
+  margin-top: 20rpx;
+} */
+
+.draw-button {
+  margin-top: 45rpx;
+  width: 342rpx;
+  height: 84rpx;
+}
+
+.draw-button image {
+  width: 342rpx;
+  height: 84rpx;
+}
+
+.draw-subinfo {
+  margin-top: 20rpx;
+  color: #666666;
+  font-size: 22rpx;
+}
+
+.draw-subinfo-special {
+  color: #FE3E34;
+}
+
+.christmas-activity-background {
+  width: 690rpx;
+  height: 476rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40rpx;
+}
+
+.christmas-activity-background image {
+  width: 690rpx;
+  height: 476rpx;
+}
+
+.christmas-activity-real {
+  margin-top: -476rpx;
+  width: 690rpx;
+  height: 476rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.activity-image {
+  width: 608rpx;
+  height: 300rpx;
+}
+
+.activity-image image {
+  width: 608rpx;
+  height: 300rpx;
+  border-radius:10rpx;
+}
+
+.button-group {
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+}
+
+.button-group .tip-image {
+  width: 424rpx;
+  height: 78rpx;
+  margin-left: -18rpx;
+}
+
+.button-group .tip-image image {
+  width: 424rpx;
+  height: 78rpx;
+}
+
+.button-group .button-image {
+  width: 270rpx;
+  height: 79rpx;
+  margin-left: 22rpx;
+}
+
+.button-group .button-image image {
+  width: 270rpx;
+  height: 79rpx;
+}
+
+.middle-draw-img {
+  margin-top: 100rpx;
+}

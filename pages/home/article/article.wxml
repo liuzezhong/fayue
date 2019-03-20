@@ -1,0 +1,263 @@
+<!--pages/article/article.wxml-->
+<block wx:if="{{aritcleDetail != null}}">
+
+
+
+  <view class='article-title'>
+    <view class='article-title-content'>
+      <text>{{aritcleDetail.articleTitle}}</text>
+    </view>
+  </view>
+
+  <view class='article-author'>
+    <view class='author-avatar' bindtap='bindAuthor' data-authorid='{{aritcleDetail.authorId}}'>
+      <image src='{{aritcleDetail.authorPortrait}}'></image>
+    </view>
+    <view class='author-info' bindtap='bindAuthor' data-authorid='{{aritcleDetail.authorId}}'>
+      <view class='author-info-name'>
+        <text>{{aritcleDetail.authorName}}</text>
+      </view>
+      <view class='author-info-introduce'>
+        <text>{{aritcleDetail.authorBio}}</text>
+      </view>
+    </view>
+    <navigator url="/page/discover/discover" target="miniProgram" open-type="navigate" hover-class="navigator-hover" app-id="{{lvdouappid}}" extra-data="1" path="pages/index/index">
+      <view class='author-counsel'>
+        <view class='counsel-button'>
+          <view class='counsel-button-icon'>
+            <image src='/image/icon_advisory@2x.png'></image>
+          </view>
+          <view class='counsel-button-text'>
+            <text>咨询</text>
+          </view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+
+  <view class='article-content'>
+    <view class='article-content-text'>
+      <text>{{aritcleDetail.articleContentNoHtml}}</text>
+    </view>
+  </view>
+
+  <view class='attribute article-attribute'>
+    <block wx:for="{{aritcleDetail.tagList}}" wx:key="*this">
+      <view class='attribute-span' bindtap='bindAttribute' data-value='{{item.tagName}}'>
+        <view class='attribute-span-left'></view>
+        <text>{{item.tagName}}</text>
+        <view class='attribute-span-right'></view>
+      </view>
+    </block>
+
+  </view>
+  <block wx:if="{{hasLawList}}">
+    <view class='project-line'></view>
+    <view class='article-laws' bindtap='bindLaw'>
+      <view class='laws-header'>
+        <view class='laws-header-left'>
+          <view class='wiki-header-title-view'></view>
+          <text>相关法规</text>
+        </view>
+        <view class='laws-header-right'>
+          <text>查看详情</text>
+          <image src='/image/Find_arrow@2x.png'></image>
+        </view>
+      </view>
+      <view class='laws-main'>
+        <block wx:for="{{aritcleDetail.lawList}}" wx:key="*this">
+          <block wx:if="{{index < 3}}">
+            <view class='laws-line'>
+              <view class='laws-line-icon'>
+                <image src='/image/rhombus@2x.png'></image>
+              </view>
+              <view class='laws-line-content'>
+                <text>{{item.lawContent}}</text>
+              </view>
+            </view>
+          </block>
+        </block>
+      </view>
+    </view>
+  </block>
+
+  <block wx:if="{{recommendArticleList != null}}">
+    <view class='project-line'></view>
+
+
+    <view class='wiki-recommend'>
+      <view class='wiki-header'>
+
+        <view class='wiki-header-title'>
+          <view class='wiki-header-title-left'>
+            <view class='wiki-header-title-view'></view>
+            <text>猜您喜欢</text>
+          </view>
+        </view>
+
+        <view class='wiki-header-title-right' bindtap='bindChange'>
+          <image class="refush-image" src='/image/refush.png'></image>
+          <text>换一批</text>
+        </view>
+      </view>
+      <view class='wiki-main'>
+
+        <block wx:for="{{recommendArticleList}}" wx:key="*this">
+          <view class='wiki-recommend-list' bindtap='bindArticle' data-id='{{item.articleId}}'>
+            <view class='wiki-recommend-content'>
+              <text>{{item.articleTitle}}</text>
+            </view>
+            <view class='data-line'>
+              <view class='view'>
+                <image src='/image/icon_view@2x.png'></image>
+                <text>{{item.browseNum}}</text>
+              </view>
+              <view class='like'>
+                <image src='/image/icon_like@2x.png'></image>
+                <text>{{item.diggNum}}</text>
+              </view>
+            </view>
+          </view>
+          <block wx:if="{{index < 2}}">
+            <view class='wiki-line'></view>
+          </block>
+        </block>
+      </view>
+    </view>
+
+  </block>
+  <view class='project-line'></view>
+
+  <view class='bottom-line'>
+    <view class='bottom-line-left'></view>
+    <view class='bottom-line-content'>
+      <text>喂喂，法律都是有底线的！</text>
+    </view>
+    <view class='bottom-line-right'></view>
+  </view>
+  <view class='bottom-view'></view>
+  <view class='article-button'>
+    <view class='article-button-consult' bindtap='bindTry'>
+      <image src='/image/luck@2x.png'></image>
+      <text>试试手气</text>
+    </view>
+  
+    <view class='article-button-handle'>
+      <view class='button-handle-list button-handle-list-master' bindtap='bindPraise'>
+        <block wx:if="{{praise != 0}}">
+          <image class='handle-praise' src='/image/icon_praise_hover@2x.png'></image>
+        </block>
+        <block wx:else>
+          <image class='handle-praise' src='/image/icon_praise@2x.png'></image>
+        </block>
+        <text>({{praise_num}})</text>
+
+
+      </view>
+      <view class='button-handle-list button-handle-list-master' bindtap='bindCollection'>
+        <block wx:if="{{collection != 0}}">
+          <image class='handle-collection' src='/image/icon_Collection_hover@2x.png'></image>
+        </block>
+        <block wx:else>
+          <image class='handle-collection' src='/image/icon_Collection@2x.png'></image>
+        </block>
+        <text>({{collection_num}})</text>
+
+
+      </view>
+      <!-- <view class='button-handle-list' bindtap='bindShare'> -->
+      <view class='button-handle-list' bindtap='bindShareMarks'>
+        <block wx:if="{{share}}">
+          <!-- <button class='share-button' open-type="share">
+            
+          </button> -->
+          <image class='handle-share' src='/image/icon_share_hover@2x.png'></image>
+        </block>
+        <block wx:else>
+          <!-- <button class='share-button' open-type="share">
+            
+          </button> -->
+          <image class='handle-share' src='/image/icon_share@2x.png'></image>
+        </block>
+
+      </view>
+    </view>
+  </view>
+
+  <view class='return-pages' bindtap='bindReturn' wx:if="{{noReturn == 0}}">
+    <image src='/image/return1@2x.png'></image>
+  </view>
+  <view class='return-pages' bindtap='bindReturnHome' wx:elif="{{noReturn != 0}}">
+    <image src='/image/backtohome@2x.png'></image>
+  </view>
+
+  <block wx:if="{{popupShow == true}}">
+    <view class='marks'></view>
+    <view class='bullet'>
+      <view class='bullet-main'>
+        <view class='bullet-main-image'>
+          <image src='/image/wallet@2x.png'></image>
+        </view>
+        <view class='bullet-main-content'>
+          <view class='bullet-main-content-title'>
+            <text>获得免费法律咨询服务</text>
+          </view>
+          <view class='bullet-main-content-subtitle'>
+            <text>仅限每日首次使用  </text>
+          </view>
+        </view>
+        <navigator url="/page/discover/discover" target="miniProgram" open-type="navigate" hover-class="navigator-hover" app-id="{{lvdouappid}}" extra-data="1" path="pages/index/index">
+          <view class='bullet-main-button' bindtap='bindService'>
+            <text>查看详情</text>
+          </view>
+        </navigator>
+        <view class='bullet-main-remark' bindtap='noAllPopup'>
+          <text>不再接受此类消息</text>
+        </view>
+      </view>
+
+      <view class='bullet-cancel' bindtap='bindChangePopup'>
+        <image src='/image/quxiao3.png'></image>
+      </view>
+    </view>
+  </block>
+</block>
+
+<block wx:if="{{sharemarks == 1}}">
+  <view class='marks' bindtap='closeMarks'></view>
+  <view class='share-choose'>
+    <view class='share-choose-main'>
+      <button class='special-button' open-type="share">
+        <view class='main-icon'>
+          <image src='/image/icon_wechat@2x.png'></image>
+          <text>分享微信好友</text>
+        </view>
+      </button>
+
+      <button class='special-button' bindtap='previewImageShow'>
+        <view class='main-icon'>
+          <image src='/image/icon_image@2x.png'></image>
+          <text>生成分享海报</text>
+        </view>
+      </button>
+    </view>
+  </view>
+</block>
+
+<block wx:if="{{previewImage == 1}}">
+  <view class="mask">
+
+  </view>
+  <view bindtap="hideAllChioce">
+    <view class='mask-image'>
+      <image src='{{aritcleDetail.cardPic1}}'></image>
+    </view>
+    <view class='mask-button'>
+      <button catchtap='saveImage'>
+        <image src='/image/down.png'></image>
+        <text>保存图片</text>
+      </button>
+    </view>
+  </view>
+
+</block>

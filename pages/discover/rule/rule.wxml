@@ -1,0 +1,139 @@
+<!--pages/discover/rule/rule.wxml-->
+<view class='main'>
+  <view class='header'>
+    <image src='/image/header_rule.png'></image>
+  </view>
+
+  <block wx:if="{{activityType == 1}}">
+    <view class='main-line'>
+      <view class='title'>
+        <view class='icon'>
+        </view>
+        <view class='text'>
+          <text>活动时间</text>
+        </view>
+      </view>
+
+      <view class='content'>
+        <text>{{ruleInfo.activityTime}}</text>
+      </view>
+    </view>
+    <view class='main-line'>
+      <view class='title'>
+        <view class='icon'>
+        </view>
+        <view class='text'>
+          <text>活动说明</text>
+        </view>
+      </view>
+
+      <view class='content'>
+        <text>{{ruleInfo.activityExplain}}</text>
+      </view>
+    </view>
+    <view class='main-line'>
+      <view class='title'>
+        <view class='icon'>
+        </view>
+        <view class='text'>
+          <text>注意事项</text>
+        </view>
+      </view>
+
+      <view class='content'>
+        <text>{{ruleInfo.activityAttentions}}</text>
+      </view>
+    </view>
+    <view class='main-line'>
+      <view class='title'>
+        <view class='icon'>
+        </view>
+        <view class='text'>
+          <text>温馨提示</text>
+        </view>
+      </view>
+
+      <view class='content'>
+        <text>{{ruleInfo.activityReminder}}</text>
+      </view>
+    </view>
+
+  </block>
+
+  <block wx:if="{{activityType == 2}}">
+    <view class='main-line'>
+      <view class='title'>
+        <view class='icon'>
+        </view>
+        <view class='text'>
+          <text>活动介绍</text>
+        </view>
+      </view>
+
+      <view class='content'>
+        <text>{{ruleInfo.activityDescription}}</text>
+      </view>
+    </view>
+    <view class='main-line'>
+      <view class='title'>
+        <view class='icon'>
+        </view>
+        <view class='text'>
+          <text>活动玩法</text>
+        </view>
+      </view>
+
+      <view class='content'>
+        <text>{{ruleInfo.activityExplain}}</text>
+      </view>
+    </view>
+    <view class='main-line'>
+      <view class='title'>
+        <view class='icon'>
+        </view>
+        <view class='text'>
+          <text>礼品规则</text>
+        </view>
+      </view>
+
+      <view class='content'>
+        <text>{{ruleInfo.activityAttentions}}</text>
+      </view>
+    </view>
+    <view class='main-line'>
+      <view class='title'>
+        <view class='icon'>
+        </view>
+        <view class='text'>
+          <text>活动时间</text>
+        </view>
+      </view>
+
+      <view class='content'>
+        <text>{{ruleInfo.activityTime}}</text>
+      </view>
+    </view>
+    <view class='main-line'>
+      <view class='title'>
+        <view class='icon'>
+        </view>
+        <view class='text'>
+          <text>奖品兑换方式</text>
+        </view>
+      </view>
+
+      <view class='content'>
+        <text>{{ruleInfo.activityReminder}}</text>
+      </view>
+    </view>
+  </block>
+  <view class='explain'>
+    <text>该活动解释权最终归无锡中铠信息咨询服务有限公司所有</text>
+  </view>
+</view>
+
+<view class='bottom-line'>
+  <view class='bottom-line-content'>
+
+  </view>
+</view>

@@ -1,0 +1,186 @@
+/* pages/discover/expense/detail/detail.wxss */
+.detail {
+  margin-left: 30rpx;
+  width: 690rpx;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.detail-status {
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail-status-image {
+  width: 140rpx;
+  height: 140rpx;
+}
+
+.detail-status-image image {
+  width: 140rpx;
+  height: 140rpx;
+}
+
+.detail-status-name-fail {
+  color: #FF5426;
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-top: 40rpx;
+}
+
+.detail-status-name-loading {
+  color: #FFA600;
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-top: 40rpx;
+}
+
+.detail-status-name-success {
+  color: #2DB54A;
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-top: 40rpx;
+}
+
+.detail-status-name-ojbk {
+  color: #B3B3B3;
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-top: 40rpx;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 70rpx;
+  width: 690rpx;
+}
+
+.form-line {
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+  width: 690rpx;
+  border-bottom: 1rpx solid #E6E6E6;
+}
+
+.form-line-title {
+  width: 200rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+}
+
+.form-line-title text {
+  padding-left: 15rpx;
+  color: #808080;
+  font-size: 30rpx;
+}
+
+.form-line-content {
+  width: 490rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.form-line-content text {
+  color: #333333;
+  font-size: 30rpx;
+  padding-right: 15rpx;
+}
+
+.from-group-rule {
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  width: 750rpx;
+  height: 20rpx;
+  background-color: #f5f5f5;
+  margin-left: -30rpx;
+}
+
+.form-group-no-bottom {
+  border: 0rpx;
+}
+
+.apply-number text {
+  color: #FF5426;
+}
+
+.form-describe {
+  margin-top: 30rpx;
+  margin-left: 15rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-describe-title {
+  color: #808080;
+  font-size: 30rpx;
+}
+
+.form-describe-content {
+  width: 660rpx;
+  height: 240rpx;
+  background-color: #f5f5f5;
+  margin-top: 20rpx;
+  border: 1rpx solid #dbdbdb;
+  border-radius: 10rpx;
+}
+
+.form-describe-content text{
+  margin: 20rpx;
+  color: #333333;
+  font-size: 28rpx;
+  line-height: 42rpx;
+}
+
+.shortcuts {
+  display: flex;
+  align-items: center;
+  color: #0054FF;
+  font-size: 26rpx;
+  margin-top: 50rpx;
+}
+
+.shortcuts-cancel {
+  margin-right: 20rpx;
+}
+
+.shortcuts-customer {
+  margin-left: 20rpx;
+}
+
+.shortcuts-customer button{
+  display: flex;
+  align-items: center;
+  color: #0054FF;
+  font-size: 26rpx;
+  border: 0rpx;
+  background-color: white;
+  padding: 0rpx;
+}
+
+.shortcuts-customer button::after{
+  border: 0rpx;
+}
+
+.shortcuts-line {
+  width: 1rpx;
+  height: 25rpx;
+  background-color: #E6E6E6;
+}
+
+.detail-status-fail-reason {
+  color: #FF5426;
+  font-size: 26rpx;
+  width: 600rpx;
+  margin-top: 20rpx;
+  text-align: center;
+}

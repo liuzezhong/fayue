@@ -1,0 +1,131 @@
+<!--pages/discover/expense/invite/invite.wxml-->
+<view class='invite'>
+  <view class='title-image'>
+    <image src='http://imgbj.xianshikeji.com/solgoo@2x.png'></image>
+  </view>
+
+  <view class='red-packet'>
+    <view class='user-info'>
+      <view class='user-image'>
+        <image src='{{parentUserInfo.portrait}}'></image>
+      </view>
+      <view class='user-name'>
+        <text>{{parentUserInfo.nickName}}</text>
+      </view>
+    </view>
+    <view class='main-title'>
+      <text>送您消费维权保障金</text>
+    </view>
+    <view class='money-info'>
+      <text>315<text class='money-info-sub'>元</text></text>
+    </view>
+    <view class='instructions'>
+      <text class='instructions-text'><text class='instructions-text-blod'>保障范围：</text>因消费维权纠纷而产生的法律服务费用，可获得规定比例现金赔付</text>
+    </view>
+    <view class='instructions-time'>
+      <text class='instructions-text'><text class='instructions-text-blod'>保障期限：</text>自领取日起6个月内</text>
+    </view>
+
+    <view class='receive-money' bindtap='bindReceive'>
+      <text>免费领取</text>
+    </view>
+
+    <view class='receiver-data'>
+      <text>已有{{totalMember}}人领取成功</text>
+    </view>
+
+    <view class='rules-button' bindtap='bindRules'>
+      <text>规则</text>
+    </view>
+
+
+  </view>
+  <view class='decorate'>
+    <image src='http://imgbj.xianshikeji.com/qiandai@2x.png'></image>
+  </view>
+  <view class='last-line'>
+    <text>律兜法律服务平台为您保驾护航</text>
+  </view>
+</view>
+<view class='shortcuts'>
+    <view class='shortcuts-cancel' bindtap='bindIndex'>
+      <text>返回首页</text>
+    </view>
+  </view>
+<view class='under-area'></view>
+<block wx:if="{{clickLogin == 1}}">
+  <view class='login-marks'>
+  </view>
+  <view class='login-bullet'>
+    <view class='main'>
+      <view class='close-bullet' bindtap='bindCloseBullet'>
+        <image src='http://imgbj.xianshikeji.com/close@2x.png'></image>
+      </view>
+
+      <view class='header'>
+        <view class='image'>
+          <image src='http://imgbj.xianshikeji.com/fayuelogo@2x.png'></image>
+        </view>
+        <view class='text'>
+          <text>请您授权以下信息</text>
+        </view>
+      </view>
+
+      <view class='content-group'>
+        <view class='info-line'>
+          <view class='image'>
+            <image src='http://imgbj.xianshikeji.com/wechat@2x.png'></image>
+          </view>
+          <view class='title-group'>
+            <text class='content-title'>基本信息</text>
+            <text class='sub-title'>授权您的头像、昵称</text>
+          </view>
+          <block wx:if="{{hasUserInfoBtn == false}}">
+            <view class='auth-button'>
+              <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">授权</button>
+            </view>
+          </block>
+          <block wx:elif="{{hasUserInfoBtn == true}}">
+            <view class='auth-button-noclick'>
+              <button>已授权</button>
+            </view>
+          </block>
+        </view>
+
+        <view class='info-line last-line'>
+          <view class='image'>
+            <image src='http://imgbj.xianshikeji.com/%20phone@2x.png'></image>
+          </view>
+          <view class='title-group'>
+            <text class='content-title'>手机号码</text>
+            <text class='sub-title'>授权您的手机号码</text>
+          </view>
+          <block wx:if="{{existPhoneBtn == false}}">
+            <view class='auth-button'>
+              <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">授权</button>
+            </view>
+          </block>
+          <block wx:elif="{{existPhoneBtn == true}}">
+            <view class='auth-button-noclick'>
+              <button>已授权</button>
+            </view>
+          </block>
+
+        </view>
+
+      </view>
+      <block wx:if="{{hasUserInfoBtn == true && existPhoneBtn == true}}">
+        <view class='next-step' bindtap='bindNextStep'>
+          <view>下一步</view>
+        </view>
+      </block>
+      <block wx:else>
+        <view class='next-step-noclick'>
+          <view>下一步</view>
+        </view>
+      </block>
+
+      <view class='under-area'></view>
+    </view>
+  </view>
+</block>

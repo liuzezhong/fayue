@@ -1,0 +1,192 @@
+/* pages/mine/favorite/favorite.wxss */
+.favorite-button {
+  box-shadow:2rpx 0rpx 6rpx rgba(0,0,0,0.2);
+  width: 750rpx;
+  position: fixed;
+  top: 0rpx;
+  left: 0rpx;
+  background-color: white;
+}
+
+.search-results-line {
+  display: flex;
+  width: 600rpx;
+  margin-left: 80rpx;
+  height: 100rpx;
+  
+}
+
+.search-results-header {
+  margin-top: 25rpx;
+  display: flex;
+  margin-left: 80rpx;
+}
+
+.results-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.results-header .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.results-header .title .content{
+  color: #000000;
+  font-size: 32rpx;
+}
+
+.results-header .title .icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rpx;
+}
+
+.results-header .title .icon image{
+  width:46rpx;
+  height:14rpx;
+}
+
+.results-number {
+  font-size: 24rpx;
+  color: #808080;
+  margin-left: 10rpx;
+  height: 45rpx;
+  display: flex;
+  align-items: center;
+  width: 140rpx;
+}
+
+.recommend-list {
+  margin-top: 100rpx;
+  width: 750rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.wiki-list {
+  margin-left: 30rpx;
+  width: 690rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.label-line {
+  margin-top: 30rpx;
+  width: 680rpx;
+  color: #808080;
+  font-size: 24rpx;
+  display: flex;
+  justify-content:space-between;
+  
+}
+
+.title-line {
+  margin-top: 30rpx;
+  width: 690rpx;
+  color: #010101;
+  font-size: 32rpx;
+  line-height: 52rpx;
+}
+
+.data-line {
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  width: 690rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+.data-line .view {
+  color: #808080;
+  font-size: 24rpx;
+  display: flex;
+  align-items: center;
+  width: 160rpx;
+}
+
+.data-line .view image{
+  width: 32rpx;
+  height: 18rpx;
+  padding-right: 15rpx;
+
+}
+
+.data-line .like {
+  color: #808080;
+  font-size: 24rpx;
+  display: flex;
+  align-items: center;
+  
+}
+
+.data-line .like image{
+  width: 25rpx;
+  height: 25rpx;
+  padding-right: 15rpx;
+}
+
+.wiki-line {
+  margin-left: 30rpx;
+  width: 690rpx;
+  height: 1rpx;
+  background-color: #E5E5E5;
+}
+
+.no-favorite {
+  margin-top: 400rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.no-favorite image {
+  width: 261rpx;
+  height: 242rpx;
+}
+
+.no-favorite text {
+  color: #4D4D4D;
+  font-size: 30rpx;
+  margin-top: 50rpx;
+}
+
+.article-list-disorderly {
+  margin-top: 140rpx;
+}
+.hot-line {
+  margin-left: 30rpx;
+}
+
+.hot-line-left {
+  width: 446rpx;
+}
+
+.hot-line-father {
+  display: flex;
+  margin-top: 30rpx;
+}
+
+.hot-line-right {
+  margin-left: 30rpx;
+}
+
+.hot-line-right image{
+  width: 214rpx;
+  height: 164rpx;
+  border-radius: 5rpx;
+}
+
+.hot-title-line {
+  color: #010101;
+  font-size: 32rpx;
+  min-height: 105rpx;
+  line-height: 52rpx;
+}

@@ -1,0 +1,102 @@
+/* pages/special/index/index.wxss */
+.swiper-title {
+  width: 750rpx;
+  height: 60rpx;
+  background-color: #000;
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 290rpx;
+}
+
+swiper {
+  height: 350rpx;
+}
+
+.swiper-image {
+  height: 350rpx;
+}
+
+.swiper-title text {
+  color: #fff;
+  font-size: 28rpx;
+  padding-left: 30rpx;
+}
+
+.slide-image {
+  width: 750rpx;
+  height: 350rpx;
+}
+
+.special-list {
+  margin-top: 50rpx;
+  width: 720rpx;
+  margin-left: 30rpx;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+
+.list-line {
+  display: flex;
+  flex-direction: column;
+  width: 330rpx;
+  margin-right: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+.list-line-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-line-image image{
+  width: 330rpx;
+  height: 165rpx;
+  border-radius: 10rpx;
+}
+
+.list-line-text {
+  font-size: 28rpx;
+  color: #333333;
+  margin-top: 20rpx;
+}
+
+.list-line-info {
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+  color: #808080;
+  margin-top: 10rpx;
+}
+
+
+.list-line-info-like {
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+  color: #808080;
+  width: 130rpx;
+}
+
+.list-line-info-like image {
+  width: 24rpx;
+  height: 23rpx;
+  margin-right: 15rpx;
+}
+
+.list-line-info-count {
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+  color: #808080;
+}
+
+.list-line-info-count image{
+  width: 20rpx;
+  height: 24rpx;
+  margin-right: 15rpx;
+}

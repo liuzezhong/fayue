@@ -1,0 +1,326 @@
+/* pages/discover/rank/rank.wxss */
+
+.header-background {
+  width: 750rpx;
+  height: 455rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -1rpx;
+}
+
+.header-background image {
+  width: 750rpx;
+  height: 455rpx;
+}
+
+.top-three {
+  width: 690rpx;
+  height: 310rpx;
+  margin-left: 30rpx;
+  display: flex;
+  align-items: center;
+  margin-top: -355rpx;
+}
+
+.top-second {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 230rpx;
+}
+
+.first-second {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 230rpx;
+}
+
+.third-second {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 230rpx;
+}
+
+.header-image {
+  width: 86rpx;
+  height: 86rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+
+.header-image image {
+  width: 86rpx;
+  height: 86rpx;
+  border-radius: 100%;
+}
+
+.first-header-image {
+  width: 125rpx;
+  height: 125rpx;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  margin-top: -44rpx;
+}
+
+.first-header-image image {
+  width: 125rpx;
+  height: 125rpx;
+  border-radius: 100%;
+}
+
+.header-name {
+  color: #333;
+  font-size: 32rpx;
+  /* margin-top: 15rpx; */
+  margin-top: -35rpx;
+}
+
+.header-id {
+  color: #888;
+  font-size: 26rpx;
+}
+
+.header-voteNum {
+  color: #fe5401;
+  font-size: 32rpx;
+  margin-top: 15rpx;
+}
+
+.header-energyNum {
+  color: #f50;
+  margin-top: 15rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-energyNum-name {
+  font-size: 26rpx;
+}
+
+.header-energyNum-num {
+  font-size: 34rpx;
+  margin-top: 5rpx;
+}
+
+.rank-list {
+  width: 690rpx;
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rank-line {
+  display: flex;
+  align-items: center;
+  width: 690rpx;
+  height: 150rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+
+.rank-line .num {
+  width: 70rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  color: #666;
+}
+
+.rank-line .avatar {
+  margin-left: 5rpx;
+  width: 80rpx;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+
+.rank-line .avatar image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 100%;
+}
+
+.spcial-line {
+  margin-top: 43rpx;
+}
+
+.rank-line .info {
+  margin-left: 25rpx;
+  width: 285rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.rank-line .info .name {
+  font-size: 32rpx;
+  color: #333;
+}
+
+.rank-line .info .id {
+  margin-top: 5rpx;
+  font-size: 26rpx;
+  color: #888;
+}
+
+.rank-line .votenumber {
+  width: 190rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.rank-line .votenumber text {
+  font-size: 32rpx;
+  color: #ff7835;
+}
+
+.rank-line .votenumber-bak-father {
+  width: 190rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.rank-line .votenumber-bak {
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  flex-direction: column;
+}
+
+.votenumber-num {
+  color: #FF7835;
+  font-size: 32rpx;
+}
+
+.votenumber-name {
+  color: #A9A9A9;
+  font-size: 22rpx;
+  margin-top: 2rpx;
+}
+
+.second-icon-image {
+  width: 40rpx;
+  height: 40rpx;
+  position: relative;
+  top: -55rpx;
+  left: -18rpx;
+}
+
+.second-icon-image image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.third-icon-image {
+  width: 41rpx;
+  height: 41rpx;
+  position: relative;
+  top: -55rpx;
+  right: -48rpx;
+}
+
+.third-icon-image image {
+  width: 41rpx;
+  height: 41rpx;
+}
+
+.first-icon-image {
+  width: 45rpx;
+  height: 45rpx;
+  position: relative;
+  top: -95rpx;
+  right: -60rpx;
+}
+
+.first-icon-image image {
+  width: 45rpx;
+  height: 45rpx;
+}
+
+.mine-rank {
+  height: 140rpx;
+  width: 690rpx;
+  margin-left: 30rpx;
+  display: flex;
+  align-items: center;
+  margin-top: 43rpx;
+}
+
+.mine-header {
+  width: 85rpx;
+  height: 85rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mine-header image {
+  width: 85rpx;
+  height: 85rpx;
+  border-radius: 100%;
+}
+
+.mine-info {
+  display: flex;
+  align-items: center;
+  margin-left: 25rpx;
+  width: 355rpx;
+}
+
+.mine-info-name {
+  color: #222;
+  font-size: 34rpx;
+}
+
+.mine-rank-info {
+  height: 48rpx;
+  background: rgba(255, 217, 0, 1);
+  border-radius: 8rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-size: 22rpx;
+  margin-left: 25rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+
+.mine-rank-number-father {
+  width: 190rpx;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mine-rank-number {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mine-rank-number .number-num {
+  color: #ff7835;
+  font-size: 34rpx;
+}
+
+.mine-rank-number .number-name {
+  color: #a9a9a9;
+  font-size: 26rpx;
+}

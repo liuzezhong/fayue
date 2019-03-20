@@ -1,0 +1,35 @@
+<!--pages/mine/order/order.wxml-->
+
+<block wx:if="{{orderList == null}}">
+  <view class='no-order'>
+    <image src='/image/No subscription@2x.png'></image>
+    <text class='no-order-text'>您还没有订阅哦！</text>
+    <view class='button' bindtap='bindSubject'>
+      <text>马上去订阅</text>
+    </view>
+  </view>
+
+</block>
+
+<block wx:else>
+  <view class='order-list'>
+
+    <block wx:for="{{orderList}}" wx:key="*this">
+      <view class='special-line' bindtap='bindSubjectList' data-subid="{{item.subjectId}}">
+        <image src='{{item.subjectPic}}'></image>
+        <view class='special-line-info'>
+        </view>
+        <view class='special-line-info-content'>
+          <text>{{item.subjectName}}</text>
+        </view>
+      </view>
+    </block>
+    <view class='bottom-line'>
+      <view class='bottom-line-left'></view>
+      <view class='bottom-line-content'>
+        <text>没有更多啦</text>
+      </view>
+      <view class='bottom-line-right'></view>
+    </view>
+  </view>
+</block>

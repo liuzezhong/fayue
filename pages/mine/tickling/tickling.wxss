@@ -1,0 +1,119 @@
+/* pages/tickling/tickling.wxss */
+.tickling-view {
+  margin-top: 100rpx;
+  width: 670rpx;
+  margin-left: 40rpx;
+  
+}
+
+.tickling-input {
+  background-color: #E0E0E0;
+  height: 500rpx;
+  width: 670rpx;
+  border-radius: 10rpx;
+  border: 1rpx solid #E0E0E0;
+}
+
+.tickling-button {
+  width: 670rpx;
+  height: 88rpx;
+  background-color: #FFD900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15rpx;
+  margin-top: 100rpx;
+  color: #333333;
+  font-size: 36rpx;
+  border: 0rpx;
+}
+
+
+
+.tickling-button::after {
+  border: 0rpx;
+}
+
+.tickling-button-no {
+  background-color: #CCCCCC;
+  color: #888888;
+}
+
+.tickling-button-no-text {
+  color: #888888;
+}
+
+.tickling-button-text {
+  color: #333333;
+  font-size: 36rpx;
+}
+
+.tickling-info {
+  position: fixed;
+  bottom: 60rpx;
+  color: #b2b2b2;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 44rpx;
+  width: 670rpx;
+}
+
+.tickling-info-link {
+  color: #0066CC;
+  text-decoration:underline;
+}
+
+.input-textarea {
+  width: 630rpx;
+  height: 460rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+  
+
+}
+
+textarea {
+  font-size: 30rpx;
+  color: #333333;
+  height: 460rpx;
+}
+
+.textarea-placeholder {
+  color: #B3B3B3;
+  font-size: 30rpx;
+}
+
+.input-nubmer {
+  display: flex;
+  text-align:right;
+  color: #FF0000;
+  font-size: 24rpx;
+  justify-content: flex-end;
+}
+
+.check-list {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50rpx;
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  
+}
+
+radio {
+  width: 46rpx;
+  height: 46rpx;
+  display: flex;
+  align-items: center;
+}
+
+.radio-text {
+  margin-left: 20rpx;
+  margin-right: 60rpx;
+  font-size: 32rpx;
+}

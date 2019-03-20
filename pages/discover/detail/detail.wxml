@@ -1,0 +1,409 @@
+<!--pages/discover/detail/detail.wxml-->
+<view class='header-area'>
+  <view class='header-image'>
+    <image src='{{activityInfo.imageUrl}}' mode='aspectFill'></image>
+  </view>
+  <view class='activity-name'>
+    <view class='activity-title'>
+    </view>
+    <view class='activity-title-text'>
+      <text>{{activityInfo.activityName}}</text>
+    </view>
+  </view>
+
+  <view class='header-info'>
+    <view class='count-down'>
+      <view class='main-title'>
+        <text>倒计时</text>
+      </view>
+
+      <view class='number'>
+        <text>{{countDAY}}</text>
+      </view>
+      <view class='title'>
+        <text>天</text>
+      </view>
+
+      <view class='number'>
+        <text>{{countHour}}</text>
+      </view>
+      <view class='title'>
+        <text>时</text>
+      </view>
+
+      <view class='number'>
+        <text>{{countMinute}}</text>
+      </view>
+      <view class='title'>
+        <text>分</text>
+      </view>
+
+      <view class='number'>
+        <text>{{countSecond}}</text>
+      </view>
+      <view class='title'>
+        <text>秒</text>
+      </view>
+    </view>
+
+    <view class='rules' data-ruleid="{{activityInfo.activityRuleId}}" bindtap='bindRules'>
+      <text>活动规则</text>
+    </view>
+  </view>
+
+</view>
+
+<view class='project-line'></view>
+
+<block wx:if="{{activityInfo.type == 1}}">
+
+  <view class='data-area'>
+    <view class='data-column'>
+      <view class='data-column-number'>
+        <text>{{activityInfo.productNum}}</text>
+      </view>
+      <view class='data-column-name'>
+        <text>参赛作品</text>
+      </view>
+    </view>
+
+    <view class='column-line'></view>
+
+    <view class='data-column'>
+      <view class='data-column-number'>
+        <text>{{activityInfo.voteNum}}</text>
+      </view>
+      <view class='data-column-name'>
+        <text>累计投票</text>
+      </view>
+    </view>
+
+    <view class='column-line'></view>
+    <view class='data-column'>
+      <view class='data-column-number'>
+        <text>{{activityInfo.viewNum}}</text>
+      </view>
+      <view class='data-column-name'>
+        <text>参与人次</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='project-line'></view>
+
+  <view class='main-area'>
+    <block wx:if="{{productList != null}}">
+      <view class='main-search'>
+        <view class='search-input'>
+          <input placeholder='请输入作者姓名或作者编号' placeholder-class='input-placeholder' bindinput="bindKeyInput"></input>
+        </view>
+        <view class="search-button" bindtap='bindSearch'>
+          <text>搜索</text>
+        </view>
+      </view>
+
+    </block>
+    <view class='production-list'>
+      <block wx:for="{{productList}}">
+        <view class='production-info' catchtap='bindDetail' data-activityitemid='{{item.activityItemId}}'>
+          <view class='basic-info'>
+            <view class='author-image'>
+              <image src='{{item.authorAvatar}}' mode='aspectFill'></image>
+            </view>
+            <view class='author-info'>
+              <text class='name'>{{item.authorName}}</text>
+              <text class='id'>作品编号:{{item.activityItemId}}</text>
+            </view>
+          </view>
+
+          <view class='product-preview'>
+            <block wx:if="{{item.type == 0}}">
+              <image src='{{item.url}}' mode='aspectFill'></image>
+            </block>
+            <block wx:elif="{{item.type == 1}}">
+              <video src="{{item.url}}" controls objectFit="cover"></video>
+            </block>
+            <block wx:elif="{{item.type == 2}}">
+              <image src='{{item.authorAvatar}}' mode='aspectFill'></image>
+            </block>
+
+          </view>
+
+          <view class='vote-number'>
+            <text>{{item.voteNum}}票</text>
+          </view>
+          <block wx:if="{{item.voteState == 0}}">
+            <view class='vote-button' catchtap='bindVote' data-activityitemid='{{item.activityItemId}}'>
+              <image src='/image/voting@2x.png'></image>
+              <text>投票</text>
+            </view>
+          </block>
+          <block wx:elif="{{item.voteState == 1}}">
+            <view class='vote-button vote-ok' catchtap='bindVote' data-activityitemid='{{item.activityItemId}}'>
+              <image src='/image/voting@2x.png'></image>
+              <text>已投</text>
+            </view>
+          </block>
+        </view>
+      </block>
+    </view>
+
+  </view>
+
+  <block wx:if="{{productList != null}}">
+    <view class='bottom-line'>
+      <view class='bottom-line-content'>
+        <block wx:if="{{getAllArtice == false}}">
+          <text>上拉查看更多精彩</text>
+        </block>
+        <block wx:else>
+          <view class='bottom-line-left'></view>
+          <text>喂喂，我是有底线的！</text>
+          <view class='bottom-line-right'></view>
+        </block>
+      </view>
+    </view>
+
+  </block>
+
+  <view class='rank-rukou' bindtap='bindRank'>
+    <image src='/image/ranking-button@2x.png'></image>
+  </view>
+
+</block>
+<block wx:elif="{{activityInfo.type == 2}}">
+
+  <block wx:if="{{activityInfo.isChooseAward == 1}}">
+    <view class='gift-detail'>
+      <view class='gift-image-father'>
+        <view class='gift-image'>
+          <image src='{{activityInfo.award.imgUrl}}'></image>
+        </view>
+        <view class='activity-names'>
+          <view class='activity-titles'>
+          </view>
+          <view class='activity-title-texts'>
+            <text>{{activityInfo.award.userNumber}}人许愿</text>
+          </view>
+        </view>
+      </view>
+
+      <view class='gift-info'>
+        <view class='gift-info-basic'>
+          <text class='title'>{{activityInfo.award.awardName}}</text>
+          <text class='number'>门槛能量值：{{activityInfo.award.energy}}</text>
+        </view>
+        <view class='gift-info-number'>
+          <text>剩余礼物：{{activityInfo.energyData.awardNumber}}</text>
+        </view>
+
+      </view>
+      <navigator hover-class="none" class='wishlist' url='../wishlist/wishlist?activityid={{activityid}}&awardId={{activityInfo.award.awardId}}'>
+        <image src='http://imgbj.xianshikeji.com/wishlist@2x.png'></image>
+      </navigator>
+    </view>
+
+    <view class='mine-line'>
+      <view class='line-left'></view>
+      <view class='mine-name'>
+        <text>我的能量</text>
+      </view>
+      <view class='line-right'></view>
+    </view>
+
+
+    <view class="energy-number">
+      <text>{{activityInfo.selectAward.haveEnergy}}</text>
+    </view>
+    <block wx:if="{{activityInfo.energyData.awardNumber > 0}}">
+      <block wx:if="{{activityInfo.selectAward.success == 1}}">
+        <view class='result-info-success'>
+          <image src='http://imgbj.xianshikeji.com/iconsuccess@2x.png'></image>
+          <text class='main-tip'>恭喜您，心愿达成！</text>
+          <text class='sub-tip'>我们会在1到2个工作日内联系您领取礼物，请耐心等待~</text>
+        </view>
+        <navigator class='wishhouse' url='../gift/gift?activityId={{activityid}}' hover-class="none">
+          <image src='http://imgbj.xianshikeji.com/makeawish@2x.png'></image>
+          <text>许愿屋</text>
+        </navigator>
+      </block>
+      <block wx:else>
+        <view class='energy-info'>
+          <block wx:if="{{activityInfo.energyData.collect == 0}}">
+            <view class='no-energy-ball'>
+              <image src='http://imgbj.xianshikeji.com/energyball.gif'></image>
+            </view>
+          </block>
+          <block wx:elif="{{activityInfo.energyData.collect == 1}}">
+            <view class='energy-ball' bindtap="bindEnergy">
+              <image src='http://imgbj.xianshikeji.com/energyballok.gif'></image>
+            </view>
+          </block>
+
+          <view class='ennergy-text'>
+            <text>{{activityInfo.energyData.collectEnergy}}</text>
+          </view>
+          <!-- <view class='tip-image' wx:if="{{activityInfo.energyData.collect == 0}}">
+            <image src='http://imgbj.xianshikeji.com/remind@2x.png'></image>
+          </view> -->
+
+
+          <block wx:if="{{addEnergy == 1}}">
+            <view class='tip-rules-p'>
+              <image src='http://imgbj.xianshikeji.com/bulb%20prompt@2x.png'></image>
+              <text class='content'>记得每天都来收能量哦~</text>
+            </view>
+          </block>
+          <block wx:elif="{{addEnergy == 0}}">
+            <view class='tip-rules'>
+              <image src='http://imgbj.xianshikeji.com/bulb%20prompt@2x.png'></image>
+              <text class='content'>{{lawContent}}</text>
+              <text class='author'>——{{lawAuthor}}</text>
+            </view>
+          </block>
+
+          <view class='beizhu-text'>
+            <text>邀请好友助力能量值，可以更快完成心愿哦~</text>
+          </view>
+        </view>
+        <view class='share-button-group' bindtap='showShareMarks'>
+          <view>邀请好友帮忙</view>
+        </view>
+
+        <navigator class='wishhouse-big' url='../gift/gift?activityId={{activityid}}' hover-class="none">
+          <image src='http://imgbj.xianshikeji.com/makeawish@2x.png'></image>
+          <text>许愿屋</text>
+        </navigator>
+      </block>
+    </block>
+    <block wx:else>
+      <view class='result-info'>
+        <image src='http://imgbj.xianshikeji.com/cry@2x.png'></image>
+        <text>您太慢啦，礼物全都被抢完啦</text>
+      </view>
+      <navigator class='wishhouse' url='../gift/gift?activityId={{activityid}}' hover-class="none">
+        <image src='http://imgbj.xianshikeji.com/makeawish@2x.png'></image>
+        <text>许愿屋</text>
+      </navigator>
+    </block>
+
+
+
+    <block wx:if="{{powerNum !=0}}">
+      <view class='powerNum-father'>
+      <view class='project-line'></view>
+      <view class='powerList'>
+        <view class='powerList-title'>
+          <view class='left'>
+            <text>已有{{powerNum}}位好友帮忙助力</text>
+          </view>
+          <navigator class='right' url='../powerlist/powerlist?id={{activityInfo.selectAward.id}}' hover-class="none">
+            <text>查看全部</text>
+            <image src='/image/icon_enter@2x.png'></image>
+          </navigator>
+        </view>
+
+        <view class='powerList-userList'>
+          <block wx:for="{{powerList}}" wx:key="*this">
+            <block wx:if="{{index < 5}}">
+              <view class='userList'>
+                <view class='userList-image'>
+                  <image src='{{item.portrait}}' mode='aspectFill'></image>
+                </view>
+                <block wx:if="{{index == 0}}">
+
+                  <view class='userList-first-icon'>
+                    <image src='/image/icon_champion_1@2x.png'></image>
+                  </view>
+                </block>
+                <block wx:elif="{{index == 1}}">
+                  <view class='userList-first-icon'>
+                    <image src='/image/icon_runner_up_1@2x.png'></image>
+                  </view>
+                </block>
+                <block wx:elif="{{index == 2}}">
+                  <view class='userList-first-icon'>
+                    <image src='/image/icon_third_place_1@2x.png'></image>
+                  </view>
+                </block>
+
+                <block wx:else>
+                  <view class='userList-first-icon'>
+                  </view>
+                </block>
+              </view>
+
+            </block>
+          </block>
+        </view>
+      </view>
+      <view class='under-line'></view>
+      </view>
+    </block>
+
+
+
+
+  </block>
+  <block wx:else>
+    <view class='activity-detailedness'>
+      <view class='lawContent'>
+        <view class='background'>
+          <image src='http://imgbj.xianshikeji.com/celebrated%20dictum@2x.png'></image>
+        </view>
+        <view class='really'>
+          <text class='content'>{{lawContent}}</text>
+          <text class='author'>——{{lawAuthor}}</text>
+        </view>
+      </view>
+      <view class='activity-guide'>
+        <image src="http://imgbj.xianshikeji.com/ctivity-picture@2x.png"></image>
+      </view>
+
+      <view class="activity-detailedness-content">
+        <view class='content-first-line'>
+          <text class='content-first-line-one'>选择礼物后每日登录可攒</text>
+          <view class='special-text'>5</view>
+          <text class='content-first-line-two'>个能量</text>
+        </view>
+        <view class='content-second-line'>
+          <text>邀请好友让TA帮你一起攒~</text>
+        </view>
+      </view>
+
+      <view class='activity-detailedness-button'>
+        <block wx:if="{{isLogin == false}}">
+          <button open-type='getUserInfo' class="button-login" style="background-image:url(http://imgbj.xianshikeji.com/energybutton@2x.png);border:0rpx;" plain='true' bindgetuserinfo="getUserInfo" wx:if="{{hasPhone == 0}}"></button>
+        </block>
+        <block wx:elif="{{isLogin == true}}">
+          <button open-type='getPhoneNumber' class="button-login" style="background-image:url(http://imgbj.xianshikeji.com/energybutton@2x.png);border:0rpx;" plain='true' bindgetphonenumber="getPhoneNumber" wx:if="{{hasPhone == 0}}"></button>
+          <button class="button-login" style="background-image:url(http://imgbj.xianshikeji.com/energybutton@2x.png);border:0rpx;" plain='true' bindtap='bindGift' wx:if="{{hasPhone == 1}}"></button>
+        </block>
+      </view>
+      <view class='under-area'></view>
+    </view>
+  </block>
+
+</block>
+
+<block wx:if="{{sharemarks == 1}}">
+  <view class='marks' bindtap='closeMarks'></view>
+  <view class='share-choose'>
+    <view class='share-choose-main'>
+      <button class='special-button' open-type="share">
+        <view class='main-icon'>
+          <image src='/image/icon_wechat@2x.png'></image>
+          <text>分享微信好友</text>
+        </view>
+
+      </button>
+
+      <button class='special-button' bindtap='previewImageShow'>
+        <view class='main-icon'>
+          <image src='/image/icon_image@2x.png'></image>
+          <text>生成分享海报</text>
+        </view>
+      </button>
+    </view>
+  </view>
+</block>

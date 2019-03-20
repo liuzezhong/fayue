@@ -1,0 +1,68 @@
+<!--pages/law/law.wxml-->
+<view class='law-list'>
+  <block wx:for="{{lawList}}" wx:key="*this">
+    <view class='law-line'>
+      <view class='line-title'>
+        <view class='line-title-icon'></view>
+        <view class='line-title-icon-kong'>
+        </view>
+      </view>
+      <view class='line-title-content'>
+        <text>{{item.lawTitle}}</text>
+      </view>
+      <view class='line-content'>
+        <text>{{item.lawContent}}</text>
+      </view>
+    </view>
+  </block>
+
+
+  <!-- <view class='law-line'>
+    <view class='line-title'>
+      <view class='line-title-icon'></view>
+      <view class='line-title-icon-kong'>
+      </view>
+    </view>
+    <view class='line-title-content'>
+      <text>《事责任民法通则》第一百二十八条</text>
+    </view>
+    <view class='line-content'>
+      <text>因正当防卫造成损害的，不承担民事责任。正当防卫超过必要的限度，造成不应有的损害的，应承担适当的民事责任。</text>
+    </view>
+  </view>
+
+  <view class='law-line'>
+    <view class='line-title'>
+      <view class='line-title-icon'></view>
+      <view class='line-title-icon-kong'>
+      </view>
+    </view>
+    <view class='line-title-content'>
+      <text>《防卫造成损害的，不承担民事责任民法通则》第一百二十八条</text>
+    </view>
+    <view class='line-content'>
+      <text>因正当防卫造成损害的，不承担民事责任。正当防卫超过必要的限度，造成不应有的损害的，应承担适当的民事责任。</text>
+    </view>
+  </view>
+
+  <view class='law-line'>
+    <view class='line-title'>
+      <view class='line-title-icon'></view>
+      <view class='line-title-icon-kong'>
+      </view>
+    </view>
+    <view class='line-title-content'>
+      <text>《防卫造成损害的，不承担民事责任民法通则》第一百二十八条第一百二十八条第一百二十八条</text>
+    </view>
+    <view class='line-content'>
+      <text>因正当防卫造成损害的，不承担民事责任。正当防卫超过必要的限度，造成不应有的损害的，应承担适当的民事责任。</text>
+    </view>
+  </view> -->
+</view>
+<navigator url="/page/discover/discover" target="miniProgram" open-type="navigate" hover-class="navigator-hover" app-id="{{lvdouappid}}" extra-data="1" path="pages/index/index">
+<view class='information'>
+  
+  <text class='info-law'><text class='info-no'>有疑问？</text>免费咨询律师</text>
+  
+</view>
+</navigator>

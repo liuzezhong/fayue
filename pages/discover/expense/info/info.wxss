@@ -1,0 +1,134 @@
+/* pages/discover/expense/info/info.wxss */
+
+.top-area {
+  width: 690rpx;
+  height: 460rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0rpx 2rpx 20rpx 0rpx rgba(51, 51, 51, 0.1);
+  border-radius: 10rpx;
+  margin-left: 30rpx;
+  margin-top: 15rpx;
+}
+
+.top-title {
+  background-image: url('http://imgbj.xianshikeji.com/duanbjaot@2x.png');
+  width: 450rpx;
+  height: 80rpx;
+  background-size: 100% 100%;
+  position: relative;
+  top: 28rpx;
+  left: -15rpx;
+  color: white;
+  font-size: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.top-title text {
+  margin-top: -8rpx;
+}
+
+.top-content {
+  margin-top: 0rpx;
+  width: 630rpx;
+  margin-left: 30rpx;
+}
+
+.top-content-text {
+  color: #333;
+  font-size: 28rpx;
+  line-height: 55rpx;
+}
+
+.second-area {
+  width: 690rpx;
+  height: 600rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0rpx 2rpx 20rpx 0rpx rgba(51, 51, 51, 0.1);
+  border-radius: 10rpx;
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+}
+
+.second-title {
+  background-image: url('http://imgbj.xianshikeji.com/duanbjaot@2x.png');
+  width: 200rpx;
+  height: 80rpx;
+  background-size: 100% 100%;
+  position: relative;
+  top: 28rpx;
+  left: -15rpx;
+  color: white;
+  font-size: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.second-title text {
+  margin-top: -8rpx;
+}
+
+.second-main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60rpx;
+}
+
+.second-main-step {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30rpx;
+  width: 630rpx;
+  margin-bottom: 30rpx;
+}
+
+.second-main-step-title {
+  display: flex;
+  align-items: center;
+}
+
+.second-main-step-title-span {
+  width: 110rpx;
+  height: 48rpx;
+  background: rgba(255, 84, 38, 1);
+  border: 3rpx solid rgba(255, 255, 255, 1);
+  border-radius: 20rpx;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24rpx;
+}
+
+.second-main-step-title-name {
+  color: #ffa800;
+  font-size: 34rpx;
+  margin-left: 20rpx;
+  font-weight: bold;
+}
+
+.second-main-step-content {
+  color: #808080;
+  font-size: 24rpx;
+  margin-top: 20rpx;
+  width: 570rpx;
+  margin-left: 10rpx;
+}
+
+.attend-button {
+  width: 500rpx;
+  height: 100rpx;
+  background: linear-gradient(0deg, rgba(255, 164, 0, 1) 0%, rgba(255, 215, 0, 1) 100%);
+  border-radius: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  margin-top: -50rpx;
+  margin-left: 125rpx;
+}

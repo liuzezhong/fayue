@@ -1,0 +1,320 @@
+<view class="page" style="background-color:{{pageBackgroundColor}}">
+  <block wx:if="{{isJoined == 0}}">
+    <!-- 未参加活动 -->
+    <view class="top-part" style="background-color: {{bgColor}}">
+      <view class='rules-button' bindtap='bindRule'>
+        <text>活动规则</text>
+      </view>
+      <!-- <view class='main-title'>
+        <view class='content'>
+          <text>已有</text>
+        </view>
+        <view class='number'>
+          <text>{{totalMember}}</text>
+        </view>
+        <view class='content'>
+          <text>人免费领取</text>
+        </view>
+      </view> -->
+      <view class='main-title'>
+        <view class='content'>
+          <text>携手</text>
+        </view>
+        <view class='number'>
+          <text>40000+律师</text>
+        </view>
+        <view class='content'>
+          <text>助你消费维权</text>
+        </view>
+      </view>
+    </view>
+    <view class='under-part' style="background-color: {{bgColor}}">
+      <view class='instructions'>
+        <view class='specialty-area'>
+          <view class='group'>
+            <view class='image'>
+              <image src='http://imgbj.xianshikeji.com/highest@2x222.png'></image>
+            </view>
+            <view class='content'>
+              <text>最高
+          <text class='special-color'>2万</text>保障金</text>
+            </view>
+          </view>
+          <view class='group'>
+            <view class='image'>
+              <image src='http://imgbj.xianshikeji.com/security@2x.png'></image>
+            </view>
+            <view class='content'>
+              <text>保障
+          时长<text class='special-color'>6个月</text></text>
+            </view>
+          </view>
+
+          <view class='group'>
+            <view class='image'>
+              <image src='http://imgbj.xianshikeji.com/category@2x.png'></image>
+            </view>
+            <view class='content'>
+              <text>包含
+          <text class='special-color'>8大服务</text>类别</text>
+            </view>
+          </view>
+
+          <view class='group'>
+            <view class='image'>
+              <image src='http://imgbj.xianshikeji.com/speed@2x.png'></image>
+            </view>
+            <view class='content'>
+              <text>极速
+          <text class='special-color'>48小时</text>到账</text>
+            </view>
+          </view>
+
+        </view>
+      </view>
+      <view class='join-button' bindtap='bindReceive'>
+        <text>立即免费领取</text>
+      </view>
+      <view class='support-info'>
+        <view class='title'>
+          <text>支持单位:</text>
+        </view>
+        <view class='group'>
+          <!-- <view class='content'>
+            <image src='http://imgbj.xianshikeji.com/zhpf@2x.png'></image>
+            <text>无锡智慧普法</text>
+          </view> -->
+          <!-- <view class='content'>
+            <image src='http://imgbj.xianshikeji.com/xlwx@2x.png'></image>
+            <text>新浪无锡</text>
+          </view> -->
+
+
+          <view class='content'>
+            <image src='http://imgbj.xianshikeji.com/ldfl@2x.png'></image>
+            <text>律兜法律服务平台</text>
+          </view>
+
+          <view class='content'>
+            <image src='http://imgbj.xianshikeji.com/default_Avatar@2x%20%E6%8B%B7%E8%B4%9D@2x.png'></image>
+            <text>法曰普法平台</text>
+          </view>
+          <view class='content'>
+            <image src='http://imgbj.xianshikeji.com/jndx@2x.png'></image>
+            <text>江南大学互联网法律研究院</text>
+          </view>
+
+        </view>
+      </view>
+    </view>
+
+    <view class='under-area'></view>
+  </block>
+  <block wx:elif="{{isJoined == 1}}">
+    <view class='personal-center'>
+      <view class='personal-header'>
+        <view class='personal-info'>
+          <view class='personal-info-image'>
+            <image src='{{userInfo.portrait}}'></image>
+          </view>
+          <view class='personal-info-name'>
+            <text>{{userInfo.nickName}}</text>
+          </view>
+        </view>
+        <view class='personal-money' bindtap='bindRecord'>
+          <view class='personal-money-title'>
+            <text>可用保障金余额</text>
+          </view>
+          <view class='personal-money-number'>
+            <text>{{userInfo.totalAmount}}</text>
+          </view>
+        </view>
+        <view class='apply-entrance' bindtap='bindApply'>
+          <view class='apply-entrance-text'>
+            <text>我要报销</text>
+          </view>
+          <view class='apply-entrance-image'>
+            <image src='http://imgbj.xianshikeji.com/into@2x.png'></image>
+          </view>
+        </view>
+      </view>
+
+      <block wx:if="{{contentArray != null}}">
+        <view class='ad-area'>
+          <swiper indicator-dots="false" autoplay="true" interval="3000">
+            <block wx:for="{{contentArray}}">
+              <block wx:if="{{item.type == 1}}">
+                <!-- 文章 -->
+                <swiper-item>
+                  <view class='ad-info' bindtap='bindArticle' data-id="{{item.objId}}">
+                    <image src="{{item.imgUrl}}" mode="aspectFill" />
+                    <view class='ad-info-clone'>
+                      <text>#{{item.title}}#</text>
+                    </view>
+                  </view>
+                </swiper-item>
+              </block>
+              <block wx:elif="{{item.type == 2}}">
+                <!-- 专题 -->
+                <swiper-item>
+                  <view class='ad-info' bindtap='bindSubjectList' data-subid="{{item.objId}}">
+                    <image src="{{item.imgUrl}}" mode="aspectFill" />
+                    <view class='ad-info-clone'>
+                      <text>#{{item.title}}#</text>
+                    </view>
+                  </view>
+                </swiper-item>
+              </block>
+              <block wx:elif="{{item.type == 3}}">
+                <!-- 小程序 -->
+                <swiper-item>
+                  <navigator url="/page/discover/discover" target="miniProgram" open-type="navigate" hover-class="none" app-id="{{lvdouappid}}" extra-data="1" path="pages/index/index?source=fayue">
+                    <view class='ad-info-app'>
+                      <image src="{{item.imgUrl}}" mode="aspectFill" />
+                    </view>
+                  </navigator>
+                </swiper-item>
+              </block>
+            </block>
+          </swiper>
+        </view>
+      </block>
+
+
+      <view class='tasks-area'>
+        <view class='tasks-title'>
+          <view class='tasks-title-icon'></view>
+          <view class='tasks-title-text'>
+            <text>做任务，赢保障金额度</text>
+          </view>
+        </view>
+
+        <view class='tasks-list'>
+
+          <view class='tasks-main tasks-mainA'>
+            <view class='tasks-content-info'>
+              <text class='tasks-main-title'>《消法》答题挑战</text>
+              <text class='tasks-sub-title'>每日挑战可赢取200元保障金</text>
+            </view>
+            <navigator url="/page/discover/expense/index/index" target='miniProgram' app-id='wx5e872ff3403ad936' open-type="navigate" path='pages/test/index/index?fayue_skey={{skey}}' extra-data='tofActivity' hover-class="navigator-hover">
+              <view class='tasks-button'>
+                <text>立即挑战</text>
+              </view>
+            </navigator>
+          </view>
+
+
+          <view class='tasks-main tasks-mainB'>
+            <view class='tasks-content-info'>
+              <text class='tasks-main-title'>运动赢保障金</text>
+              <text class='tasks-sub-title'>每日满5000步赢100元保障金</text>
+            </view>
+            <navigator class='tasks-button' url="../run/run" hover-class="navigator-hover">
+              <text>立即参与</text>
+            </navigator>
+          </view>
+
+          <view class='tasks-main tasks-mainC'>
+            <view class='tasks-content-info'>
+              <text class='tasks-main-title'>分享拿保障金</text>
+              <text class='tasks-sub-title'>成功邀请好友得500元保障金</text>
+            </view>
+            <navigator class='tasks-button' url="../share/share" hover-class="navigator-hover">
+              <text>查看详情</text>
+            </navigator>
+          </view>
+        </view>
+      </view>
+
+      <view class='shortcuts'>
+        <view class='shortcuts-cancel' bindtap='bindRule'>
+          <text>活动规则</text>
+        </view>
+        <view class='shortcuts-line'></view>
+
+        <view class='shortcuts-customer' bindtap='bindIndex'>
+          <button>返回首页</button>
+        </view>
+      </view>
+      <view class='under-area'></view>
+    </view>
+  </block>
+
+
+  <block wx:if="{{clickLogin == 1}}">
+    <view class='login-marks'>
+    </view>
+    <view class='login-bullet'>
+      <view class='main'>
+        <view class='close-bullet' bindtap='bindCloseBullet'>
+          <image src='http://imgbj.xianshikeji.com/close@2x.png'></image>
+        </view>
+
+        <view class='header'>
+          <view class='image'>
+            <image src='http://imgbj.xianshikeji.com/fayuelogo@2x.png'></image>
+          </view>
+          <view class='text'>
+            <text>请您授权以下信息</text>
+          </view>
+        </view>
+
+        <view class='content-group'>
+          <view class='info-line'>
+            <view class='image'>
+              <image src='http://imgbj.xianshikeji.com/wechat@2x.png'></image>
+            </view>
+            <view class='title-group'>
+              <text class='content-title'>基本信息</text>
+              <text class='sub-title'>授权您的头像、昵称</text>
+            </view>
+            <block wx:if="{{hasUserInfoBtn == false}}">
+              <view class='auth-button'>
+                <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">授权</button>
+              </view>
+            </block>
+            <block wx:elif="{{hasUserInfoBtn == true}}">
+              <view class='auth-button-noclick'>
+                <button>已授权</button>
+              </view>
+            </block>
+          </view>
+
+          <view class='info-line last-line'>
+            <view class='image'>
+              <image src='http://imgbj.xianshikeji.com/%20phone@2x.png'></image>
+            </view>
+            <view class='title-group'>
+              <text class='content-title'>手机号码</text>
+              <text class='sub-title'>授权您的手机号码</text>
+            </view>
+            <block wx:if="{{existPhoneBtn == false}}">
+              <view class='auth-button'>
+                <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">授权</button>
+              </view>
+            </block>
+            <block wx:elif="{{existPhoneBtn == true}}">
+              <view class='auth-button-noclick'>
+                <button>已授权</button>
+              </view>
+            </block>
+
+          </view>
+
+        </view>
+        <block wx:if="{{hasUserInfoBtn == true && existPhoneBtn == true}}">
+          <view class='next-step' bindtap='bindNextStep'>
+            <view>下一步</view>
+          </view>
+        </block>
+        <block wx:else>
+          <view class='next-step-noclick'>
+            <view>下一步</view>
+          </view>
+        </block>
+
+        <view class='under-area'></view>
+      </view>
+    </view>
+  </block>
+</view>

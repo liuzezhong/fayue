@@ -1,0 +1,64 @@
+<!--pages/discover/list/list.wxml-->
+<block wx:if="{{activityList != null}}">
+
+  <block wx:for="{{activityList}}">
+    <view class='activity-plate' bindtap='bindActivityDetail' data-activityid='{{item.activityId}}'>
+      <view class='image'>
+        <image src='{{item.imageUrl}}' mode='aspectFill'></image>
+      </view>
+
+      <view class='title'>
+        <text>{{item.activityName}}</text>
+      </view>
+
+      <view class='intro'>
+        <text>{{item.activityDesc}}</text>
+      </view>
+
+      <view class='line'></view>
+
+      <view class='basic-info'>
+        <view class='time'>
+          <image src='/image/refush.png'></image>
+          <text>{{item.startTime}}-{{item.endTime}}</text>
+        </view>
+        <block wx:if="{{item.state == 1}}">
+          <view class='status-underway'>
+            <text>进行中</text>
+          </view>
+        </block>
+        <block wx:elif="{{item.state == 2}}">
+          <view class='status-end'>
+            <text>已结束</text>
+          </view>
+        </block>
+        <block wx:elif="{{item.state == 9}}">
+          <view class='status-unstart'>
+            <text>未开始</text>
+          </view>
+        </block>
+      </view>
+    </view>
+
+  </block>
+
+
+  <view class='bottom-line'>
+    <view class='bottom-line-content'>
+      <block wx:if="{{getAllArtice == false}}">
+        <text>上拉查看更多精彩</text>
+      </block>
+      <block wx:else>
+        <view class='bottom-line-left'></view>
+        <text>喂喂，我是有底线的！</text>
+        <view class='bottom-line-right'></view>
+      </block>
+    </view>
+  </view>
+
+</block>
+
+<block wx:else>
+
+
+</block>

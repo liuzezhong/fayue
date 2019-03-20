@@ -1,0 +1,104 @@
+/* pages/discover/sign/sign.wxss */
+
+.title {
+  margin-top: 50rpx;
+  margin-left: 30rpx;
+  margin-bottom: 50rpx;
+  color: #000;
+  font-size: 38rpx;
+}
+
+.main {
+  width: 690rpx;
+  height: 100%;
+  margin-left: 30rpx;
+  box-shadow:0rpx 4rpx 10rpx 0rpx rgba(0, 0, 0, 0.2);
+  border-radius:10rpx;
+  border-top: 5rpx solid #FFD900;
+}
+
+.input-group {
+  margin: 60rpx 30rpx 60rpx 30rpx;
+}
+
+.input-line {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60rpx;
+}
+
+.line-icon {
+  width: 35rpx;
+  height: 35rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.line-icon image{
+  width: 35rpx;
+  height: 35rpx;
+}
+
+.line-text {
+  font-size: 32rpx;
+  color: #333;
+  margin-left: 15rpx;
+}
+
+.line-input {
+  border: 1rpx solid #DEDEDE;
+  margin-left: 30rpx;
+  width: 400rpx;
+  height: 75rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.line-input input{
+  margin-left: 20rpx;
+  font-size: 28rpx;
+  color: #333;
+  width: 100%;
+}
+
+.input-placeholder {
+  color: #808080;
+  font-size: 28rpx;
+}
+
+.input-button {
+  margin-top: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-button button{
+  width: 366rpx;
+  height: 75rpx;
+  background-color: #FFD900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 37rpx;
+  border: 0rpx;
+}
+
+button::after {
+  border: 0rpx;
+}
+
+.sign-success {
+  width: 750rpx;
+  height: 1134rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-success image{
+  width: 750rpx;
+  height: 1134rpx;
+}

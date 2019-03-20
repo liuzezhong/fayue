@@ -1,0 +1,474 @@
+/* pages/discover/expense/index/index.wxss */
+
+/* page {
+  background-color: #ff5426;
+} */
+
+.setPage {
+  background-color: #ff5426;
+}
+
+.page {
+  display: block;
+  min-height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.top-part {
+  width: 750rpx;
+  height: 726rpx;
+  /* background-image: url('http://imgbj.xianshikeji.com/315toppart.png'); */
+  background-image: url('http://imgbj.xianshikeji.com/315topbackground.jpg');
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.under-part {
+  width: 750rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rules-button {
+  width: 128rpx;
+  height: 57rpx;
+  background-color: #ffd200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30rpx;
+  margin-top: 26rpx;
+  margin-left: 600rpx;
+}
+
+.rules-button text {
+  color: white;
+  font-size: 22rpx;
+  font-weight: bold;
+}
+
+.main-title {
+  margin-top: 489rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.main-title .content {
+  color: #fff;
+  font-size: 30rpx;
+}
+
+.main-title .number {
+  height: 40rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  color: #f55;
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+
+.instructions {
+  width: 690rpx;
+  height: 320rpx;
+  background-color: white;
+  margin-top: -80rpx;
+  border-radius: 10rpx;
+}
+
+.specialty-area {
+  display: flex;
+  align-items: center;
+  width: 630rpx;
+  margin-left: 30rpx;
+  margin-top: 40rpx;
+  justify-content: space-around;
+}
+
+.specialty-area .group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.specialty-area .group .image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.specialty-area .group .image image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.specialty-area .group .content {
+  color: #333;
+  font-size: 24rpx;
+  margin-top: 20rpx;
+  text-align: center;
+  font-weight: bold;
+}
+
+.special-color {
+  color: #ff3e3e;
+}
+
+.join-button {
+  color: #fff;
+  font-size: 40rpx;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffd600;
+  width: 500rpx;
+  height: 100rpx;
+  border-radius: 45rpx;
+  margin-top: -50rpx;
+}
+
+.support-info {
+  margin-top: 80rpx;
+  width: 690rpx;
+  margin-left: 30rpx;
+}
+
+.support-info .title {
+  color: white;
+  font-weight: bold;
+  font-size: 24rpx;
+}
+
+.support-info .group {
+  margin-top: 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.support-info .group .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50rpx;
+  margin-bottom: 25rpx;
+}
+
+.support-info .group .content image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.support-info .group .content text {
+  color: #fff;
+  font-size: 24rpx;
+  margin-left: 13rpx;
+}
+
+.personal-center {
+  width: 750rpx;
+}
+
+.personal-header {
+  background-image: url('http://imgbj.xianshikeji.com/tuiyuan@2x.png');
+  background-size: 100% 100%;
+  width: 750rpx;
+  height: 398rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.personal-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.personal-info-image {
+  width: 100rpx;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rpx;
+}
+
+.personal-info-image image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 100%;
+  border: 2rpx solid #fff;
+}
+
+.personal-info-name {
+  color: white;
+  font-size: 24rpx;
+  margin-top: 10rpx;
+  font-weight: bold;
+}
+
+.personal-money {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  margin-top: 30rpx;
+}
+
+.personal-money-title {
+  font-size: 24rpx;
+}
+
+.personal-money-number {
+  margin-top: 10rpx;
+  font-size: 88rpx;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.apply-entrance {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 690rpx;
+  margin-top: -330rpx;
+}
+
+.apply-entrance-text {
+  font-size: 24rpx;
+  color: white;
+}
+
+.apply-entrance-image {
+  width: 14rpx;
+  height: 23rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10rpx;
+}
+
+.apply-entrance image {
+  width: 12rpx;
+  height: 20rpx;
+}
+
+.ad-area {
+  width: 690rpx;
+  height: 140rpx;
+  margin-top: 56rpx;
+  margin-left: 30rpx;
+  border-radius: 66rpx;
+}
+
+.ad-area swiper {
+  width: 690rpx;
+  margin-top: 30rpx;
+  height: 140rpx;
+}
+
+.ad-info {
+  width: 690rpx;
+  height: 140rpx;
+  border-radius: 66rpx;
+  background: #000;
+}
+
+.ad-info image{
+  width: 690rpx;
+  height: 140rpx;
+  border-radius: 66rpx;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+}
+
+.ad-info-app {
+  width: 690rpx;
+  height: 140rpx;
+  border-radius: 66rpx;
+}
+
+.ad-info-app image {
+  width: 690rpx;
+  height: 140rpx;
+  border-radius: 66rpx;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.ad-area image {
+  /* width: 690rpx;
+  height: 140rpx;
+  border-radius: 66rpx;
+  opacity: 0.4;
+  filter: alpha(opacity=40); */
+}
+
+.tasks-area {
+  margin-top: 60rpx;
+  width: 690rpx;
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.tasks-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.tasks-title-icon {
+  width: 8rpx;
+  height: 35rpx;
+  background: rgba(255, 84, 38, 1);
+  border-radius: 2rpx;
+}
+
+.tasks-title-text {
+  color: #333;
+  font-size: 34rpx;
+  font-weight: bold;
+  margin-left: 10rpx;
+}
+
+.tasks-list {
+  margin-top: 40rpx;
+}
+
+.tasks-main {
+  width: 690rpx;
+  height: 180rpx;
+  border-radius: 10rpx;
+  margin-bottom: 40rpx;
+  display: flex;
+  align-items: center;
+}
+
+.ad-info-clone {
+  position: relative;
+  top: -151rpx;
+  z-index: 10;
+  color: white;
+  width: 690rpx;
+  height: 140rpx;
+  left: 0rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 66rpx;
+  font-size: 38rpx;
+  font-weight: bold;
+}
+
+.tasks-mainA {
+  background-image: url('http://imgbj.xianshikeji.com/renwi1@2x.png');
+  background-size: 100% 100%;
+}
+
+.tasks-mainB {
+  background-image: url('http://imgbj.xianshikeji.com/renwi2@2x.png');
+  background-size: 100% 100%;
+}
+
+.tasks-mainC {
+  background-image: url('http://imgbj.xianshikeji.com/renwi3@2x.png');
+  background-size: 100% 100%;
+}
+
+.tasks-content-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 170rpx;
+  width: 340rpx;
+}
+
+.tasks-content-info .tasks-main-title {
+  color: white;
+  font-weight: bold;
+  font-size: 34rpx;
+}
+
+.tasks-content-info .tasks-sub-title {
+  color: white;
+  font-size: 24rpx;
+  margin-top: 15rpx;
+}
+
+.tasks-button {
+  width: 140rpx;
+  height: 52rpx;
+  border: 2rpx solid rgba(255, 255, 255, 1);
+  border-radius: 26rpx;
+  color: white;
+  font-size: 24rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-background {
+  min-height: 100%;
+  width: 100%;
+  
+  z-index: 1;
+}
+
+.shortcuts {
+  color: #0054FF;
+  font-size: 26rpx;
+  margin-top: 10rpx;
+  width: 750rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shortcuts-cancel {
+  margin-right: 20rpx;
+}
+
+.shortcuts-customer {
+  margin-left: 20rpx;
+}
+
+.shortcuts-customer button{
+  display: flex;
+  align-items: center;
+  color: #0054FF;
+  font-size: 26rpx;
+  border: 0rpx;
+  background-color: white;
+  padding: 0rpx;
+}
+
+.shortcuts-customer button::after{
+  border: 0rpx;
+}
+
+.shortcuts-line {
+  width: 1rpx;
+  height: 25rpx;
+  background-color: #E6E6E6;
+}

@@ -1,0 +1,82 @@
+<!--pages/discover/expense/share/share.wxml-->
+
+<view class='header-image'>
+  <view class='header-rule' bindtap='bindRule'>
+    <text>规则</text>
+  </view>
+</view>
+
+<view class='share-info'>
+  每成功邀请
+  <text class='special-text'>1</text>位好友，奖励
+  <text class='special-text'>500元</text>保障金
+</view>
+
+<view class='share-button'>
+  <form bindsubmit="formSubmit" report-submit="true">
+    <button formType="submit" class='btn' open-type='share'>
+      立即邀请好友
+    </button>
+  </form>
+</view>
+
+<view class='strategy'>
+  <view class='strategy-title'>
+    <text>邀请攻略</text>
+  </view>
+  <view class='strategy-content'>
+    <view class='strategy-content-area'>
+      <view class='strategy-content-area-image'>
+        <image src='http://imgbj.xianshikeji.com/step1@2x.png'></image>
+      </view>
+      <view class='strategy-content-area-text'>
+        <text>点击按钮
+        分享好友</text>
+      </view>
+    </view>
+
+    <view class='strategy-content-area'>
+      <view class='strategy-content-area-image'>
+        <image src='http://imgbj.xianshikeji.com/step2@2x.png'></image>
+      </view>
+      <view class='strategy-content-area-text'>
+        <text>好友接受
+        您的邀请</text>
+      </view>
+    </view>
+
+    <view class='strategy-content-area'>
+      <view class='strategy-content-area-image'>
+        <image src='http://imgbj.xianshikeji.com/step3@2x.png'></image>
+      </view>
+      <view class='strategy-content-area-text'>
+        <text>好友成功
+        领取保障金</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<block wx:if="{{invitArray != null}}">
+  <view class='share-record'>
+    <view class='share-record-info'>
+      已成功邀请<text class='special-text'>{{invitFriend}}</text>位好友，累计获得<text class='special-text'>{{invitSumMoney}}元</text>保障金！
+    </view>
+    <view class='scroll-views'>
+
+      <block wx:for="{{invitArray}}">
+        <view class='share-record-content'>
+          <view class='share-record-content-header'>
+            <image src='{{item.portrait}}'></image>
+          </view>
+          <view class='share-record-content-name'>
+            <text>{{item.nickName}}</text>
+          </view>
+        </view>
+      </block>
+
+    </view>
+  </view>
+</block>
+
+<view class='under-area'></view>

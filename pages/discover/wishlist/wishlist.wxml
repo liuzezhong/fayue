@@ -1,0 +1,68 @@
+<view class='main'>
+  <view class='prize-info-father'>
+    <view class='prize-info'>
+      <view class='decorate'>
+        <image src='/image/star@2x.png'></image>
+      </view>
+      <view class='prize-info-image'>
+        <image src='{{awardInfo.imgUrl}}' mode='aspectFill'></image>
+      </view>
+      <view class='prize-info-value'>
+        <view class='info-value-name'>
+          <text>{{awardInfo.awardName}}</text>
+        </view>
+        <view class='info-value-line'></view>
+        <view class='info-value-number'>
+          <text>门槛能量值：{{awardInfo.energy}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='prize-number'>
+      <text>剩余礼物数：{{awardNumber}}</text>
+      <text>已有{{awardInfo.userNumber}}人许愿</text>
+    </view>
+  </view>
+
+  <view class='completeList'>
+    <block wx:if="{{winningNumber != 0}}">
+      <view class='completeList-title'>
+      <view class='left'>
+        <image src='/image/laba@2x.png'></image>
+        <text>他们都完成心愿啦</text>
+      </view>
+      <view class='right'>
+        <text>已有{{winningNumber}}人完成</text>
+      </view>
+    </view>
+
+    <view class='completeList-userlist'>
+      <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
+        <block wx:for="{{successRanking}}">
+          <image src='{{item.authorAvatar}}' bindtap="bindUserEnergy" data-id='{{item.id}}'></image>
+        </block>
+      </scroll-view>
+    </view>
+    </block>
+    
+
+    <view class='completeList-nowlist'>
+      <view class='completeList-nowlist-header'>
+        <image src='http://imgbj.xianshikeji.com/wishiing@2x.png'></image>
+      </view>
+      <block wx:for="{{rankList}}">
+      <view class='nowlist-line' bindtap="bindUserEnergy" data-id='{{item.id}}'>
+        <view class='left'>
+          <image src='{{item.authorAvatar}}'></image>
+          <text>{{item.authorName}}</text>
+        </view>
+        <view class='right'>
+          <text class='number'>{{item.voteNum}}</text>
+          <text class='china'>能量值</text>
+        </view>
+      </view>
+      </block>
+    </view>
+  </view>
+</view>
+
+<view class='under-area'></view>

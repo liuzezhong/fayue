@@ -1,0 +1,10 @@
+<!--pages/discover/image/image.wxml-->
+<view class='main'>
+  <view class='image'>
+    <image src='{{url}}' mode='aspectFill'></image>
+  </view>
+
+  <view class='save-button' bindtap='bindSaveImage'>
+    <text>保存到相册</text>
+  </view>
+</view>

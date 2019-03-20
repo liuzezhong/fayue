@@ -1,0 +1,141 @@
+<!--pages/discover/expense/detail/detail.wxml-->
+<view class='detail'>
+  <view class='detail-status'>
+    <!-- 审核失败 -->
+    <block wx:if="{{recordDetail.state == 1}}">
+      <view class='detail-status-image'>
+        <image src='http://imgbj.xianshikeji.com/shzt2@2x.png'></image>
+      </view>
+      <view class='detail-status-name-fail'>
+        <text>审核未通过</text>
+      </view>
+      <view class='detail-status-fail-reason'>
+        <text>{{recordDetail.cause}}</text>
+      </view>
+    </block>
+    <block wx:elif="{{recordDetail.state == 0}}">
+      <view class='detail-status-image'>
+        <image src='http://imgbj.xianshikeji.com/shzt1@2x.png'></image>
+      </view>
+      <view class='detail-status-name-loading'>
+        <text>正在审核中</text>
+      </view>
+    </block>
+    <block wx:elif="{{recordDetail.state == 2}}">
+      <view class='detail-status-image'>
+        <image src='http://imgbj.xianshikeji.com/shzt3@2x.png'></image>
+      </view>
+      <view class='detail-status-name-success'>
+        <text>审核通过</text>
+      </view>
+    </block>
+    <block wx:elif="{{recordDetail.state == 3}}">
+      <view class='detail-status-image'>
+        <image src='http://imgbj.xianshikeji.com/shzt4@2x.png'></image>
+      </view>
+      <view class='detail-status-name-ojbk'>
+        <text>已报销</text>
+      </view>
+    </block>
+    <block wx:elif="{{recordDetail.state == 4}}">
+      <view class='detail-status-image'>
+        <image src='http://imgbj.xianshikeji.com/cancel@2x.png'></image>
+      </view>
+      <view class='detail-status-name-ojbk'>
+        <text>已取消</text>
+      </view>
+    </block>
+
+
+  </view>
+
+  <view class='form-group'>
+    <view class='form-line'>
+      <view class='form-line-title'>
+        <text>申请人</text>
+      </view>
+      <view class='form-line-content'>
+        <text>{{recordDetail.nickname}}</text>
+      </view>
+    </view>
+
+    <view class='form-line'>
+      <view class='form-line-title'>
+        <text>手机号码</text>
+      </view>
+      <view class='form-line-content'>
+        <text>{{recordDetail.mobile}}</text>
+      </view>
+    </view>
+
+    <view class='form-line form-group-no-bottom'>
+      <view class='form-line-title'>
+        <text>申请日期</text>
+      </view>
+      <view class='form-line-content'>
+        <text>{{recordDetail.createdTime}}</text>
+      </view>
+    </view>
+
+    <view class='from-group-rule'></view>
+
+    <view class='form-line'>
+      <view class='form-line-title'>
+        <text>律兜订单号</text>
+      </view>
+      <view class='form-line-content'>
+        <text>{{recordDetail.orderId}}</text>
+      </view>
+    </view>
+    <view class='form-line'>
+      <view class='form-line-title'>
+        <text>订单类型</text>
+      </view>
+      <view class='form-line-content'>
+        <text>{{recordDetail.orderType}}</text>
+      </view>
+    </view>
+
+    <view class='form-line'>
+      <view class='form-line-title'>
+        <text>订单金额</text>
+      </view>
+      <view class='form-line-content'>
+        <text>{{recordDetail.orderAmount}}元</text>
+      </view>
+    </view>
+
+    <view class='form-line form-group-no-bottom'>
+      <view class='form-line-title'>
+        <text>可报销金额</text>
+      </view>
+      <view class='form-line-content apply-number'>
+        <text>{{recordDetail.expenseAmount}}元</text>
+      </view>
+    </view>
+
+    <view class='from-group-rule'></view>
+
+    <view class='form-describe'>
+      <view class='form-describe-title'>
+        <text>事件描述：</text>
+      </view>
+      <view class='form-describe-content'>
+        <text>{{recordDetail.orderDescription}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='shortcuts'>
+    <block wx:if="{{recordDetail.state == 0}}">
+      <view class='shortcuts-cancel' bindtap='bindCancel'>
+        <text>取消申请</text>
+      </view>
+      <view class='shortcuts-line'></view>
+    </block>
+
+    <view class='shortcuts-customer'>
+      <button open-type="contact">联系客服</button>
+    </view>
+  </view>
+  <view class='under-area'></view>
+</view>

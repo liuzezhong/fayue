@@ -1,0 +1,248 @@
+/* pages/discover/expense/run/run.wxss */
+
+.header-image {
+  margin-left: 30rpx;
+  width: 690rpx;
+  height: 200rpx;
+  background-image: url('http://imgbj.xianshikeji.com/-s-yundong@2x.png');
+  background-size: 100% 100%;
+  margin-top: 40rpx;
+}
+
+.header-rule {
+  width: 75rpx;
+  height: 40rpx;
+  background: rgba(255, 167, 0, 1);
+  color: white;
+  font-size: 24rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 20rpx;
+  border-bottom-left-radius: 20rpx;
+  position: relative;
+  top: 20rpx;
+  left: 616rpx;
+}
+
+.run-number {
+  margin-left: 215rpx;
+  margin-top: 80rpx;
+  width: 320rpx;
+  height: 320rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.run-number-unfinished {
+  background-image: url('http://imgbj.xianshikeji.com/jishuyuanquan@2x.png');
+  background-size: 100% 100%;
+}
+
+.run-number-finished {
+  background-image: url('http://imgbj.xianshikeji.com/green-sp@2x.png');
+  background-size: 100% 100%;
+}
+
+.run-number-title {
+  color: #999;
+  font-size: 30rpx;
+}
+
+.run-number-text {
+  color: #2db54a;
+  font-size: 72rpx;
+  font-weight: bold;
+  margin-top: 15rpx;
+  margin-bottom: 15rpx;
+}
+
+.run-number-text-unfinished {
+  color: #ffa600;
+  font-size: 72rpx;
+  font-weight: bold;
+}
+
+.run-number-objective {
+  color: #999;
+  font-size: 32rpx;
+}
+
+.run-data {
+  margin-top: 67rpx;
+  color: #333;
+  font-size: 30rpx;
+  text-align: center;
+}
+
+.special-text {
+  color: #ffa600;
+  font-weight: bold;
+}
+
+.run-button {
+  width: 500rpx;
+  height: 100rpx;
+  background: linear-gradient(0deg, rgba(255, 164, 0, 1) 0%, rgba(255, 215, 0, 1) 100%);
+  border-radius: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40rpx;
+  color: white;
+  font-weight: bold;
+  margin-top: 30rpx;
+  margin-left: 125rpx;
+}
+
+.run-button-unclick {
+  background: #FFDF7F;
+}
+
+.run-record {
+  width: 690rpx;
+  margin-left: 30rpx;
+  margin-top: 60rpx;
+}
+
+.run-record-line {
+  width: 690rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #e6e6e6;
+}
+
+.run-record-line-left {
+  padding-left: 30rpx;
+  width: 450rpx;
+  color: #808080;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+}
+
+.run-record-line-right {
+  width: 240rpx;
+  color: #ffa600;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-weight: bold;
+  padding-right: 30rpx;
+}
+
+.run-record-noline {
+  border: 0rpx;
+}
+
+.run-marks {
+  z-index: 666;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.8;
+  position: fixed;
+  left: 0rpx;
+  top: 0rpx;
+}
+
+.run-bullet {
+  width: 750rpx;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  z-index: 999;
+  top: 0rpx;
+  left: 0rpx;
+}
+
+.run-bullet .main {
+  width: 620rpx;
+  height: 720rpx;
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('http://imgbj.xianshikeji.com/bgf@2x.png');
+  background-size: 100% 100%;
+}
+
+.run-bullet .main .close-bullet {
+  width: 570rpx;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30rpx;
+}
+
+.run-bullet .main .close-bullet image {
+  width: 25rpx;
+  height: 25rpx;
+}
+
+.run-main-title {
+  margin-top: 10rpx;
+  text-align: center;
+  color: white;
+  font-size: 54rpx;
+  font-weight: bold;
+}
+
+.run-main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 165rpx;
+  margin-left: 20rpx;
+  width: 570rpx;
+}
+
+.run-main-content-subtitle {
+  color: white;
+  font-size: 22rpx;
+}
+
+.run-main-content-maintitle {
+  color: white;
+  font-size: 100rpx;
+  font-weight: bold;
+  margin-top: -10rpx;
+}
+
+.run-main-content-specialtext {
+  font-size: 30rpx;
+  font-weight: normal;
+}
+
+.run-main-double-button {
+  width: 450rpx;
+  height: 100rpx;
+  background: linear-gradient(0deg, rgba(255, 164, 0, 1) 0%, rgba(255, 215, 0, 1) 100%);
+  border-radius: 50rpx;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40rpx;
+  font-weight: bold;
+  margin-top: 70rpx;
+  border: 0rpx;
+}
+
+.run-main-double-button::after {
+  border: 0rpx;
+}
+
+
+.run-main-button-text {
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  text-align: center;
+  color: white;
+}

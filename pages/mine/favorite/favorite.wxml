@@ -1,0 +1,160 @@
+<!--pages/mine/favorite/favorite.wxml-->
+
+<block wx:if="{{hasData != null}}">
+<block wx:if="{{favoriteWikiList != null}}">
+  <view class='favorite-button'>
+    <view class='search-results-line'>
+      <view class='search-results-header' bindtap='bindChangeType'>
+        <view class='results-header'>
+          <view class='title'>
+            <view class='content'>
+              <text>百科</text>
+            </view>
+            <view class='icon'>
+              <block wx:if='{{articleType == 0}}'>
+                <image src='/image/select@2x.png'></image>
+              </block>
+            </view>
+          </view>
+        </view>
+        <view class='results-number'>
+          <text>({{wikiNum}})</text>
+        </view>
+      </view>
+
+
+      <view class='search-results-header' bindtap='bindChangeType'>
+        <view class='results-header'>
+          <view class='title'>
+            <view class='content'>
+              <text>专题</text>
+            </view>
+            <view class='icon'>
+              <block wx:if='{{articleType == 1}}'>
+                <image src='/image/select@2x.png'></image>
+              </block>
+            </view>
+          </view>
+        </view>
+        <view class='results-number'>
+          <text>({{subjectNum}})</text>
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+
+  <block wx:if="{{articleType == 1}}">
+    <view class='article-list-disorderly'>
+      <block wx:for="{{favoriteSubjectList}}" wx:key="*this">
+        <view class='hot-line' data-article_id='{{item.articleId}}' data-subject_id='{{item.subjectId}}' bindtap='bindSubjectDetail'>
+          <view class='hot-line-father'>
+            <view class='hot-line-left'>
+              <view class='hot-title-line'>
+                <text>{{item.articleTitle}}</text>
+              </view>
+              <view class='data-line'>
+                <view class='view'>
+                  <image src='/image/icon_view@2x.png'></image>
+                  <text>{{item.browseNum}}</text>
+                </view>
+                <view class='like'>
+                  <image src='/image/icon_like@2x.png'></image>
+                  <text>{{item.diggNum}}</text>
+                </view>
+              </view>
+            </view>
+            <view class='hot-line-right'>
+              <image src='{{item.articleImg}}'></image>
+            </view>
+          </view>
+          <block wx:if="{{favoriteSubjectList[index+1]}}">
+            <view class='wiki-line'></view>
+          </block>
+        </view>
+      </block>
+      <block wx:if="{{getAllArtice == false}}">
+        <view class='bottom-line'>
+          <view class='bottom-line-content'>
+            <text>上拉加载更多</text>
+          </view>
+        </view>
+      </block>
+      <block wx:else>
+        <view class='bottom-line'>
+          <view class='bottom-line-left'></view>
+          <view class='bottom-line-content'>
+            <text>到底啦，再去收藏一点吧！</text>
+          </view>
+          <view class='bottom-line-right'></view>
+        </view>
+      </block>
+
+    </view>
+  </block>
+  <block wx:else>
+    <view class='recommend-list'>
+      <block wx:for="{{favoriteWikiList}}" wx:key="*this">
+        <view class='wiki-list' data-article_id='{{item.articleId}}' bindtap='bindArticle'>
+          <view class='label-line'>
+            <view class='label-line-kind'>
+              <text>#{{item.categoryName}}</text>
+            </view>
+            <view class='label-line-time'>
+
+            </view>
+          </view>
+          <view class='title-line'>
+            <text>{{item.articleTitle}}</text>
+          </view>
+          <view class='data-line'>
+            <view class='view'>
+              <image src='/image/icon_view@2x.png'></image>
+              <text>{{item.browseNum}}</text>
+            </view>
+            <view class='like'>
+              <image src='/image/icon_like@2x.png'></image>
+              <text>{{item.diggNum}}</text>
+            </view>
+          </view>
+        </view>
+        <block wx:if="{{favoriteWikiList}}">
+          <view class='wiki-line'></view>
+        </block>
+      </block>
+      <block wx:if="{{getAllArtice == false}}">
+        <view class='bottom-line'>
+          <view class='bottom-line-content'>
+            <text>上拉加载更多</text>
+          </view>
+        </view>
+      </block>
+      <block wx:else>
+        <view class='bottom-line'>
+          <view class='bottom-line-left'></view>
+          <view class='bottom-line-content'>
+            <text>到底啦，再去收藏一点吧！</text>
+          </view>
+          <view class='bottom-line-right'></view>
+        </view>
+      </block>
+    </view>
+  </block>
+
+  <!-- <view class='bottom-line'>
+    <view class='bottom-line-left'></view>
+    <view class='bottom-line-content'>
+      <text>到底啦，再去收藏一点吧~</text>
+    </view>
+    <view class='bottom-line-right'></view>
+  </view> -->
+</block>
+
+<block wx:else>
+  <view class='no-favorite'>
+    <image src='/image/Nocollection@2x.png'></image>
+    <text>收藏夹里空空如也~</text>
+  </view>
+</block>
+</block>

@@ -1,0 +1,226 @@
+<!--pages/special/list/list.wxml-->
+<block wx:if="{{specialDetail != null}}">
+
+
+
+
+  <view class='header'>
+    <view class='header-image'>
+      <image src='{{specialDetail.subjectPic}}'></image>
+    </view>
+    <!-- <view class='header-order'>
+      <block wx:if="{{order != 0}}">
+        <form bindsubmit="formSubmit" bindreset="formReset" report-submit="true">
+          <image src='/image/Subscriptionsuccess@2x.png'></image>
+        </form>
+      </block>
+      <block wx:else>
+        <form bindsubmit="formSubmit" bindreset="formReset" report-submit="true">
+          <image src='/image/subscription@2x.png'></image>
+          <button formType="submit">Submit</button>
+        </form>
+      </block>
+    </view> -->
+    <view class='header-title'>
+      <view class='header-title-text'>
+        <text>{{specialDetail.subjectName}}</text>
+      </view>
+      <!-- <view class='header-title-share' bindtap='bindShare'> -->
+      <view class='header-title-share' bindtap='bindShareMarks'>
+        <block wx:if="{{share}}">
+          <!-- <button class='share-button' open-type='share'>
+            
+          </button> -->
+          <image src='/image/icon_share_hover@2x.png'></image>
+        </block>
+        <block wx:else>
+          <!-- <button class='share-button' open-type='share'>
+            
+          </button> -->
+          <image src='/image/icon_share@2x.png'></image>
+
+        </block>
+      </view>
+    </view>
+    <view class='header-introduce'>
+      <text>{{specialDetail.subjectComment}}</text>
+    </view>
+  </view>
+
+  <!-- <view class='coarse-line'></view>
+<block wx:if="{{specialDetail.subjectType == 0}}">
+  <view class='article-list-orderly'>
+    <block wx:for="{{specialList}}">
+      <view class='article-line' bindtap='bindDetail' data-article_id='{{item.articleId}}' data-subject_id='{{item.subjectId}}'>
+        <view class='origin'>
+          <image src='/image/round@2x.png'></image>
+        </view>
+        <view class='article-line-point'>
+        </view>
+        <view class='article-line-main'>
+          <view class='subtitle'>
+            <text>{{item.subtitle}}</text>
+          </view>
+          <view class='article-line-title'>
+            <text>{{item.articleTitle}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</block>
+<block wx:else>
+
+  <view class='article-list-disorderly'>
+    <block wx:for="{{specialList}}">
+      <view class='hot-line' bindtap='bindDetail' data-article_id='{{item.articleId}}' data-subject_id='{{item.subjectId}}'>
+        <view class='hot-line-father'>
+          <view class='hot-line-left'>
+            <view class='hot-title-line'>
+              <text>{{item.articleTitle}}</text>
+            </view>
+            <view class='data-line'>
+              <view class='view'>
+                <image src='/image/icon_view@2x.png'></image>
+                <text>{{item.articleView}}</text>
+              </view>
+              <view class='like'>
+                <image src='/image/icon_like@2x.png'></image>
+                <text>{{item.articleLike}}</text>
+              </view>
+            </view>
+          </view>
+          <view class='hot-line-right'>
+            <image src='/image/home_banner@2x.png'></image>
+          </view>
+        </view>
+        <view class='wiki-line'></view>
+      </view>
+    </block>
+
+
+  </view>
+</block> -->
+
+  <view class='article-list-disorderly'>
+    <block wx:for="{{specialList}}">
+      <view class='hot-line' bindtap='bindDetail' data-article_id='{{item.articleId}}' data-subject_id='{{item.subjectId}}'>
+        <view class='hot-line-father'>
+          <view class='hot-line-left'>
+            <view class='hot-title-line'>
+              <text>{{item.articleTitle}}</text>
+            </view>
+            <view class='data-line'>
+              <view class='view'>
+                <image src='/image/icon_view@2x.png'></image>
+                <text>{{item.articleView}}</text>
+              </view>
+              <view class='like'>
+                <image src='/image/icon_like@2x.png'></image>
+                <text>{{item.articleLike}}</text>
+              </view>
+            </view>
+          </view>
+          <view class='hot-line-right'>
+            <image src='{{item.articleImg}}'></image>
+          </view>
+        </view>
+        <block wx:if="{{specialList[index+1]}}">
+
+          <view class='wiki-line'></view>
+        </block>
+      </view>
+    </block>
+
+
+  </view>
+
+
+  <view class='project-recommend'>
+    <view class='project-line'></view>
+    <view class='project-header'>
+      <view class='project-header-title'>
+        <view class='project-header-title-view'></view>
+        <text>猜您喜欢</text>
+      </view>
+
+    </view>
+    <view class='project-main'>
+      <scroll-view class="scroll-view_H" scroll-x="true">
+        <block wx:for="{{speciaRecommendlList}}" wx:key="*this">
+          <view class="view-item" data-subject_id='{{item.subjectId}}' bindtap='bindSubjectList'>
+            <view class='project-list'>
+              <view class='project-list-image'>
+                <image src='{{item.subjectPic}}'></image>
+              </view>
+              <view class='project-list-title'>
+                <text>{{item.subjectName}}</text>
+              </view>
+            </view>
+          </view>
+        </block>
+
+
+      </scroll-view>
+    </view>
+    <view class='project-line'></view>
+  </view>
+  <block wx:if="{{getAllList == false}}">
+    <view class='bottom-line'>
+      <!-- <view class='bottom-line-left'></view> -->
+      <view class='bottom-line-content'>
+        <text>上拉加载更多</text>
+      </view>
+      <!-- <view class='bottom-line-right'></view> -->
+    </view>
+  </block>
+  <block wx:else>
+    <view class='bottom-line'>
+      <view class='bottom-line-left'></view>
+      <view class='bottom-line-content'>
+        <text>喂喂，法律都是有底线的！</text>
+      </view>
+      <view class='bottom-line-right'></view>
+    </view>
+  </block>
+</block>
+
+
+<block wx:if="{{sharemarks == 1}}">
+  <view class='marks' bindtap='closeMarks'></view>
+  <view class='share-choose'>
+    <view class='share-choose-main'>
+      <button class='special-button' open-type="share">
+        <view class='main-icon'>
+          <image src='/image/icon_wechat@2x.png'></image>
+          <text>分享微信好友</text>
+        </view>
+
+      </button>
+
+      <button class='special-button' bindtap='previewImageShow'>
+        <view class='main-icon'>
+          <image src='/image/icon_image@2x.png'></image>
+          <text>生成分享海报</text>
+        </view>
+      </button>
+    </view>
+  </view>
+</block>
+
+<block wx:if="{{previewImage == 1}}">
+<view class="mask">
+
+  </view>
+  <view bindtap="hideAllChioce">
+    <view class='mask-image'>
+      <image src='{{specialDetail.cardPic}}'></image>
+    </view>
+    <view class='mask-button'>
+      <button catchtap='saveImage'>
+        <image src='/image/down.png'></image>
+        <text>保存图片</text>
+      </button>
+    </view>
+  </view>
+  </block>

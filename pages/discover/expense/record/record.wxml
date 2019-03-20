@@ -1,0 +1,55 @@
+<!--pages/discover/expense/record/record.wxml-->
+
+<block wx:if="{{recordArray != null}}">
+  <view class='record'>
+    <block wx:for="{{recordArray}}">
+      <view class='line' bindtap='bindDetail' data-id='{{item.reportId}}'>
+        <view class='money'>
+          <text>¥{{item.expenseAmount}}</text>
+        </view>
+        <view class='content'>
+          <view class='name'>
+            <text>{{item.orderType}}</text>
+          </view>
+          <view class='time'>
+            <text>{{item.createdTime}}</text>
+          </view>
+        </view>
+        <view class='status'>
+          <!-- 0审核中，1审核失败，2审核成功，3已报销 -->
+          <block wx:if="{{item.state == 0}}">
+            <image src='http://imgbj.xianshikeji.com/sh2@2x.png'></image>
+          </block>
+          <block wx:elif="{{item.state == 1}}">
+            <image src='http://imgbj.xianshikeji.com/sh3@2x.png'></image>
+          </block>
+          <block wx:elif="{{item.state == 2}}">
+            <image src='http://imgbj.xianshikeji.com/sh1@2x.png'></image>
+          </block>
+          <block wx:elif="{{item.state == 3}}">
+            <image src='http://imgbj.xianshikeji.com/sh4@2x.png'></image>
+          </block>
+          <block wx:elif="{{item.state == 4}}">
+            <image src='http://imgbj.xianshikeji.com/cancleicon@2x.png'></image>
+          </block>
+        </view>
+      </view>
+    </block>
+  </view>
+</block>
+
+<block wx:else>
+
+  <block wx:if="{{noRecord == 1}}">
+  
+    <view class='no-record'>
+      <view class='no-record-image'>
+        <image src='http://imgbj.xianshikeji.com/norecord@2x.png'></image>
+      </view>
+      <view class='no-record-text'>
+        <text>暂无申请记录</text>
+      </view>
+    </view>
+  </block>
+</block>
+<view class='under-area'></view>

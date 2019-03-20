@@ -1,0 +1,99 @@
+/* pages/mine/prize/prize.wxss */
+page {
+  background-color: #FFD900;
+}
+
+.main {
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 750rpx;
+  height: 1206rpx; */
+}
+
+.background {
+  margin-top: 6%;
+  margin-left: 40rpx;
+}
+
+.background image{
+  width: 681rpx;
+  height: 1104rpx;
+}
+
+.content-area {
+  width: 670rpx;
+  height: 1000rpx;
+  margin-left: 40rpx;
+  position: absolute;
+  top: 150rpx;
+  
+}
+
+.record-list {
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 560rpx;
+  margin-left: 55rpx;
+  height: 880rpx;
+}
+
+.record-line {
+  height: 215rpx;
+  width: 560rpx;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2rpx dashed #B5B5B5;
+  justify-content: center;
+}
+
+.record-title-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.record-title-text {
+  color: #222222;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.record-title-status {
+  color: #FE6F6B;
+  font-size: 30rpx;
+}
+
+.record-info-line {
+  margin-top: 10rpx;
+  font-size: 26rpx;
+  color: #666666;
+  display: flex;
+  flex-direction: column;
+  line-height: 46rpx;
+}
+
+.copyright-info {
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: #999999;
+  font-size: 20rpx;
+}
+
+.no-record {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 40rpx;
+  color: #2D2D2D;
+  font-weight: bold;
+  line-height: 80rpx;
+  margin-top: 300rpx;
+}

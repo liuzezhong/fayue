@@ -1,0 +1,71 @@
+/* pages/mine/order/order.wxss */
+
+.no-order {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 350rpx;
+}
+
+.no-order image{
+  width: 272rpx;
+  height: 224rpx;
+}
+
+.no-order-text {
+  color: #4D4D4D;
+  font-size: 30rpx;
+  margin-top: 50rpx;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250rpx;
+  height: 60rpx;
+  background-color: #FFD900;
+  color: #333333;
+  font-size: 32rpx;
+  border-radius: 30rpx;
+  margin-top: 127rpx;
+}
+
+.order-list {
+  width: 690rpx;
+  margin-left: 30rpx;
+  margin-top: 40rpx;
+  margin-bottom: 50rpx;
+}
+
+.special-line {
+  width: 690rpx;
+  height: 350rpx;
+  margin-bottom: 30rpx;
+}
+
+.special-line image{
+  width: 690rpx;
+  height: 350rpx;
+  border-radius: 15rpx;
+}
+
+.special-line-info {
+  width: 690rpx;
+  height: 350rpx;
+  background-color: #000000;
+  border-radius: 15rpx;
+  opacity: 0.4;
+  position: relative;
+  top: -361rpx;
+  left: rpx;
+}
+
+.special-line-info-content {
+  position: relative;
+  top: -420rpx;
+  left: 30rpx;
+  font-size: 32rpx;
+  color: #ffffff;
+}

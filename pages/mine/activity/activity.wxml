@@ -1,0 +1,75 @@
+<!--pages/mine/activity/activity.wxml-->
+<!-- <view class='activity-list'>
+  <view class='activity'>
+    <image src='http://wx4.sinaimg.cn/mw600/8ba37cc9ly1fxygqrot2cj21900u0qv5.jpg'></image>
+  </view>
+  <view class='activity-name'>
+    <view class='activity-title'>
+    </view>
+    <view class='activity-title-text'>
+      <text>大米的发生的发生</text>
+    </view>
+  </view>
+
+  <view class='activity'>
+    <image src='http://wx4.sinaimg.cn/mw600/8ba37cc9ly1fxygqrot2cj21900u0qv5.jpg'></image>
+  </view>
+  <view class='activity-name'>
+    <view class='activity-title'>
+    </view>
+    <view class='activity-title-text'>
+      <text>大米的发生的发生</text>
+    </view>
+  </view>
+
+  <view class='activity'>
+    <image src='http://wx4.sinaimg.cn/mw600/8ba37cc9ly1fxygqrot2cj21900u0qv5.jpg'></image>
+  </view>
+  <view class='activity-name'>
+    <view class='activity-title'>
+    </view>
+    <view class='activity-title-text'>
+      <text>大米的发生的发生</text>
+    </view>
+  </view>
+
+  <view class='activity'>
+    <image src='http://wx4.sinaimg.cn/mw600/8ba37cc9ly1fxygqrot2cj21900u0qv5.jpg'></image>
+  </view>
+  <view class='activity-name'>
+    <view class='activity-title'>
+    </view>
+    <view class='activity-title-text'>
+      <text>大米的发生的发生</text>
+    </view>
+  </view>
+
+  <view class='activity'>
+    <image src='http://wx4.sinaimg.cn/mw600/8ba37cc9ly1fxygqrot2cj21900u0qv5.jpg'></image>
+  </view>
+  <view class='activity-name'>
+    <view class='activity-title'>
+    </view>
+    <view class='activity-title-text'>
+      <text>大米的发生的发生</text>
+    </view>
+  </view>
+
+  <view class='activity'>
+    <image src='http://wx4.sinaimg.cn/mw600/8ba37cc9ly1fxygqrot2cj21900u0qv5.jpg'></image>
+  </view>
+  <view class='activity-name'>
+    <view class='activity-title'>
+    </view>
+    <view class='activity-title-text'>
+      <text>大米的发生的发生</text>
+    </view>
+  </view>
+</view>
+
+<view class='under-area'></view> -->
+
+<view class='no-favorite'>
+    <image src='/image/Nocollection@2x.png'></image>
+    <text>您还未参加任何活动哦~</text>
+  </view>

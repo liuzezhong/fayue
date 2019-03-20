@@ -1,0 +1,202 @@
+/* pages/discover/expense/invite/invite.wxss */
+page {
+  background-image: url('http://imgbj.xianshikeji.com/bgfm@2x.png');
+  background-position: 100%;
+  background-size: auto 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.invite {
+  width: 750rpx;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-image {
+  margin-top: 80rpx;
+  width: 620rpx;
+  height: 64rpx;
+}
+
+.title-image image {
+  width: 620rpx;
+  height: 64rpx;
+}
+
+.red-packet {
+  margin-top: 120rpx;
+  width: 600rpx;
+  height: 800rpx;
+  background-image: url('http://imgbj.xianshikeji.com/redpackter@2x.png');
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-image {
+  width: 108rpx;
+  height: 108rpx;
+  margin-top: -54rpx;
+}
+
+.user-image image {
+  width: 108rpx;
+  height: 108rpx;
+  border-radius: 100%;
+}
+
+.user-name {
+  color: white;
+  font-size: 26rpx;
+  margin-top: 5rpx;
+}
+
+.main-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30rpx;
+  color: #ffed8e;
+  font-size: 32rpx;
+}
+
+.money-info {
+  color: #ffed8e;
+  font-size: 135rpx;
+  font-weight: bold;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+}
+
+.money-info-sub {
+  color: #ffed8e;
+  font-size: 36rpx;
+}
+
+.instructions {
+  width: 450rpx;
+  color: #ffec86;
+  font-size: 22rpx;
+  line-height: 34rpx;
+}
+
+.instructions-text-blod {
+  font-weight: bold;
+  margin-bottom: 30rpx;
+}
+
+.instructions-time {
+  width: 450rpx;
+  color: #ffec86;
+  font-size: 22rpx;
+  margin-top: 15rpx;
+}
+
+.receive-money {
+  width: 500rpx;
+  height: 100rpx;
+  background: linear-gradient(0deg, rgba(255, 164, 0, 1) 0%, rgba(255, 215, 0, 1) 100%);
+  border-radius: 50rpx;
+  color: white;
+  font-size: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50rpx;
+}
+
+.receiver-data {
+  margin-top: 30rpx;
+  color: #ffed8e;
+  font-size: 22rpx;
+}
+
+.last-line {
+  color: #b59957;
+  font-size: 24rpx;
+  font-weight: bold;
+  margin-top: -190rpx;
+}
+
+.rules-button {
+  width: 85rpx;
+  height: 50rpx;
+  background: rgba(255, 237, 142, 1);
+  font-size: 24rpx;
+  color: #FB4226;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight:bold;
+  border-top-left-radius: 20rpx;
+  border-bottom-left-radius: 20rpx;
+  position: relative;
+  bottom: 700rpx;
+  left: 258rpx;
+}
+
+.decorate {
+  width: 221rpx;
+  height: 259rpx;
+  position: relative;
+  bottom: 230rpx;
+  left: 265rpx;
+}
+
+.decorate image {
+  width: 221rpx;
+  height: 259rpx;
+}
+
+.under-area {
+  width: 750rpx;
+  height: 300rpx;
+}
+
+.shortcuts {
+  color: #0054FF;
+  font-size: 24rpx;
+  margin-top: 30rpx;
+  width: 750rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shortcuts-cancel {
+  margin-right: 20rpx;
+}
+
+.shortcuts-customer {
+  margin-left: 20rpx;
+}
+
+.shortcuts-customer button{
+  display: flex;
+  align-items: center;
+  color: #0054FF;
+  font-size: 26rpx;
+  border: 0rpx;
+  background-color: white;
+  padding: 0rpx;
+}
+
+.shortcuts-customer button::after{
+  border: 0rpx;
+}
+
+.shortcuts-line {
+  width: 1rpx;
+  height: 25rpx;
+  background-color: #E6E6E6;
+}

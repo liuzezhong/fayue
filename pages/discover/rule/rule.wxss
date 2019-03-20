@@ -1,0 +1,71 @@
+/* pages/discover/rule/rule.wxss */
+
+page {
+  background-color: #ffd900;
+}
+
+.main {
+  margin-top: 80rpx;
+  width: 690rpx;
+  margin-left: 30rpx;
+  background: white;
+  border: 4rpx solid rgba(0, 0, 0, 1);
+  border-radius: 20rpx;
+  
+}
+
+.header {
+  width: 299rpx;
+  height: 98rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 195rpx;
+  margin-top: -49rpx;
+}
+
+.header image {
+  width: 299rpx;
+  height: 98rpx;
+}
+
+.main-line {
+  margin-top: 60rpx;
+  width: 620rpx;
+  margin-left: 35rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-line .title {
+  display: flex;
+  align-items: center;
+}
+
+.main-line .title .icon {
+  width: 24rpx;
+  height: 24rpx;
+  background: rgba(255, 217, 0, 1);
+  border-radius: 2rpx;
+}
+
+.main-line .title .text {
+  color: #111111;
+  font-size: 38rpx;
+  margin-left: 15rpx;
+}
+
+.main-line .content {
+  margin-top: 30rpx;
+  font-size:34rpx;
+  color: #333333;
+  line-height:64rpx;
+}
+
+.explain {
+  margin-top: 80rpx;
+  margin-bottom: 60rpx;
+  font-size: 20rpx;
+  color: #999999;
+  text-align: center;
+}

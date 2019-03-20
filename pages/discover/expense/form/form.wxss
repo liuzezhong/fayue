@@ -1,0 +1,131 @@
+/* pages/discover/expense/form/form.wxss */
+
+.form {
+  width: 690rpx;
+  margin-left: 30rpx;
+}
+
+.title {
+  color: #333;
+  font-size: 48rpx;
+  margin-top: 40rpx;
+  margin-bottom: 30rpx;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100rpx;
+  width: 690rpx;
+  border-bottom: 1rpx solid #e6e6e6;
+}
+
+.form-group-line .left-title {
+  color: #333;
+  font-size: 30rpx;
+  width: 200rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+}
+
+.form-group-line .input {
+  width: 490rpx;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-group-line .input input {
+  width: 460rpx;
+  height: 100rpx;
+  color: #333;
+  font-size: 30rpx;
+}
+
+.input-placeholder {
+  color: #b3b3b3;
+  font-size: 30rpx;
+}
+
+.form-group-no-bottom {
+  border: 0rpx;
+}
+
+.from-group-rule {
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  width: 750rpx;
+  height: 20rpx;
+  background-color: #f5f5f5;
+  margin-left: -30rpx;
+}
+
+.form-describe {
+  width: 600rpx;
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-describe-title {
+  color: #333;
+  font-size: 30rpx;
+}
+
+.form-describe-content {
+  width: 680rpx;
+  height: 240rpx;
+  background-color: #f5f5f5;
+  margin-top: 20rpx;
+  border: 1rpx solid #dbdbdb;
+  border-radius: 10rpx;
+}
+
+.form-describe-content textarea {
+  padding: 30rpx;
+  color: #333;
+  font-size: 30rpx;
+}
+
+.textarea-placeholder {
+  color: #b3b3b3;
+  font-size: 30rpx;
+}
+
+.form-submit-button {
+  width: 500rpx;
+  height: 100rpx;
+  background: linear-gradient(0deg, rgba(255, 164, 0, 1) 0%, rgba(255, 215, 0, 1) 100%);
+  border-radius: 50rpx;
+  color: white;
+  font-size: 40rpx;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 95rpx;
+  margin-top: 40rpx;
+}
+
+.captions-area {
+  margin-top: 30rpx;
+  color: #808080;
+  font-size: 24rpx;
+  width: 600rpx;
+  margin-left: 45rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button::after {
+  border: 0rpx;
+}

@@ -1,0 +1,44 @@
+<!--pages/special/index/index.wxml-->
+<view class='banner'>
+  <view class='swiper-image'>
+    <swiper autoplay="false" indicator-color="rgba(251, 253, 255, 1)" indicator-active-color="rgba(255, 217, 0, 1)">
+      <block wx:for="{{carouselList}}" wx:key="*this" >
+        <swiper-item bindtap='bindDetail' data-id='{{item.objId}}'>
+          <view class='swiper-title'>
+            <text>{{item.title}}</text>
+          </view>
+          <image src="{{item.imgUrl}}" class="slide-image" />
+        </swiper-item>
+
+      </block>
+    </swiper>
+  </view>
+</view>
+
+<view class='special-list'>
+
+  <block wx:for="{{specialList}}" wx:key="*this">
+    <view class='list-line' bindtap='bindDetail' data-id='{{item.subjectId}}'>
+      <view class='list-line-image'>
+        <image src='{{item.subjectPic}}'></image>
+      </view>
+      <view class='list-line-text'>
+        <text>{{item.subjectName}}</text>
+      </view>
+      <view class='list-line-info'>
+        <view class='list-line-info-like'>
+          <image src='/image/icon_subscription@2x.png'></image>
+          <text>{{item.subscribeCount}}</text>
+        </view>
+        <view class='list-line-info-count'>
+          <image src='/image/icon_article@2x.png'></image>
+          <text>{{item.articleCount}}</text>
+        </view>
+      </view>
+    </view>
+
+  </block>
+
+
+
+</view>

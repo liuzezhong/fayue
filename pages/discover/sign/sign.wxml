@@ -1,0 +1,73 @@
+<block wx:if="{{submitSuccess == 0}}">
+
+  <view class='title'>
+    <text>请填写报名信息</text>
+  </view>
+
+  <view class='main'>
+    <form bindsubmit="formSubmit">
+      <view class='input-group'>
+
+        <view class='input-line'>
+          <view class='line-icon'>
+            <image src='/image/house@2x.png'></image>
+          </view>
+          <view class='line-text'>
+            <text>院校名称</text>
+          </view>
+          <view class='line-input'>
+            <input placeholder='请输入院校名称' placeholder-class='input-placeholder' name="compoundName"></input>
+          </view>
+        </view>
+        <view class='input-line'>
+          <view class='line-icon'>
+            <image src='/image/number@2x.png'></image>
+          </view>
+          <view class='line-text'>
+            <text>专业名称</text>
+          </view>
+          <view class='line-input'>
+            <input placeholder='请输入专业名称' placeholder-class='input-placeholder' name="donationNumber"></input>
+          </view>
+        </view>
+
+        <view class='input-line'>
+          <view class='line-icon'>
+            <image src='/image/name@2x.png'></image>
+          </view>
+          <view class='line-text'>
+            <text>您的姓名</text>
+          </view>
+          <view class='line-input'>
+            <input placeholder='请输入您的姓名' placeholder-class='input-placeholder' name="name"></input>
+          </view>
+        </view>
+
+        <view class='input-line'>
+          <view class='line-icon'>
+            <image src='/image/mobile@2x.png'></image>
+          </view>
+          <view class='line-text'>
+            <text>手机号码</text>
+          </view>
+          <view class='line-input'>
+            <input placeholder='请输入您的手机号码' placeholder-class='input-placeholder' name="mobile"></input>
+          </view>
+        </view>
+
+        
+
+        <view class='input-button'>
+          <button formType="submit">提交报名</button>
+        </view>
+      </view>
+    </form>
+  </view>
+</block>
+<block wx:elif="{{submitSuccess == 1}}">
+  <navigator url="/page/discover/discover" target="miniProgram" open-type="navigate" hover-class="navigator-hover" app-id="{{lvdouappid}}" extra-data="1" path="pages/index/index">
+  <view class='sign-success'>
+    <image src='/image/registersuccess.gif'></image>
+  </view>
+  </navigator>
+</block>

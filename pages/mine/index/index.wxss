@@ -1,0 +1,145 @@
+/* pages/mine/index/index.wxss */
+.header-image {
+  width: 750rpx;
+  height: 240rpx;
+}
+
+.header-image image {
+  width: 750rpx;
+  height: 240rpx;
+}
+
+.mine-header {
+  margin-top: -122rpx;
+  width: 750rpx;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 0rpx;
+  
+}
+
+/* .mine-header image{
+  width: 190rpx;
+  height: 190rpx;
+  border-radius: 100%;
+  border: 5rpx solid #fff;
+} */
+
+.mine-header text {
+  font-size: 36rpx;
+  color: #000000;
+  margin-top: 36rpx;
+}
+
+.opendata-image {
+  width: 190rpx;
+  height: 190rpx;
+  border-radius: 100%;
+  border: 5rpx solid #fff;
+  overflow:hidden;
+  display:block;
+}
+
+.opendata-text {
+  font-size: 36rpx;
+  color: #000000;
+  margin-top: 36rpx;
+}
+
+.mine-menu {
+  width: 670rpx;
+  margin-left: 40rpx;
+  margin-top: 30rpx;
+}
+
+.menu-list {
+  display: flex;
+  align-items: center;
+  height: 119rpx;
+  /* border-bottom: 1rpx solid #E2E2E2; */
+}
+
+.menu-list-icon {
+  width: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.my_order {
+  width: 30rpx;
+  height: 39rpx;
+}
+
+.my_collection {
+  width: 34rpx;
+  height: 34rpx;
+}
+
+.my_subscription {
+  width: 30rpx;
+  height: 34rpx;
+}
+
+.contactus {
+  width: 34rpx;
+  height: 34rpx;
+}
+
+.menu-list-content {
+  width: 500rpx;
+  font-size: 32rpx;
+  color: #333333;
+}
+
+.menu-list-more {
+  width: 90rpx;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu-list-more image {
+  width: 16rpx;
+  height: 26rpx;
+}
+
+.loginButton {
+  font-size: 36rpx;
+  color: #000000;
+  border: 0rpx;
+  background-color: white;
+}
+
+.loginButton::after {
+  border: 0rpx;
+}
+
+.menu-right {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #E2E2E2;
+  margin-left: 30rpx;
+}
+
+.no-button-line {
+  border-bottom: 0rpx;
+}
+
+.button-login {
+  width: 190rpx;
+  height: 190rpx;
+  background-size: 190rpx 190rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0rpx;
+  box-sizing: content-box;
+}
+
+.button-login::after {
+  border: 0rpx;
+}

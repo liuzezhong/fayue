@@ -1,0 +1,224 @@
+<!--pages/discover/energy/energy.wxml-->
+<navigator class='regulation' url="../rule/rule?activityruleid={{activityRuleId}}" hover-class="none">
+  <text>规则详情</text>
+</navigator>
+
+<view class='gift'>
+  <view class='gift-image'>
+    <image src='{{awardInfo.imgUrl}}' mode='aspectFill'></image>
+  </view>
+  <view class='gift-info'>
+    <view class='gift-info-title'>
+      <text>{{awardInfo.awardName}}</text>
+    </view>
+    <view class='gift-info-line'>
+    </view>
+    <view class='gift-info-energy'>
+      <text>门槛能量值：{{awardInfo.energy}}</text>
+    </view>
+  </view>
+</view>
+<view class='background'>
+  <view class='energy-background'>
+    <image src='http://imgbj.xianshikeji.com/othergift@2x.png'></image>
+  </view>
+  <navigator url="../wishlist/wishlist?activityid={{selectAward.activityId}}&awardId={{selectAward.awardId}}" open-type="navigate" hover-class="none">
+    <view class='rank-background'>
+      <image src='http://imgbj.xianshikeji.com/wishlisting@2x.png'></image>
+    </view>
+  </navigator>
+</view>
+
+<view class='energy-real'>
+  <view class='energy-info'>
+    <block wx:if="{{isSelf == 0}}">
+      <text class='title'>TA的能量值</text>
+    </block>
+    <block wx:elif="{{isSelf == 1}}">
+      <text class='title'>我的能量值</text>
+    </block>
+    <text class='number'>{{selectAward.haveEnergy}}</text>
+  </view>
+  <view class='ball'>
+    <block wx:if="{{isSelf == 0}}">
+      <block wx:if="{{give == 0}}">
+        <view class='no-energy-ball'>
+          <image src='http://imgbj.xianshikeji.com/energyball.gif'></image>
+        </view>
+        <view class='energy-number'>
+          <text>{{giveEnergy}}</text>
+        </view>
+      </block>
+      <block wx:elif="{{give == 1}}">
+        <view class='energy-ball' bindtap="bindOtherEnergy">
+          <image src='http://imgbj.xianshikeji.com/kezhuli.gif'></image>
+        </view>
+        <view class='energy-number'>
+          <text>{{giveEnergy}}</text>
+        </view>
+      </block>
+    </block>
+    <block wx:if="{{isSelf == 1}}">
+      <block wx:if="{{collect == 0}}">
+        <view class='no-energy-ball'>
+          <image src='http://imgbj.xianshikeji.com/energyball.gif'></image>
+        </view>
+        <view class='energy-number'>
+          <text>{{collectEnergy}}</text>
+        </view>
+      </block>
+      <block wx:elif="{{collect == 1}}">
+        <view class='energy-ball' bindtap="bindEnergy">
+          <image src='http://imgbj.xianshikeji.com/energyballok.gif'></image>
+        </view>
+        <view class='energy-number' bindtap="bindEnergy">
+          <text>{{collectEnergy}}</text>
+        </view>
+      </block>
+    </block>
+
+
+    <!-- <block wx:if="{{isSelf == 0 && give == 0}}">
+      <view class='tip-image'>
+        <image src='http://imgbj.xianshikeji.com/note@2x.png'></image>
+      </view>
+
+    </block> -->
+
+
+    <block wx:if="{{addEnergy == 1}}">
+      <view class='tip-rules-p'>
+        <image src='http://imgbj.xianshikeji.com/bulb%20prompt@2x.png'></image>
+        <block wx:if="{{isSelf == 0}}">
+          <text class='content'>快来挑选属于你的礼物吧~</text>
+        </block>
+        <block wx:elif="{{isSelf == 1}}">
+          <text class='content'>记得每天都来收能量哦~</text>
+        </block>
+
+      </view>
+    </block>
+    <block wx:elif="{{addEnergy == 0}}">
+      <view class='tip-rules'>
+        <image src='http://imgbj.xianshikeji.com/bulb%20prompt@2x.png'></image>
+        <text class='content'>{{lawContent}}</text>
+        <text class='author'>——{{lawAuthor}}</text>
+      </view>
+    </block>
+
+  </view>
+  <view class='reminder'>
+    <text>邀请好友助力能量值，可以更快完成心愿哦~</text>
+  </view>
+
+  <view class='button-group'>
+    <block wx:if="{{isSelf == 0}}">
+
+      <block wx:if="{{isLogin == true}}">
+        <block wx:if="{{hasPhone == 0}}">
+          <button open-type='getPhoneNumber' class="button-share" style="background-image:url(http://imgbj.xianshikeji.com/giveenery@2x.png);border:0rpx;" plain='true' bindgetphonenumber="getPhoneNumber"></button>
+        </block>
+        <block wx:elif="{{hasPhone == 1}}">
+          <block wx:if="{{give == 0}}">
+            <button class="button-share" style="background-image:url(http://imgbj.xianshikeji.com/havehelped@2x.png);border:0rpx;" plain='true'></button>
+          </block>
+          <block wx:elif="{{give == 1}}">
+            <button bindtap="bindOtherEnergy" class="button-share" style="background-image:url(http://imgbj.xianshikeji.com/giveenery@2x.png);border:0rpx;" plain='true'></button>
+          </block>
+        </block>
+
+      </block>
+      <block wx:if="{{isLogin == false}}">
+        <button open-type='getUserInfo' class="button-share" style="background-image:url(http://imgbj.xianshikeji.com/giveenery@2x.png);border:0rpx;" plain='true' bindgetuserinfo="getUserInfo"></button>
+      </block>
+
+
+      <navigator url='../detail/detail?activityid={{awardInfo.activityId}}' open-type="redirect" hover-class="none">
+        <image class='last-image' src='http://imgbj.xianshikeji.com/also@2x.png'></image>
+      </navigator>
+
+    </block>
+    <block wx:elif="{{isSelf == 1}}">
+      <button open-type='share' class="button-share" style="background-image:url(http://imgbj.xianshikeji.com/woyeyao@2x.png);border:0rpx;" plain='true'></button>
+      <navigator url='../image/image?url={{selectAward.cardPic}}' hover-class="none">
+        <image class='last-image' src='http://imgbj.xianshikeji.com/haibao@2x.png'></image>
+      </navigator>
+
+    </block>
+  </view>
+</view>
+
+<view class='powerList' wx:if="{{powerNum != 0}}">
+  <view class='powerList-title'>
+    <view class='left'>
+      <text>已有{{powerNum}}位好友帮忙助力</text>
+    </view>
+    <navigator class='right' url='../powerlist/powerlist?id={{selectId}}' hover-class="none">
+      <text>查看全部</text>
+      <image src='/image/icon_enter@2x.png'></image>
+    </navigator>
+  </view>
+
+  <view class='powerList-userList'>
+    <block wx:for="{{powerList}}" wx:key="*this">
+      <block wx:if="{{index < 5}}">
+        <view class='userList'>
+          <view class='userList-image'>
+            <image src='{{item.portrait}}' mode='aspectFill'></image>
+          </view>
+          <block wx:if="{{index == 0}}">
+
+            <view class='userList-first-icon'>
+              <image src='/image/icon_champion_1@2x.png'></image>
+            </view>
+          </block>
+          <block wx:elif="{{index == 1}}">
+            <view class='userList-first-icon'>
+              <image src='/image/icon_runner_up_1@2x.png'></image>
+            </view>
+          </block>
+          <block wx:elif="{{index == 2}}">
+            <view class='userList-first-icon'>
+              <image src='/image/icon_third_place_1@2x.png'></image>
+            </view>
+          </block>
+
+          <block wx:else>
+            <view class='userList-first-icon'>
+            </view>
+          </block>
+        </view>
+
+      </block>
+    </block>
+
+  </view>
+</view>
+<view class='under-line'></view>
+
+
+
+
+
+<navigator class='floatwindow' wx:if="{{forwarding == 1}}" url='/pages/discover/index/index' open-type="switchTab" hover-class="none">
+  <image src='http://imgbj.xianshikeji.com/backhomepage@2x.png'></image>
+</navigator>
+
+
+<view class='strategy' wx:if="{{forwarding != 1}}" bindtap='bindChangePopshow'>
+  <image src='http://imgbj.xianshikeji.com/energystrategy@2x.png'></image>
+</view>
+
+<block wx:if="{{strategyPop == 1}}">
+  <view class='marks'>
+  </view>
+  <view class='bullet'>
+    <view class='bullet-main-strategy'>
+      <image src='http://imgbj.xianshikeji.com/strategy-all@2x.png'></image>
+    </view>
+    <view class='bullet-cancel-strategy' bindtap='bindChangePopup'>
+      <image src='/image/close@2x.png'></image>
+    </view>
+
+  </view>
+</block>

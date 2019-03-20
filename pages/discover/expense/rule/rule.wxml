@@ -1,0 +1,68 @@
+<!--pages/discover/rule/rule.wxml-->
+<view class='main'>
+  <view class='header'>
+    <image src='http://imgbj.xianshikeji.com/activity-rules@2x.png'></image>
+  </view>
+  <view class='main-line'>
+    <view class='title'>
+      <view class='icon'>
+      </view>
+      <view class='text'>
+        <text>什么是消费维权保障金？</text>
+      </view>
+    </view>
+
+    <view class='content'>
+      <text>{{ruleInfo.activityRule}}</text>
+    </view>
+  </view>
+  <view class='main-line'>
+    <view class='title'>
+      <view class='icon'>
+      </view>
+      <view class='text'>
+        <text>保障金领取规则</text>
+      </view>
+    </view>
+    <view class='content'>
+      <text>{{ruleInfo.activityTime}}</text>
+    </view>
+  </view>
+  <view class='main-line'>
+    <view class='title'>
+      <view class='icon'>
+      </view>
+      <view class='text'>
+        <text>保障金使用规则</text>
+      </view>
+    </view>
+
+    <view class='content'>
+      <text>{{ruleInfo.activitySponsor}}</text>
+    </view>
+  </view>
+  <view class='main-line'>
+    <view class='title'>
+      <view class='icon'>
+      </view>
+      <view class='text'>
+        <text>温馨提示</text>
+      </view>
+    </view>
+
+    <view class='content'>
+      <text>{{ruleInfo.warmPrompt}}</text>
+    </view>
+  </view>
+
+
+  <view class='explain'>
+    <text>该活动解释权最终归无锡中铠信息咨询服务有限公司所有</text>
+  </view>
+</view>
+
+<view class='bottom-line'>
+  <view class='bottom-line-content'>
+
+  </view>
+</view>

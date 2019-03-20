@@ -1,0 +1,85 @@
+/* pages/discover/powerlist/powerlist.wxss */
+page {
+  background-color: #576cb5;
+}
+
+.main {
+  margin-top: 90rpx;
+  width:670rpx;
+  margin-left: 40rpx;
+background:rgba(255,255,255,1);
+border:2rpx solid rgba(0,0,0,1);
+border-radius:20rpx;
+display: flex;
+flex-direction: column;
+}
+
+.title {
+  width: 299rpx;
+  height: 111rpx;
+  margin-top: -55rpx;
+  margin-left: 186rpx;
+  margin-bottom: 20rpx;
+}
+
+.title image{
+  width: 299rpx;
+  height: 111rpx;
+}
+
+.user-list {
+  display: flex;
+  flex-direction: row;
+  height: 148rpx;
+  width: 610rpx;
+  justify-content:flex-start;
+  margin-left: 30rpx;
+  border-bottom: 2rpx dashed rgba(181,181,181,1);
+  align-items: center;
+}
+
+.icon {
+  width: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon image {
+  width: 45rpx;
+  height: 36rpx;
+}
+
+.icon text {
+  color: #666666;
+  font-size: 36rpx;
+}
+
+.name {
+  color: #222222;
+  font-size: 32rpx;
+  margin-left: 25rpx;
+  width: 335rpx;
+}
+
+.image {
+  width: 75rpx;
+  height: 75rpx;
+  margin-left: 25rpx;
+}
+
+.image image {
+  width: 75rpx;
+  height: 75rpx;
+  border-radius: 100%;
+}
+
+.number {
+  width: 100rpx;
+  color: #FF7835;
+  font-size: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  
+}

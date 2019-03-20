@@ -1,0 +1,90 @@
+{
+  "pages": [
+    "pages/home/index/index",
+    "pages/discover/expense/index/index",
+    "pages/discover/expense/record/record",
+    "pages/discover/expense/form/form",
+    
+    "pages/discover/expense/success/success",
+    "pages/discover/expense/invite/invite",
+    "pages/discover/expense/run/run",
+    "pages/discover/expense/share/share",
+    "pages/special/index/index",
+    "pages/discover/expense/detail/detail",
+    "pages/discover/expense/info/info",
+    
+    "pages/discover/expense/rule/rule",
+    "pages/discover/rule/rule",
+    
+    "pages/discover/detail/detail",
+    "pages/discover/energy/energy",
+    "pages/discover/powerlist/powerlist",
+    "pages/discover/gift/gift",
+    "pages/discover/wishlist/wishlist",
+    "pages/discover/winner/winner",
+    "pages/discover/rank/rank",
+    "pages/discover/image/image",
+    "pages/mine/activity/activity",
+    "pages/discover/list/list",
+    "pages/discover/draw/draw",
+    "pages/mine/prize/prize",
+    "pages/discover/index/index",
+    "pages/mine/index/index",
+    "pages/discover/product/product",
+    "pages/mine/tickling/tickling",
+    "pages/discover/sign/sign",
+    "pages/search/index/index",
+    "pages/home/article/article",
+    "pages/personal/personal",
+    "pages/mine/order/order",
+    "pages/mine/favorite/favorite",
+    "pages/special/detail/detail",
+    "pages/special/list/list",
+    "pages/home/law/law",
+    "pages/ence_push/ence_push"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "法曰",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "default",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/index/index",
+        "text": "首页",
+        "iconPath": "/image/icon_home@2x.png",
+        "selectedIconPath": "/image/icon_home_hover@2x.png"
+      },
+      {
+        "pagePath": "pages/special/index/index",
+        "text": "专题",
+        "iconPath": "/image/icon_special topic@2x.png",
+        "selectedIconPath": "/image/icon_special topic_hover@2x.png"
+      },
+      {
+        "pagePath": "pages/discover/index/index",
+        "text": "发现",
+        "iconPath": "/image/icon_find@2x.png",
+        "selectedIconPath": "/image/icon_find_hover@2x.png"
+      },
+      {
+        "pagePath": "pages/mine/index/index",
+        "text": "我的",
+        "iconPath": "/image/icon_my@2x.png",
+        "selectedIconPath": "/image/icon_my_hover@2x.png"
+      }
+    ],
+    "color": "#999999",
+    "selectedColor": "#000000",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black"
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx586501a5b03c99be",
+    "wx5e872ff3403ad936"
+  ]
+}

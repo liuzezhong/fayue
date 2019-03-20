@@ -1,0 +1,71 @@
+<!--pages/discover/expense/info/info.wxml-->
+<view class='top-area'>
+  <view class='top-title'>
+    <text>遇到以下情况您可申请报销</text>
+  </view>
+  <view class='top-content'>
+    <text class='top-content-text'>
+      1. 有足够的保障金余额且在有效期内；
+      2. 在律兜平台因消费维权而产生的服务费用；
+      3. 单笔可报销金额最多不超过5000元；
+      4. 因理赔审理需要，后续视报销金额等情况需您协助补传相关文件和费用清单，或邮寄纸质单证。
+    </text>
+  </view>
+</view>
+
+<view class='second-area'>
+  <view class='second-title'>
+    <text>报销流程</text>
+  </view>
+  <view class='second-main'>
+    <view class='second-main-step'>
+      <view class='second-main-step-title'>
+        <view class='second-main-step-title-span'>
+          <text>第1步</text>
+        </view>
+        <view class='second-main-step-title-name'>
+          <text>填写个人信息</text>
+        </view>
+      </view>
+      <view class='second-main-step-content'>
+        <text>请在线填写真实姓名、手机号，提交报销申请。</text>
+      </view>
+    
+    </view>
+
+    <view class='second-main-step'>
+      <view class='second-main-step-title'>
+        <view class='second-main-step-title-span'>
+          <text>第2步</text>
+        </view>
+        <view class='second-main-step-title-name'>
+          <text>提交律兜订单号</text>
+        </view>
+      </view>
+      <view class='second-main-step-content'>
+        <text>根据报销规则要求，提交律兜服务平台订单号。</text>
+      </view>
+    
+    </view>
+
+    <view class='second-main-step'>
+      <view class='second-main-step-title'>
+        <view class='second-main-step-title-span'>
+          <text>第3步</text>
+        </view>
+        <view class='second-main-step-title-name'>
+          <text>等待客服审核</text>
+        </view>
+      </view>
+      <view class='second-main-step-content'>
+        <text>客服将尽快进行材料审核，审核通过后予以赔付。</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='attend-button' bindtap='bindAttend'>
+  <text>立即申请</text>
+</view>
+
+<view class='under-area'></view>

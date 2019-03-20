@@ -1,0 +1,169 @@
+/* pages/discover/expense/share/share.wxss */
+
+.header-image {
+  margin-left: 30rpx;
+  width: 690rpx;
+  height: 200rpx;
+  background-image: url('http://imgbj.xianshikeji.com/baozhanghin@2x.png');
+  background-size: 100% 100%;
+  margin-top: 40rpx;
+}
+
+.header-rule {
+  width: 75rpx;
+  height: 40rpx;
+  background: rgba(255, 167, 0, 1);
+  color: white;
+  font-size: 24rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 20rpx;
+  border-bottom-left-radius: 20rpx;
+  position: relative;
+  top: 20rpx;
+  left: 616rpx;
+}
+
+.share-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 66rpx;
+  color: #333;
+  font-size: 30rpx;
+}
+
+.special-text {
+  color: #ffa600;
+  font-weight: bold;
+}
+
+.share-button {
+  margin-top: 30rpx;
+  width: 750rpx;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.share-button button {
+  width: 500rpx;
+  height: 100rpx;
+  background: linear-gradient(0deg, rgba(255, 164, 0, 1) 0%, rgba(255, 215, 0, 1) 100%);
+  border-radius: 50rpx;
+  border: 0rpx;
+  color: white;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.share-button button::after {
+  border: 0rpx;
+}
+
+.strategy {
+  width: 690rpx;
+  height: 380rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0rpx 2rpx 15rpx 0rpx rgba(51, 51, 51, 0.15);
+  border-radius: 10rpx;
+  margin-left: 30rpx;
+  margin-top: 60rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.strategy-title {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: rgba(255, 84, 38, 1);
+  margin-top: 30rpx;
+}
+
+.strategy-content {
+  display: flex;
+  align-items: center;
+  margin-top: 30rpx;
+  width: 570rpx;
+  justify-content: space-between;
+}
+
+.strategy-content-area {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.strategy-content-area-image {
+  width: 120rpx;
+  height: 169rpx;
+}
+
+.strategy-content-area-image image {
+  width: 120rpx;
+  height: 169rpx;
+}
+
+.strategy-content-area-text {
+  color: #333;
+  font-size: 24rpx;
+  margin-top: 15rpx;
+  text-align: center;
+}
+
+.share-record {
+  margin-top: 80rpx;
+  margin-left: 40rpx;
+  width: 670rpx;
+}
+
+.share-record-info {
+  color: #333;
+  font-size: 24rpx;
+}
+
+.share-record-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.share-record-content-header {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.share-record-content-header image {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 100%;
+}
+
+.share-record-content-name {
+  color: #808080;
+  font-size: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rpx;
+}
+
+.scroll-views {
+  display: flex;
+  margin-top: 30rpx;
+  flex-wrap: wrap;
+}
+
+.scroll-views scroll-view{
+  white-space: nowrap;
+}

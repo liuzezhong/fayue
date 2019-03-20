@@ -1,0 +1,116 @@
+/* pages/personal/personal.wxss */
+
+.personal-header {
+  display: flex;
+  width: 750rpx;
+  height: 320rpx;
+  background-image: url('http://imgbj.xianshikeji.com/background%20image@2x.png');
+  position: fixed;
+  top: 0rpx;
+  left: 0rpx;
+  
+}
+
+.personal-header-line {
+  margin-top: 80rpx;
+  display: flex;
+  align-items: center;
+}
+
+.header-avatar {
+  display: flex;
+  justify-content: center;
+  
+  margin-left: 40rpx;
+}
+
+.header-avatar image {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.header-info {
+  display: flex;
+  color: white;
+  flex-direction: column;
+  
+  margin-left: 30rpx;
+}
+
+.info-name {
+  font-size: 38rpx;
+  font-weight: bold;
+}
+
+.info-count {
+  font-size: 28rpx;
+  display: flex;
+  margin-top: 20rpx;
+  align-items: flex-start;
+}
+
+.info-count-list {
+  margin-right: 80rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.personal-article {
+  width: 690rpx;
+  margin-left: 30rpx;
+  margin-top: 330rpx;
+}
+
+.article-list {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.article-list-line {
+
+}
+
+.list-line-title {
+  color: #333333;
+  font-size: 32rpx;
+  margin-top: 40rpx;
+  line-height: 52rpx;
+}
+
+.image-view {
+  width: 32rpx;
+  height: 18rpx;
+}
+
+.image-like {
+  width: 24rpx;
+  height: 23rpx;
+}
+
+.image-collect {
+  width: 25rpx;
+  height: 23rpx;
+}
+
+.info-view-content {
+  margin-left: 20rpx;
+}
+.info-view-content text{
+  color: #808080;
+  font-size: 24rpx;
+}
+
+.info-view {
+  display: flex;
+  margin-right: 15rpx;
+  width: 130rpx;
+}
+
+.list-line-info {
+  display: flex;
+  margin-top: 15rpx;
+  margin-bottom: 40rpx;
+}

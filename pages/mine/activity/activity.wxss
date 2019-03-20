@@ -1,0 +1,73 @@
+/* pages/mine/activity/activity.wxss */
+
+.activity-list {
+  width: 690rpx;
+  margin-left: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.activity {
+  width: 690rpx;
+  height: 340rpx;
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50rpx;
+}
+
+.activity image {
+  width: 690rpx;
+  height: 340rpx;
+  border-radius: 10rpx;
+}
+
+.activity-name {
+
+}
+
+.activity-title {
+  width: 690rpx;
+  height: 65rpx;
+  background-color: black;
+  opacity: 0.5;
+  border-bottom-left-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+  margin-top: -65rpx;
+  
+}
+
+.activity-title-text {
+  margin-left: 15rpx;
+  height: 65rpx;
+  width: 660rpx;
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: -62rpx;
+  font-size: 28rpx;
+  color: white;
+  margin-bottom: -65rpx;
+}
+
+.no-favorite {
+  margin-top: 400rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.no-favorite image {
+  width: 261rpx;
+  height: 242rpx;
+}
+
+.no-favorite text {
+  color: #4D4D4D;
+  font-size: 30rpx;
+  margin-top: 50rpx;
+}

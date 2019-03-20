@@ -1,0 +1,113 @@
+/* pages/discover/list/list.wxss */
+
+page {
+  background-color: #f3f3f3;
+}
+
+.activity-plate {
+  margin-top: 40rpx;
+  margin-left: 30rpx;
+  width: 690rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 20rpx;
+}
+
+.image {
+  padding-top: 40rpx;
+  margin-left: 30rpx;
+  width: 630rpx;
+  height: 340rpx;
+}
+
+.image image {
+  width: 630rpx;
+  height: 340rpx;
+  border-radius: 10rpx;
+}
+
+.title {
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-top: 30rpx;
+  font-size: 34rpx;
+  color: #222;
+}
+
+.intro {
+  margin-right: 30rpx;
+  margin-left: 30rpx;
+  color: #b2b2b2;
+  font-size: 28rpx;
+  margin-top: 10rpx;
+}
+
+.line {
+  margin-top: 25rpx;
+  margin-left: 30rpx;
+  width: 630rpx;
+  height: 1rpx;
+  border-bottom: 1rpx dashed #dcdcdc;
+}
+
+.basic-info {
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  display: flex;
+  align-items: center;
+  margin-top: 25rpx;
+  padding-bottom: 30rpx;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  width: 600rpx;
+}
+
+.time image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.time text {
+  margin-left: 15rpx;
+  color: #666;
+  font-size: 24rpx;
+}
+
+
+.status-underway {
+  width: 80rpx;
+  height: 36rpx;
+  border: 1rpx solid rgba(255, 85, 0, 1);
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f50;
+  font-size: 20rpx;
+}
+
+.status-end {
+  width: 80rpx;
+  height: 36rpx;
+  border: 1rpx solid #999999;
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #999999;
+  font-size: 20rpx;
+}
+
+.status-unstart {
+  width: 80rpx;
+  height: 36rpx;
+  border: 1rpx solid #3B49B9;
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3B49B9;
+  font-size: 20rpx;
+}

@@ -1,0 +1,48 @@
+<!--pages/discover/draw/draw.wxml-->
+<view class='main'>
+  <view class='draw-background'>
+    <image src='http://imgbj.xianshikeji.com/draw-bg@2x.png'></image>
+  </view>
+
+  <view class='draw-real'>
+    <view class='draw-list'>
+      <text>领取奖励</text>
+    </view>
+    <!-- <view class='draw-img'>
+      <image src='http://imgbj.xianshikeji.com/draw-gift@2x.png'></image>
+    </view> -->
+
+    <view class='draw-img-nozhong middle-draw-img'>
+      <image src='http://imgbj.xianshikeji.com/draw-cry@2x.png'></image>
+    </view>
+    <view class='draw-info'>
+      <text>恭喜获得<text class='special-draw-info-text'>兜仔钥匙扣x1
+</text></text>
+      <!-- <text class='special-draw-info-two'>运气不错，继续Hi！</text> -->
+    </view>
+    <!-- <view class='draw-button'>
+      <image src='http://imgbj.xianshikeji.com/continuetodraw@2x.png'></image>
+    </view>
+    <view class='draw-subinfo'>
+      <text>免费抽奖次数还剩：<text class='draw-subinfo-special'>1</text>次</text>
+    </view> -->
+  </view>
+
+  <view class='christmas-activity-background'>
+    <image src='http://imgbj.xianshikeji.com/wish-bg@2x.png'></image>
+  </view>
+
+  <view class='christmas-activity-real'>
+    <view class='activity-image'>
+      <image src='http://ww3.sinaimg.cn/mw600/006XNEY7gy1fxzgaufpxhj30u01g27wj.jpg' mode='aspectFill'></image>
+    </view>
+    <view class='button-group'>
+      <view class='tip-image'>
+        <image src='http://imgbj.xianshikeji.com/bookmarks@2x.png'></image>
+      </view>
+      <view class='button-image'>
+        <image src='http://imgbj.xianshikeji.com/immediatelyto@2x.png'></image>
+      </view>
+    </view>
+  </view>
+</view>

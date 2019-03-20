@@ -1,0 +1,229 @@
+/* pages/discover/product/product.wxss */
+
+page {
+  background-color: #F5F5F5;
+}
+
+.header-background {
+  margin-top: -1rpx;
+  width: 750rpx;
+  height: 322rpx;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+.header-background image{
+  width: 750rpx;
+  height: 322rpx;
+}
+
+.header-area {
+  width: 690rpx;
+  margin-left: 30rpx; 
+  background-color: white;
+  border-radius: 20rpx;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -205rpx;
+  z-index: 999;
+  position: relative;
+
+}
+
+.header-image {
+  width:160rpx;
+  height:160rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -80rpx;
+  border-radius: 100%;
+  border: 5rpx solid white;
+}
+
+.header-image image{
+  width:160rpx;
+  height:160rpx;
+  border-radius:100%;
+}
+
+.header-name {
+  margin-top: 30rpx;
+  color: #222222;
+  font-size: 38rpx;
+}
+
+.header-id {
+  margin-top: 15rpx;
+  color: #888888;
+  font-size: 32rpx;
+}
+
+.row-line {
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  width:544rpx;
+  height:1rpx;
+  border-bottom:1rpx dashed rgba(207,207,207,1)
+}
+
+.header-info {
+  width: 600rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.header-info-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50rpx;
+}
+
+.header-info-area image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.header-info-area text {
+  font-size: 32rpx;
+  color: #222222;
+  margin-top: 25rpx;
+}
+
+.product-main {
+  width: 690rpx;
+  margin-left: 30rpx;
+  background-color: white;
+  margin-top: 40rpx;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-header {
+  display: flex;
+  align-items: center;
+  margin-left: 30rpx;
+  margin-top: 50rpx;
+}
+
+.main-header .icon {
+  width:32rpx;
+  height:28rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-header .icon image{
+  width:32rpx;
+  height:28rpx;
+}
+
+.main-header .title{
+  font-size: 36rpx;
+  color: #111111;
+  margin-left: 15rpx;
+}
+
+.main-content {
+  width: 628rpx;
+  margin-top: 40rpx;
+  margin-left: 30rpx;
+  font-size:34rpx;
+  color: #333333;
+  line-height:64rpx;
+}
+
+.row-line-long {
+  margin: 40rpx 30rpx 40rpx 30rpx;
+  width:630rpx;
+  height:1rpx;
+  border-bottom:1rpx dashed rgba(207,207,207,1)
+}
+
+.product-preview {
+  width: 630rpx;
+  height: 370rpx;
+  margin-left: 30rpx;
+  margin-bottom: 50rpx;
+}
+
+.product-preview image,video{
+  width: 630rpx;
+  height: 370rpx;
+  border-radius:20rpx;
+}
+
+.vote-button {
+  margin-top: 40rpx;
+  background-color: #FFD900;
+  width: 690rpx;
+  height: 94rpx;
+  margin-left: 30rpx;
+  border-radius: 10rpx;
+  color: #333333;
+  font-size: 36rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vote-button-ok {
+  background-color: #D9D9D9;
+}
+
+.reminder {
+  margin-top: 25rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #999999;
+  font-size: 20rpx;
+}
+
+.other-product {
+  width: 220rpx;
+  height: 120rpx; 
+  position: fixed;
+
+  right: -20rpx;
+  bottom: 600rpx;
+  z-index: 999;
+}
+
+.other-share {
+  width: 220rpx;
+  height: 120rpx; 
+  position: fixed;
+  right: -20rpx;
+  bottom: 600rpx;
+  z-index: 999;
+}
+
+
+.other-product image{
+  width: 220rpx;
+  height: 120rpx; 
+}
+
+.under-other-product {
+  bottom: 490rpx;
+}
+
+.button-share  {
+  width: 150rpx;
+  height: 150rpx;
+  background-size: 150rpx 150rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0rpx;
+  box-sizing: content-box;
+}

@@ -1,0 +1,66 @@
+/* pages/law/law.wxss */
+
+.law-list {
+  width: 690rpx;
+  margin-left: 30rpx;
+  margin-top: 50rpx;
+}
+
+.law-line {
+  margin-bottom: 77rpx;
+  
+}
+
+.line-title {
+  display: flex;
+  align-items: center;
+}
+
+.line-title-icon {
+  
+  width: 10rpx;
+  height: 34rpx;
+  background-color: #FFD900;
+}
+
+.line-title-content {
+  margin-left: 10rpx;
+  font-size: 34rpx;
+  line-height: 54rpx;
+  color: #333333;
+  font-weight: bold;
+  
+  margin-top: -52rpx;
+}
+
+.line-title-icon-kong {
+  
+  width: 680rpx;
+  height: 50rpx;
+}
+
+.line-content {
+  margin-top: 30rpx;
+  font-size: 34rpx;
+  line-height: 60rpx;
+  color: #888888;
+}
+
+.information {
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+  width: 690rpx;
+  height: 200rpx;
+  align-items: flex-start;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.info-law {
+  font-size: 28rpx;
+  color: #0066CC;
+}
+
+.info-no {
+  color: #b2b2b2;
+}

@@ -1,0 +1,80 @@
+<!--pages/discover/gift/gift.wxml-->
+<block wx:if="{{awardList != null}}">
+  <view class='header-tip'>
+    <image src='http://imgbj.xianshikeji.com/chooselike@2x.png'></image>
+  </view>
+
+  <view class='gift-list'>
+    <block wx:for="{{awardList}}">
+      <view class="gift-group" bindtap='bindSureChoose' data-id="{{item.awardId}}">
+        <view class='gift-background'>
+          <image src='http://imgbj.xianshikeji.com/gift-frame@2x.png'></image>
+        </view>
+
+        <view class='gift-real'>
+          <view class='gift-real-image'>
+            <image src='{{item.imgUrl}}' mode="aspectFill"></image>
+          </view>
+          <view class='activity-name'>
+            <view class='activity-title'>
+            </view>
+            <view class='activity-title-text'>
+              <text>剩余数量：{{item.awardNumber}}</text>
+            </view>
+          </view>
+          <view class='gift-real-info'>
+            <text class='main-title'>{{item.awardName}}</text>
+            <text class='sub-title'>门槛能量值：{{item.energy}}</text>
+          </view>
+          <view class='gift-real-number'>
+            <image src='/image/user@2x.png'></image>
+            <text>已有{{item.userNumber}}人许愿</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class='under-tip' bindtap='goTop'>
+    <image src='http://imgbj.xianshikeji.com/top@2x.png'></image>
+  </view>
+
+  <view class='under-area'></view>
+
+</block>
+
+
+<block wx:if="{{showSureToast == true}}">
+  <view class='marks'>
+  </view>
+  <view class='bullet'>
+    <view class='bullet-cancel-sure-father' bindtap='bindChangePopup'>
+      <view class='bullet-cancel-sure'>
+        <image src='/image/close-button@2x.png'></image>
+      </view>
+    </view>
+
+    <view class='bullet-main-sure'>
+      <image src='http://imgbj.xianshikeji.com/pink-border@2x.png'></image>
+    </view>
+
+    <view class='bullet-main-content'>
+      <view class='bullet-main-content-info'>
+        <text> 确定选择TA为你的心愿礼物吗？</text>
+        <view class='special-line'>
+          <text>每人只能选择</text>
+          <view class='special-text'>
+            <text>1</text>
+          </view>
+          <text>件心愿礼物</text>
+        </view>
+
+        <text>确定后不可更改哦~</text>
+      </view>
+      <view class='bullet-main-content-button' bindtap='bindChooseAward'>
+        <text>确定</text>
+      </view>
+
+    </view>
+  </view>
+</block>

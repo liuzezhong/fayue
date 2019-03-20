@@ -1,0 +1,519 @@
+<view class="nav-bar">
+  <block wx:if="{{navList != null}}">
+
+
+    <block wx:if="{{!chioceType}}">
+      <view class='nav-title'>
+        <scroll-view class="scroll-view_H" scroll-x="true" scroll-with-animation="true" scroll-into-view="{{toView}}" scroll-left="{{scrollLeft}}">
+          <view class='view-item' id="default" data-id='0'>
+            <view class='title-bar'>
+              <view class='text-view' bindtap='bindChangeDefNav'>
+                <block wx:if="{{navDefaultChecked}}">
+                  <text class="title-bar-text-checked">推荐</text>
+                </block>
+                <block wx:else>
+                  <text class="title-bar-text">推荐</text>
+                </block>
+              </view>
+              <view class='image-bar'>
+                <block wx:if="{{navDefaultChecked}}">
+                  <image src='/image/select@2x.png' class='title-bar-image'></image>
+                </block>
+              </view>
+            </view>
+          </view>
+          <block wx:for="{{navList}}" wx:key="*this">
+            <view class='view-item' bindtap='bindChangeNav' data-id='{{item.categoryId}}' id="{{item.id_name}}">
+              <view class='title-bar'>
+                <view class='text-view'>
+                  <block wx:if="{{item.ischecked}}">
+                    <text class="title-bar-text-checked">{{item.categoryName}}</text>
+                  </block>
+                  <block wx:else>
+                    <text class="title-bar-text">{{item.categoryName}}</text>
+                  </block>
+                </view>
+                <view class='image-bar'>
+                  <block wx:if="{{item.ischecked}}">
+                    <image src='/image/select@2x.png' class='title-bar-image'></image>
+                  </block>
+                </view>
+              </view>
+            </view>
+          </block>
+        </scroll-view>
+      </view>
+    </block>
+    <block wx:else>
+      <view class='nav-title'>
+        <view class='view-item'>
+          <view class='title-bar'>
+            <view class=''>
+              <text class="title-bar-text-checked">切换栏目</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <view class='xuhua1'>
+    </view>
+    <view class='xuhua2'>
+    </view>
+    <block wx:if="{{!chioceType}}">
+      <view class='more-button' bindtap='chioceType'>
+        <image src='/image/icon_more@2x.png'></image>
+      </view>
+    </block>
+    <block wx:else>
+      <view class='close-button' bindtap='closeChioceType'>
+        <image src='/image/icon_close@2x.png'></image>
+      </view>
+
+    </block>
+    <view class='search-button' bindtap='bindSearch'>
+      <image src='/image/icon_searchfor@2x.png'></image>
+    </view>
+  </block>
+</view>
+
+
+<view class="type-list-all{{!chioceType?' chioce-list-hide':' chioce-list-show'}}" catchtouchmove='{{true}}'>
+  <view class='typelist'>
+    <block wx:if="{{navDefaultChecked}}">
+      <view class='typespan spanchecked' bindtap='bindChangeDefNav'>
+        <text>推荐</text>
+      </view>
+    </block>
+    <block wx:else>
+      <view class='typespan' bindtap='bindChangeDefNav'>
+        <text>推荐</text>
+      </view>
+    </block>
+
+    <block wx:for="{{navList}}" wx:key="*this">
+      <block wx:if="{{item.ischecked}}">
+        <view class='typespan spanchecked' bindtap='bindChangeNav' data-id='{{item.categoryId}}'>
+          <text>{{item.categoryName}}</text>
+        </view>
+      </block>
+      <block wx:else>
+        <view class='typespan' bindtap='bindChangeNav' data-id='{{item.categoryId}}'>
+          <text>{{item.categoryName}}</text>
+        </view>
+      </block>
+    </block>
+  </view>
+</view>
+
+<!-- <view bindtap="hideAllChioce" class="mask" hidden="{{!chioceType}}">
+
+
+</view> -->
+
+
+
+<block wx:if="{{navDefaultChecked}}">
+  <view class='banner'>
+    <view class='swiper-image'>
+      <swiper autoplay="false" indicator-color="rgba(251, 253, 255, 1)" indicator-active-color="rgba(255, 217, 0, 1)">
+        <block wx:for="{{carouselList}}" wx:key="*this">
+          <block wx:if="{{item.type == 1}}">
+            <!-- 文章 -->
+            <swiper-item bindtap='bindArticle' data-id="{{item.objId}}">
+              <view class='swiper-title'>
+                <text>{{item.title}}</text>
+              </view>
+              <image src="{{item.imgUrl}}" class="slide-image" />
+            </swiper-item>
+          </block>
+          <block wx:if="{{item.type == 2}}">
+            <!-- 专题 -->
+            <swiper-item bindtap="bindSubjectList" data-subid="{{item.objId}}">
+              <view class='swiper-title'>
+                <text>{{item.title}}</text>
+              </view>
+              <image src="{{item.imgUrl}}" class="slide-image" />
+            </swiper-item>
+          </block>
+          <block wx:elif="{{item.type == 3}}">
+            <!-- 小程序 -->
+            <swiper-item>
+              <navigator url="/page/discover/discover" target="miniProgram" open-type="navigate" hover-class="navigator-hover" app-id="{{lvdouappid}}" extra-data="1" path="pages/index/index">
+                <view class='swiper-title'>
+                  <text>{{item.title}}</text>
+                </view>
+                <image src="{{item.imgUrl}}" class="slide-image" />
+              </navigator>
+            </swiper-item>
+          </block>
+          <block wx:elif="{{item.type == 4}}">
+            <!-- 活动页 -->
+            <swiper-item bindtap="bindActivity">
+              <view class='swiper-title'>
+                <text>{{item.title}}</text>
+              </view>
+              <image src="{{item.imgUrl}}" class="slide-image" />
+            </swiper-item>
+          </block>
+        </block>
+      </swiper>
+    </view>
+  </view>
+  <view style="width:100%;position:relative;height:100%;background:gray;">
+    <official-account></official-account>
+  </view>
+
+
+
+  <view class='recommend-list'>
+    <block wx:for='{{articleList}}' wx:key='*this'>
+      <block wx:if="{{index < 3}}">
+        <view class='wiki-list' bindtap='bindArticle' data-id="{{item.articleId}}">
+          <view class='label-line'>
+            <text>#{{item.categoryName}}</text>
+          </view>
+          <view class='title-line'>
+            <text>{{item.articleTitle}}</text>
+          </view>
+          <view class='data-line'>
+            <view class='view'>
+              <image src='/image/icon_view@2x.png'></image>
+              <text>{{item.browseNum}}</text>
+            </view>
+            <view class='like'>
+              <image src='/image/icon_like@2x.png'></image>
+              <text>{{item.diggNum}}</text>
+            </view>
+          </view>
+        </view>
+        <block wx:if="{{index < 2}}">
+          <view class='wiki-line'></view>
+        </block>
+      </block>
+    </block>
+
+
+
+    <block wx:if="{{subjectList[0] != null}}">
+      <view class='project-recommend'>
+        <view class='project-line'></view>
+        <view class='project-header'>
+          <view class='project-header-title'>
+            <image src='/image/specialtopic@2x.png'></image>
+            <text>{{subjectList[0].subjectName}}</text>
+          </view>
+          <view class='project-header-subtitle' bindtap='bindSubjectList' data-subid='{{subjectList[0].subjectId}}'>
+            <text>更多</text>
+            <image src='/image/Find_arrow@2x.png'></image>
+          </view>
+        </view>
+        <view class='project-main'>
+          <scroll-view class="scroll-view_H" scroll-x="true">
+            <block wx:for="{{subjectList[0].articles}}" wx:key="*this">
+              <view class="view-item" bindtap='bindSubjectDetail' data-detail_id='{{item.articleId}}' data-subid='{{subjectList[0].subjectId}}'>
+                <view class='project-list'>
+                  <view class='project-list-image'>
+                    <image src='{{item.articleImg}}'></image>
+                  </view>
+                  <view class='project-list-title'>
+                    <text>{{item.articleTitle}}</text>
+                  </view>
+                </view>
+              </view>
+            </block>
+
+          </scroll-view>
+        </view>
+        <view class='project-line'></view>
+      </view>
+
+    </block>
+
+
+    <block wx:for='{{articleList}}' wx:key='*this'>
+      <block wx:if="{{index > 2 && index <6}}">
+        <view class='wiki-list' bindtap='bindArticle' data-id="{{item.articleId}}">
+          <view class='label-line'>
+            <text>#{{item.categoryName}}</text>
+          </view>
+          <view class='title-line'>
+            <text>{{item.articleTitle}}</text>
+          </view>
+          <view class='data-line'>
+            <view class='view'>
+              <image src='/image/icon_view@2x.png'></image>
+              <text>{{item.browseNum}}</text>
+            </view>
+            <view class='like'>
+              <image src='/image/icon_like@2x.png'></image>
+              <text>{{item.diggNum}}</text>
+            </view>
+          </view>
+        </view>
+        <block wx:if="{{index < 5}}">
+          <view class='wiki-line'></view>
+        </block>
+      </block>
+    </block>
+
+    <block wx:if="{{subjectList[1] != null}}">
+      <view class='project-recommend'>
+        <view class='project-line'></view>
+        <view class='project-header'>
+          <view class='project-header-title'>
+            <image src='/image/specialtopic@2x.png'></image>
+            <text>{{subjectList[1].subjectName}}</text>
+          </view>
+          <view class='project-header-subtitle' bindtap='bindSubjectList' data-subid='{{subjectList[1].subjectId}}'>
+            <text>更多</text>
+            <image src='/image/Find_arrow@2x.png'></image>
+          </view>
+        </view>
+        <view class='project-main'>
+          <scroll-view class="scroll-view_H" scroll-x="true">
+            <block wx:for="{{subjectList[1].articles}}" wx:key="*this">
+              <view class="view-item" bindtap='bindSubjectDetail' data-detail_id='{{item.articleId}}' data-subid='{{subjectList[1].subjectId}}'>
+                <view class='project-list'>
+                  <view class='project-list-image'>
+                    <image src='{{item.articleImg}}'></image>
+                    <!-- <image src='{{item.articleImage}}'></image> -->
+                  </view>
+                  <view class='project-list-title'>
+                    <text>{{item.articleTitle}}</text>
+                  </view>
+                </view>
+              </view>
+            </block>
+
+          </scroll-view>
+        </view>
+        <view class='project-line'></view>
+      </view>
+    </block>
+
+    <block wx:for='{{articleList}}' wx:key='*this'>
+      <block wx:if="{{index > 5 && index <9}}">
+        <view class='wiki-list' bindtap='bindArticle' data-id="{{item.articleId}}">
+          <view class='label-line'>
+            <text>#{{item.categoryName}}</text>
+          </view>
+          <view class='title-line'>
+            <text>{{item.articleTitle}}</text>
+          </view>
+          <view class='data-line'>
+            <view class='view'>
+              <image src='/image/icon_view@2x.png'></image>
+              <text>{{item.browseNum}}</text>
+            </view>
+            <view class='like'>
+              <image src='/image/icon_like@2x.png'></image>
+              <text>{{item.diggNum}}</text>
+            </view>
+          </view>
+        </view>
+        <block wx:if="{{index < 8}}">
+          <view class='wiki-line'></view>
+        </block>
+      </block>
+    </block>
+
+    <block wx:if="{{subjectList[2] != null}}">
+      <view class='project-recommend'>
+        <view class='project-line'></view>
+        <view class='project-header'>
+          <view class='project-header-title'>
+            <image src='/image/specialtopic@2x.png'></image>
+            <text>{{subjectList[2].subjectName}}</text>
+          </view>
+          <view class='project-header-subtitle' bindtap='bindSubjectList' data-subid='{{subjectList[2].subjectId}}'>
+            <text>更多</text>
+            <image src='/image/Find_arrow@2x.png'></image>
+          </view>
+        </view>
+        <view class='project-main'>
+          <scroll-view class="scroll-view_H" scroll-x="true">
+            <block wx:for="{{subjectList[2].articles}}" wx:key="*this">
+              <view class="view-item" bindtap='bindSubjectDetail' data-detail_id='{{item.articleId}}' data-subid='{{subjectList[2].subjectId}}'>
+                <view class='project-list'>
+                  <view class='project-list-image'>
+                    <image src='{{item.articleImg}}'></image>
+                    <!-- <image src='{{item.articleImage}}'></image> -->
+                  </view>
+                  <view class='project-list-title'>
+                    <text>{{item.articleTitle}}</text>
+                  </view>
+                </view>
+              </view>
+            </block>
+
+          </scroll-view>
+        </view>
+        <view class='project-line'></view>
+      </view>
+    </block>
+
+    <block wx:for='{{articleList}}' wx:key='*this'>
+      <block wx:if="{{index > 8}}">
+        <view class='wiki-list' bindtap='bindArticle' data-id="{{item.articleId}}">
+          <view class='label-line'>
+            <text>#{{item.categoryName}}</text>
+          </view>
+          <view class='title-line'>
+            <text>{{item.articleTitle}}</text>
+          </view>
+          <view class='data-line'>
+            <view class='view'>
+              <image src='/image/icon_view@2x.png'></image>
+              <text>{{item.browseNum}}</text>
+            </view>
+            <view class='like'>
+              <image src='/image/icon_like@2x.png'></image>
+              <text>{{item.diggNum}}</text>
+            </view>
+          </view>
+        </view>
+        <block wx:if="{{articleList[index+1]}}">
+          <view class='wiki-line'></view>
+        </block>
+      </block>
+    </block>
+  </view>
+
+
+  <block wx:if="{{articleList != null}}">
+    <view class='bottom-line'>
+
+      <view class='bottom-line-content'>
+        <block wx:if="{{getAllArtice == false}}">
+          <text>上拉查看更多</text>
+        </block>
+        <block wx:else>
+          <view class='bottom-line-left'></view>
+          <text>喂喂，法律都是有底线的！</text>
+          <view class='bottom-line-right'></view>
+        </block>
+      </view>
+
+    </view>
+  </block>
+
+
+
+</block>
+<block wx:else>
+
+  <block wx:if="{{articleList != null}}">
+    <view class='recommend-list hot-list'>
+      <block wx:if="{{hotList != null}}">
+        <view class='wiki-hot'>
+          <view class='wiki-hot-header'>
+            <image src='/image/Popular@2x.png'></image>
+            <text>大家都在看</text>
+          </view>
+
+          <block wx:for="{{hotList}}" wx:key="*this">
+            <block wx:if="{{index < 3}}">
+              <view class='hot-line' data-id="{{item.articleId}}" bindtap='bindArticle'>
+                <view class='label-line'>
+                  <text>#{{item.categoryName}}</text>
+                </view>
+                <view class='hot-line-father'>
+                  <view class='hot-line-left'>
+                    <view class='hot-title-line'>
+                      <text>{{item.articleTitle}}</text>
+                    </view>
+                    <view class='data-line'>
+                      <view class='view'>
+                        <image src='/image/icon_view@2x.png'></image>
+                        <text>{{item.browseNum}}</text>
+                      </view>
+                      <view class='like'>
+                        <image src='/image/icon_like@2x.png'></image>
+                        <text>{{item.diggNum}}</text>
+                      </view>
+                    </view>
+                  </view>
+                  <view class='hot-line-right'>
+                    <!-- <image src='/image/home_banner@2x.png'></image> -->
+                    <image src='{{item.articleImg}}'></image>
+                  </view>
+                </view>
+              </view>
+              <block wx:if="{{index < 2}}">
+                <view class='wiki-line'></view>
+              </block>
+
+            </block>
+
+          </block>
+
+        </view>
+        <view class='project-line'></view>
+      </block>
+      <block wx:for="{{articleList}}" wx:key="*this">
+        <view class='wiki-list' bindtap='bindArticle' data-id="{{item.articleId}}">
+          <view class='label-line'>
+            <text>#{{item.categoryName}}</text>
+          </view>
+          <view class='title-line'>
+            <text>{{item.articleTitle}}</text>
+          </view>
+          <view class='data-line'>
+            <view class='view'>
+              <image src='/image/icon_view@2x.png'></image>
+              <text>{{item.browseNum}}</text>
+            </view>
+            <view class='like'>
+              <image src='/image/icon_like@2x.png'></image>
+              <text>{{item.diggNum}}</text>
+            </view>
+          </view>
+        </view>
+        <block wx:if="{{articleList[index+1]}}">
+          <view class='wiki-line'></view>
+        </block>
+      </block>
+      <block wx:if="{{articleList != null}}">
+        <view class='bottom-line'>
+
+          <view class='bottom-line-content'>
+            <block wx:if="{{getAllArtice == false}}">
+              <text>上拉查看更多精彩</text>
+            </block>
+            <block wx:else>
+              <view class='bottom-line-left'></view>
+              <text>喂喂，法律都是有底线的！</text>
+              <view class='bottom-line-right'></view>
+            </block>
+          </view>
+
+        </view>
+      </block>
+
+    </view>
+  </block>
+
+
+
+</block>
+
+
+
+
+<!-- <block wx:if="{{submitSuccess == 0}}">
+  <view class='marks'>
+  </view>
+  <view class='bullet'>
+    <view class='bullet-cancel' bindtap='bindChangePopup'>
+      <image src='/image/close@2x.png'></image>
+    </view>
+    <view class='bullet-main' bindtap='bindSign'>
+      <image src='http://imgbj.xianshikeji.com/house@2x2.png'></image>
+    </view>
+    <view class='bullet-open'>
+      <button open-type='share' class="button-open" style="background-image:url(http://imgbj.xianshikeji.com/open@2x.png);" plain='true'></button>
+    </view>
+
+  </view>
+</block> -->
+

@@ -1,0 +1,300 @@
+/* pages/discover/winner/winner.wxss */
+
+page {
+  background-color: #fe7d7a;
+}
+
+.main {
+  width: 650rpx;
+  margin-left: 50rpx;
+}
+
+.prize-info {
+  margin-top: 40rpx;
+  width: 650rpx;
+  height: 260rpx;
+  background: rgba(255, 255, 255, 1);
+  border: 2rpx solid rgba(0, 0, 0, 1);
+  border-radius: 20rpx;
+  display: flex;
+  align-items: center;
+}
+
+.prize-info-image {
+  width: 178rpx;
+  height: 178rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -17rpx;
+}
+
+.prize-info-image image {
+  width: 178rpx;
+  height: 178rpx;
+  border-radius: 10rpx;
+}
+
+.prize-info-value {
+  display: flex;
+  flex-direction: column;
+  margin-left: 40rpx;
+}
+
+.info-value-line {
+  width: 348rpx;
+  height: 1rpx;
+  border-bottom: 2rpx dashed #3f4043;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+.info-value-name {
+  color: #222;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.info-value-number {
+  color: #ff7835;
+  font-size: 28rpx;
+}
+
+.ranklist-background {
+  width: 650rpx;
+  height: 460rpx;
+  margin-top: 37rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -70rpx;
+}
+
+.ranklist-background image {
+  width: 650rpx;
+  height: 460rpx;
+}
+
+.ranklist-real {
+  width: 650rpx;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10rpx;
+  border: 2rpx solid #000;
+  margin-top: -70rpx;
+}
+
+.ranklist-line {
+  width: 580rpx;
+  height: 148rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 2rpx dashed #b5b5b5;
+  margin-left: 35rpx;
+}
+
+.ranklist-rank {
+  width: 46rpx;
+  height: 46rpx;
+  background: rgba(255, 217, 0, 1);
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26rpx;
+  color: #000;
+}
+
+.ranklist-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70rpx;
+  height: 70rpx;
+  margin-left: 30rpx;
+}
+
+.ranklist-image image {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 100%;
+}
+
+.ranklist-name {
+  width: 290rpx;
+  margin-left: 30rpx;
+  font-size: 32rpx;
+  color: #222;
+}
+
+.ranklist-score-father {
+  width: 150rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.ranklist-score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.ranklist-score-number {
+  color: #ff7835;
+  font-size: 32rpx;
+}
+
+.ranklist-score-name {
+  color: #a9a9a9;
+  font-size: 22rpx;
+}
+
+.ranklist-rank-no-line {
+  border: 0rpx;
+}
+
+.mine-rank {
+  width: 650rpx;
+  height: 222rpx;
+  background: rgba(255, 255, 255, 1);
+  border: 2rpx solid rgba(0, 0, 0, 1);
+  border-radius: 30rpx;
+  margin-top: 53rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.mine-rank-title {
+  width: 172rpx;
+  height: 76rpx;
+  background: rgba(255, 217, 0, 1);
+  border: 2rpx solid rgba(0, 0, 0, 1);
+  border-radius: 8rpx;
+  font-size: 34rpx;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -23rpx;
+  margin-left: 30rpx;
+}
+
+.mine-info {
+  display: flex;
+  align-items: center;
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+}
+
+.mine-header {
+  width: 85rpx;
+  height: 85rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mine-header image {
+  width: 85rpx;
+  height: 85rpx;
+  border-radius: 100%;
+}
+
+.mine-detail {
+  margin-left: 30rpx;
+  display: flex;
+  align-items: center;
+  width: 300rpx;
+}
+
+.mine-name {
+  color: #222;
+  font-size: 34rpx;
+}
+
+.mine-number {
+  width: 108rpx;
+  height: 48rpx;
+  background: rgba(255, 217, 0, 1);
+  border-radius: 8rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-size: 22rpx;
+  margin-left: 30rpx;
+}
+
+.mine-score-father {
+  width: 150rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.other-reminder {
+font-size:34rpx;
+font-family:PingFang-SC-Bold;
+font-weight:bold;
+text-decoration:underline;
+color:rgba(255,255,255,1);
+margin-top: 62rpx;
+text-align: center;
+}
+
+.cable-line-group {
+  display: flex;
+  align-items: center;
+}
+
+.cable-line {
+  width: 22rpx;
+  height: 101rpx;
+  position: relative;
+  top: -35rpx;
+  left: 50rpx;
+}
+
+.cable-line image{
+  width: 22rpx;
+  height: 101rpx;
+}
+
+.cable-line-other {
+  width: 22rpx;
+  height: 101rpx;
+  position: relative;
+  top: -35rpx;
+  left: 50rpx;
+  margin-left: 505rpx;
+}
+
+.cable-line-other image {
+  width: 22rpx;
+  height: 101rpx;
+}
+
+.decorate {
+  width: 59rpx;
+  height: 41rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 550rpx;
+  top: -80rpx;
+}
+
+.decorate image {
+  width: 59rpx;
+  height: 41rpx;
+}
+
+.ranklist-null {
+  height: 30rpx;
+  width: 100%;
+}

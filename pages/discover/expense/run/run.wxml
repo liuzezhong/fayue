@@ -1,0 +1,126 @@
+<!--pages/discover/expense/run/run.wxml-->
+<view class='header-image'>
+  <view class='header-rule' bindtap='bindRule'>
+    <text>规则</text>
+  </view>
+</view>
+
+<block wx:if="{{tomroorwStep > 5000 || tomroorwStep == 5000}}">
+  <view class='run-number run-number-finished'>
+    <view class='run-number-title'>
+      <text>目标5000步</text>
+    </view>
+
+    <view class='run-number-text run-number-text-finished'>
+      <text>{{tomroorwStep}}</text>
+    </view>
+
+    <view class='run-number-objective'>
+      <text>已达标</text>
+    </view>
+  </view>
+</block>
+<block wx:elif="{{tomroorwStep < 5000}}">
+  <view class='run-number run-number-unfinished'>
+
+    <block wx:if="{{isScopeWerun == 0}}">
+      <view class='run-number-text run-number-text-unfinished'>
+        <text>未授权</text>
+      </view>
+    </block>
+    <block wx:else>
+      <view class='run-number-title'>
+        <text>目标5000步</text>
+      </view>
+      <view class='run-number-text run-number-text-unfinished'>
+        <text>{{tomroorwStep}}</text>
+      </view>
+      <view class='run-number-objective'>
+        <text>未达标</text>
+      </view>
+    </block>
+  </view>
+</block>
+
+
+<view class='run-data'>
+  <text>累计已兑换<text class='special-text'>{{sumMoney}}元</text>保障金</text>
+</view>
+
+<block wx:if="{{isScopeWerun == 0}}">
+  <view class='run-button' bindtap='getRunData'>
+    <text>授权微信运动</text>
+  </view>
+</block>
+<block wx:elif="{{isScopeWerun == 1}}">
+  <block wx:if="{{tomroorwStep < 5000}}">
+    <view class='run-button run-button-unclick'>
+      <text>未达成目标</text>
+    </view>
+  </block>
+  <block wx:else>
+    <block wx:if="{{isExchange == true}}">
+      <view class='run-button run-button-unclick'>
+        <text>今日已兑换</text>
+      </view>
+
+    </block>
+    <block wx:else>
+      <view class='run-button' bindtap='bindExchange'>
+        <text>立即兑换</text>
+      </view>
+    </block>
+
+  </block>
+</block>
+
+
+<block wx:if="{{runArray != null}}">
+  <view class='run-record'>
+    <block wx:for="{{runArray}}">
+      <view class='run-record-line'>
+        <view class='run-record-line-left'>
+          <text>{{item.createdTime}}</text>
+        </view>
+        <view class='run-record-line-right'>
+          <text>+{{item.paymentAmount}}元</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</block>
+<view class='under-area'></view>
+
+
+
+<block wx:if="{{exchangeSuccess != false}}">
+  <view class='run-marks'>
+  </view>
+  <view class='run-bullet'>
+    <view class='main'>
+      <view class='close-bullet' bindtap='bindCloseBullet'>
+        <image src='http://imgbj.xianshikeji.com/closewhite2.png'></image>
+      </view>
+      <view class='run-main-title'>
+        <text>兑换成功，再接再厉！</text>
+      </view>
+      <view class='run-main-content'>
+        <view class='run-main-content-subtitle'>
+          <text>保障金已存入您账户</text>
+        </view>
+        <view class='run-main-content-maintitle'>
+          <text>100<text class='run-main-content-specialtext'>元</text></text>
+        </view>
+      </view>
+      <button class='run-main-double-button' open-type='share'>
+        <text>分享好友再领100元</text>
+      </button>
+
+      <view class='run-main-button-text' bindtap='bindIndex'>
+        <text>查看我的保障金</text>
+      </view>
+
+    </view>
+    <view class='under-area'></view>
+  </view>
+</block>

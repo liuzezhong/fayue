@@ -1,0 +1,37 @@
+<!--pages/discover/powerlist/powerlist.wxml-->
+<view class='main'>
+  <view class='title'>
+    <image src='http://imgbj.xianshikeji.com/title@2x.png'></image>
+  </view>
+
+  <block wx:for="{{powerList}}" wx:key="*this">
+    <view class='user-list'>
+    <view class='icon'>
+      <block wx:if="{{index == 0}}">
+        <image src='/image/icon_champion_2@2x.png' mode='aspectFill'></image>
+      </block>
+      <block wx:elif="{{index == 1}}">
+        <image src='/image/icon_runner_up_2@2x.png' mode='aspectFill'></image>
+      </block>
+      <block wx:elif="{{index == 2}}">
+        <image src='/image/icon_third_place_2@2x.png' mode='aspectFill'></image>
+      </block>
+      <block wx:else>
+        <text>{{index + 1}}</text>
+      </block>
+      
+    </view>
+    <view class='image'>
+      <image src='{{item.portrait}}' mode='aspectFill'></image>
+    </view>
+    <view class='name'>
+      <text>{{item.nickname}}</text>
+    </view>
+    <view class='number'>
+      <text>{{item.energy}}能量</text>
+    </view>
+  </view>
+  </block>
+</view>
+
+<view class='under-area'></view>

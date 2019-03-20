@@ -1,0 +1,84 @@
+<!--pages/discover/winner/winner.wxml-->
+<view class='main'>
+
+  <view class='prize-info'>
+    <view class='decorate'>
+      <image src='/image/star@2x.png'></image>
+    </view>
+    <view class='prize-info-image'>
+      <image src='{{awardInfo.imgUrl}}' mode='aspectFill'></image>
+    </view>
+    <view class='prize-info-value'>
+      <view class='info-value-name'>
+        <text>{{awardInfo.awardName}}</text>
+      </view>
+      <view class='info-value-line'></view>
+      <view class='info-value-number'>
+        <text>门槛能量值：{{awardInfo.energy}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='cable-line-group'>
+    <view class='cable-line'>
+      <image src='/image/link@2x.png'></image>
+    </view>
+
+    <view class='cable-line-other'>
+      <image src='/image/link@2x.png'></image>
+    </view>
+
+  </view>
+
+
+  <view class='ranklist-real'>
+    <view class='ranklist-null'></view> 
+
+    <view class='ranklist-line' wx:for="{{publicityList}}">
+      <view class='ranklist-image'>
+        <image src='{{item.authorAvatar}}' mode='aspectFill'></image>
+      </view>
+      <view class='ranklist-name'>
+        <text>{{item.authorName}}</text>
+      </view>
+      <view class='ranklist-score-father'>
+        <view class='ranklist-score'>
+          <text class='ranklist-score-number'>{{item.voteNum}}</text>
+          <text class='ranklist-score-name'>能量值</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- <block wx:if="{{myRank != null}}">
+    <view class='mine-rank'>
+    <view class='mine-rank-title'>
+      <text>我的排名</text>
+    </view>
+    <view class='mine-info'>
+      <view class='mine-header'>
+        <image src='{{myRank.authorAvatar}}' mode='aspectFill'></image>
+      </view>
+      <view class='mine-detail'>
+        <view class='mine-name'>
+        <text>{{myRank.authorName}}</text>
+      </view>
+      <view class='mine-number'>
+        <text>第{{myRank.rank}}名</text>
+      </view>
+      </view>
+      <view class='mine-score-father'>
+        <view class='ranklist-score'>
+          <text class='ranklist-score-number'>{{myRank.voteNum}}</text>
+          <text class='ranklist-score-name'>能量值</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  </block> -->
+
+
+  <navigator class='other-reminder' url='../energy/energy?activityId={{awardInfo.activityId}}' open-type="navigateBack" delta="1">
+    <text>查看其它获奖名单</text>
+  </navigator>
+</view>
+
+<view class='under-area'></view>

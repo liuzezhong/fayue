@@ -1,0 +1,111 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.4.3",
+	"appid": "wx1e400c1260bebace",
+	"projectname": "fayue",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 8,
+			"list": [
+				{
+					"id": 0,
+					"name": "分享打开文章",
+					"pathName": "pages/home/article/article",
+					"query": "article_id=1177&noReturn=1",
+					"scene": "1007"
+				},
+				{
+					"id": 1,
+					"name": "分享打开文章",
+					"pathName": "pages/home/index/index",
+					"query": "article_id=1177&noReturn=1",
+					"scene": "1007"
+				},
+				{
+					"id": -1,
+					"name": "分享打开文章",
+					"pathName": "pages/home/index/index",
+					"query": "",
+					"scene": "1007"
+				},
+				{
+					"id": -1,
+					"name": "分享打开文章",
+					"pathName": "pages/home/index/index",
+					"query": "",
+					"scene": "1007"
+				},
+				{
+					"id": 4,
+					"name": "打开链接页",
+					"pathName": "pages/discover/energy/energy",
+					"query": "selectId=89",
+					"scene": "1007"
+				},
+				{
+					"id": 5,
+					"name": "打开春节专题页",
+					"pathName": "pages/special/list/list",
+					"query": "special_id=25&foreign=1",
+					"scene": "1007"
+				},
+				{
+					"id": 6,
+					"name": "打开链接页",
+					"pathName": "pages/discover/expense/index/index",
+					"query": "special_id=26",
+					"scene": 1007
+				},
+				{
+					"id": 7,
+					"name": "打开链接页",
+					"pathName": "pages/discover/expense/invite/invite",
+					"query": "special_id=27",
+					"scene": null
+				},
+				{
+					"id": 8,
+					"name": "打开链接页",
+					"pathName": "pages/discover/expense/run/run",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 9,
+					"name": "打开链接页",
+					"pathName": "pages/discover/expense/run/run",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

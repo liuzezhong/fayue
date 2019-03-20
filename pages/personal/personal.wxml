@@ -1,0 +1,95 @@
+<!--pages/personal/personal.wxml-->
+<view class='personal-header'>
+  <view class='personal-header-line'>
+    <view class='header-avatar'>
+      <image src='{{authorInfo.avatarUrl}}'></image>
+    </view>
+    <view class='header-info'>
+      <view class='info-name'>
+        <text>{{authorInfo.nickName}}</text>
+      </view>
+      <view class='info-count'>
+        <view class='info-count-list'>
+          <view class='info-count-list-number'>
+            <text>{{authorArticle.browseNum}}</text>
+          </view>
+          <view class='info-count-list-content'>
+            <text>阅读</text>
+          </view>
+        </view>
+        <view class='info-count-list'>
+          <view class='info-count-list-number'>
+            <text>{{authorArticle.diggNum}}</text>
+          </view>
+          <view class='info-count-list-content'>
+            <text>获赞</text>
+          </view>
+        </view>
+        <view class='info-count-list'>
+          <view class='info-count-list-number'>
+            <text>{{authorArticle.collectNum}}</text>
+          </view>
+          <view class='info-count-list-content'>
+            <text>收藏</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='personal-article'>
+  <view class='article-list'>
+
+    <block wx:for="{{authorArticleList}}" wx:key="*this">
+      <view class='article-list-line' bindtap='bindArticle' data-id='{{item.articleId}}' data-type="{{item.articleType}}">
+        <view class='list-line-title'>
+          <text>{{item.articleTitle}}</text>
+        </view>
+        <view class='list-line-info'>
+          <view class='info-view'>
+            <view class='info-view-image'>
+              <image class="image-view" src='/image/icon_view@2x.png'></image>
+            </view>
+            <view class='info-view-content'>
+              <text>{{item.browseNum}}</text>
+            </view>
+          </view>
+
+          <view class='info-view'>
+            <view class='info-view-image'>
+              <image class="image-like" src='/image/icon_like@2x.png'></image>
+            </view>
+            <view class='info-view-content'>
+              <text>{{item.diggNum}}</text>
+            </view>
+          </view>
+
+          <view class='info-view'>
+            <view class='info-view-image'>
+              <image class="image-collect" src='/image/icon_collect@2x.png'></image>
+            </view>
+            <view class='info-view-content'>
+              <text>{{item.collectNum}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='wiki-line'></view>
+    </block>
+
+  </view>
+</view>
+
+<view class='bottom-line'>
+  <view class='bottom-line-content'>
+        <block wx:if="{{getAllArtice == false}}">
+          <text>上拉查看更多</text>
+        </block>
+        <block wx:else>
+          <view class='bottom-line-left'></view>
+          <text>喂喂，法律都是有底线的！</text>
+          <view class='bottom-line-right'></view>
+        </block>
+      </view>
+</view>

@@ -1,0 +1,313 @@
+<!--pages/search/index/index.wxml-->
+<view class='search '>
+  <view class='search-line'>
+    <view class='search-input'>
+      <view class='input-icon'>
+        <image src='/image/icon_search@2x.png'></image>
+      </view>
+      <view class='input-main'>
+        <input placeholder='搜个关键词试试看？' placeholder-class='search-placeholder' confirm-type='search' bindinput="bindKeyInput" value='{{inputValue}}' bindconfirm="bindSearch"></input>
+      </view>
+      <block wx:if="{{inputValue}}">
+        <view class='cancel-icon' bindtap='bindClearInput'>
+          <image src='/image/Clear@2x.png'></image>
+        </view>
+      </block>
+    </view>
+    <!-- <block wx:if="{{resaultNumber&&inputValue}}"> -->
+    <block wx:if="{{!inputValue}}">
+      <view class='search-cancel' bindtap='bindCancelSearch'>
+        <text>取消</text>
+      </view>
+    </block>
+    <block wx:else>
+      <view class='search-cancel' bindtap='bindSearch'>
+        <text>搜索</text>
+      </view>
+    </block>
+  </view>
+  <block wx:if="{{hasnoResault == -1}}">
+    <view class='nosearch'>
+      <view class='nosearch-a'>
+        <text>没有搜索到"{{inputValue}}"相关内容</text>
+      </view>
+      <navigator url="/page/discover/discover" target="miniProgram" open-type="navigate" hover-class="navigator-hover" app-id="{{lvdouappid}}" extra-data="1" path="pages/index/index">
+        <view class='nosearch-b'>
+          <text>换个关键词 或 <text class='nosearch-ask'>咨询律师</text> 试试</text>
+        </view>
+      </navigator>
+    </view>
+  </block>
+  <block wx:elif="{{hasnoResault == 1}}">
+    <view class='search-results-line'>
+      <view class='search-results-header' bindtap='bindChangeType' data-typeid='1'>
+        <view class='results-header'>
+          <view class='title'>
+            <view class='content'>
+              <text>综合</text>
+            </view>
+            <view class='icon'>
+              <block wx:if='{{resaultType == 1}}'>
+                <image src='/image/select@2x.png'></image>
+              </block>
+            </view>
+          </view>
+        </view>
+        <view class='results-number'>
+          <text>({{resaultNumber}})</text>
+        </view>
+      </view>
+
+      <view class='search-results-header' bindtap='bindChangeType' data-typeid='2'>
+        <view class='results-header'>
+          <view class='title'>
+            <view class='content'>
+              <text>百科</text>
+
+            </view>
+            <view class='icon'>
+              <block wx:if='{{resaultType == 2}}'>
+                <image src='/image/select@2x.png'></image>
+              </block>
+            </view>
+          </view>
+        </view>
+        <view class='results-number'>
+          <text>({{artcleNum}})</text>
+        </view>
+      </view>
+
+
+      <view class='search-results-header' bindtap='bindChangeType' data-typeid='3'>
+        <view class='results-header'>
+          <view class='title'>
+            <view class='content'>
+              <text>专题</text>
+
+            </view>
+            <view class='icon'>
+              <block wx:if='{{resaultType == 3}}'>
+                <image src='/image/select@2x.png'></image>
+              </block>
+            </view>
+          </view>
+        </view>
+        <view class='results-number'>
+          <text>({{subjectNum}})</text>
+        </view>
+      </view>
+
+    </view>
+  </block>
+</view>
+
+<block wx:if="{{hasnoResault == 0}}">
+  <view class="search-default">
+    <block wx:if="{{hotKeyList != null}}">
+      <view class='hot-search'>
+        <view class='hot-search-title'>
+          <text>热门搜索：</text>
+        </view>
+        <view class='search-span-list'>
+          <block wx:for="{{hotKeyList}}" wx:key="*this">
+            <view class='search-span' bindtap='bindSpan' data-content='{{item.searchText}}'>
+              <view class='search-span-left'></view>
+              <text>{{item.searchText}}</text>
+              <view class='search-span-right'></view>
+            </view>
+          </block>
+
+        </view>
+      </view>
+
+
+      <block wx:if="{{searchRecord != null}}">
+        <view class='search-history'>
+          <view class='hot-search-title'>
+            <text>搜索历史：</text>
+            <image src='/image/delete@2x.png' bindtap='bindClearHistory'></image>
+          </view>
+          <view class='search-span-list'>
+            <block wx:for="{{searchRecord}}">
+              <view class='search-span' bindtap='bindSpan' data-content='{{item}}'>
+                <view class='search-span-left'></view>
+                <text>{{item}}</text>
+                <view class='search-span-right'></view>
+              </view>
+            </block>
+          </view>
+        </view>
+
+      </block>
+    </block>
+  </view>
+</block>
+
+<block wx:elif="{{hasnoResault == 1}}">
+  <block wx:if="{{resaultType == 1}}">
+    <view class='search-results-list'>
+      <block wx:for="{{searchResault}}" wx:key="*this">
+        <block wx:if="{{item.type == 0}}">
+          <view class='results-list' bindtap='bindArticle' data-type_id="{{item.type}}" data-article_id="{{item.id}}">
+            <view class='results-list-question'>
+              <text>{{item.title}}</text>
+            </view>
+            <view class='results-list-answer'>
+              <text>{{item.content}}…</text>
+            </view>
+          </view>
+          <block wx:if="{{searchResault[index+1]}}">
+            <view class='wiki-line'></view>
+          </block>
+        </block>
+        <block wx:elif="{{item.type == 1}}">
+          <view class='results-list-project' bindtap='bindArticle' data-type_id="{{item.type}}" data-article_id="{{item.id}}">
+            <view class='results-list-project-main'>
+              <view class='results-list-question'>
+                <text>{{item.title}}</text>
+              </view>
+              <view class='results-list-answer'>
+                <text>{{item.content}}…</text>
+              </view>
+            </view>
+            <view class='results-list-project-image'>
+              <image src='{{item.picUrl}}'></image>
+            </view>
+          </view>
+          <block wx:if="{{searchResault[index+1]}}">
+            <view class='wiki-line'></view>
+          </block>
+        </block>
+      </block>
+
+      <view class='ask-line' bindtap='bindNoQuestion'>
+        <text>找不到答案？</text>
+      </view>
+    </view>
+  </block>
+  <block wx:if="{{resaultType == 2}}">
+    <view class='search-results-list'>
+      <block wx:for="{{searchResault}}" wx:key="*this">
+        <block wx:if="{{item.type == 0}}">
+          <view class='results-list' bindtap='bindArticle' data-type_id="{{item.type}}" data-article_id="{{item.id}}">
+            <view class='results-list-question'>
+              <text>{{item.title}}</text>
+            </view>
+            <view class='results-list-answer'>
+              <text>{{item.content}}…</text>
+            </view>
+          </view>
+          <block wx:if="{{searchResault[index+1]}}">
+            <view class='wiki-line'></view>
+          </block>
+        </block>
+
+      </block>
+
+      <view class='ask-line' bindtap='bindNoQuestion'>
+        <text>找不到答案？</text>
+      </view>
+    </view>
+  </block>
+
+  <block wx:if="{{resaultType == 3}}">
+    <view class='search-results-list'>
+      <block wx:for="{{searchResault}}" wx:key="*this">
+        <block wx:if="{{item.type == 1}}">
+          <view class='results-list-project' bindtap='bindArticle' data-type_id="{{item.type}}" data-article_id="{{item.id}}">
+            <view class='results-list-project-main'>
+              <view class='results-list-question'>
+                <text>{{item.title}}</text>
+              </view>
+              <view class='results-list-answer'>
+                <text>{{item.content}}…</text>
+              </view>
+            </view>
+            <view class='results-list-project-image'>
+              <image src='{{item.picUrl}}'></image>
+            </view>
+          </view>
+          <block wx:if="{{searchResault[index+1]}}">
+            <view class='wiki-line'></view>
+          </block>
+        </block>
+      </block>
+
+      <view class='ask-line' bindtap='bindNoQuestion'>
+        <text>找不到答案？</text>
+      </view>
+    </view>
+  </block>
+
+</block>
+
+
+<block wx:elif="{{hasnoResault == -1}}">
+  <view class='wiki-hot'>
+    <view class='wiki-hot-header'>
+      <image src='/image/Popular@2x.png'></image>
+      <text>大家都在看</text>
+    </view>
+  </view>
+  <view class='search-results-list search-results-list-recommend'>
+    <block wx:for="{{recommendResults}}" wx:key="*this">
+      <block wx:if="{{item.type == 0}}">
+        <view class='results-list' bindtap='bindArticle' data-type_id="{{item.type}}" data-article_id="{{item.id}}">
+          <view class='results-list-question'>
+            <text>{{item.title}}</text>
+          </view>
+          <view class='results-list-answer'>
+            <text>{{item.content}}…</text>
+          </view>
+        </view>
+        <block wx:if="{{searchResault[index+1]}}">
+          <view class='wiki-line'></view>
+        </block>
+      </block>
+      <block wx:elif="{{item.type == 1}}">
+        <view class='results-list-project' bindtap='bindArticle' data-type_id="{{item.type}}" data-article_id="{{item.id}}">
+          <view class='results-list-project-main'>
+            <view class='results-list-question'>
+              <text>{{item.title}}</text>
+            </view>
+            <view class='results-list-answer'>
+              <text>{{item.content}}…</text>
+            </view>
+          </view>
+          <view class='results-list-project-image'>
+            <image src='{{item.picUrl}}'></image>
+          </view>
+        </view>
+        <block wx:if="{{searchResault[index+1]}}">
+          <view class='wiki-line'></view>
+        </block>
+      </block>
+    </block>
+  </view>
+</block>
+
+<!-- <block wx:if="{{inputWantValue != null}}">
+  <view class='search-associated'>
+    <block wx:for="{{inputWantValue}}" wx:key="*this">
+    <view class='asso-list' bindtap='bindSpan' data-content='{{item.searchText}}'>
+      <view class='asso-list-content'>
+        <text>{{item.searchText}}</text>
+      </view>
+      <view class='asso-list-icon'>
+        <image src='/image/right arrow@2x.png'></image>
+      </view>
+    </view>
+    <view class='wiki-line'></view>
+    </block>
+  </view>
+</block> -->
+
+
+
+
+
+<!-- <view class='ask-law'>
+  <image src='/image/icon_advisory@2x.png'></image>
+  <text>免费问律师</text>
+</view> -->
+<view class='bottom'></view>

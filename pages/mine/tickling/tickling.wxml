@@ -1,0 +1,37 @@
+<!--pages/tickling/tickling.wxml-->
+<view class='tickling-view'>
+  <block wx:if="{{tickType != 0}}">
+    <view class='check-list'>
+      <radio-group class="radio-group" bindchange="radioChange">
+        <radio value="1" checked="checked" color="#FFD900" />
+        <text class='radio-text'>我要提问</text>
+        <radio value="2" color="#FFD900" />
+        <text class='radio-text'>我要纠错</text>
+      </radio-group>
+    </view>
+  </block>
+
+  <form bindsubmit="bindFormSubmit">
+  <view class='tickling-input'>
+    <view class='input-textarea'>
+      <textarea placeholder="请输入您宝贵的反馈与建议…" placeholder-class='textarea-placeholder' name="textarea" maxlength='-1' bindinput="bindContent" auto-focus  />
+      <view class='input-nubmer'>
+        <text>{{fontNum}}</text>
+      </view>
+    </view>
+
+  </view>
+  <block wx:if="{{fontNum > -1}}">
+    <button class='tickling-button' form-type="submit"> 提交反馈 </button>
+  </block>
+  <block wx:else>
+    <button class='tickling-button tickling-button-no'> 提交反馈 </button>
+  </block>
+  
+  </form>
+  <view class='tickling-info' bindtap='bindPhone'>
+    <text>您也可以通过客服热线联系我们
+    热线电话  <text class='tickling-info-link' >400-8591-580</text></text>
+
+  </view>
+</view>

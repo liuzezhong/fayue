@@ -1,0 +1,108 @@
+<view class='law-area'>
+  <view class='title'>
+    <text>法律服务</text>
+  </view>
+  <view class='button-group'>
+
+    <navigator url="/page/discover/discover" target="miniProgram" open-type="navigate" hover-class="navigator-hover" app-id="{{lvdouappid}}" extra-data="1" path="pages/quick_consolt/quick_consolt">
+      <view class='main'>
+        <image src='http://imgbj.xianshikeji.com/textconsulting@2x2.png'></image>
+      </view>
+    </navigator>
+    <view class='minor'>
+      <navigator url="/page/discover/discover" target="miniProgram" open-type="navigate" hover-class="navigator-hover" app-id="{{lvdouappid}}" extra-data="1" path="pages/telephone_consolt/telephone_consolt">
+        <view class='first'>
+          <image src='http://imgbj.xianshikeji.com/phoneintrouble@2x.png'></image>
+        </view>
+      </navigator>
+
+      <navigator url="/page/discover/discover" target="miniProgram" open-type="navigate" hover-class="navigator-hover" app-id="{{lvdouappid}}" extra-data="1" path="pages/index/index">
+        <view class='second'>
+          <image src='http://imgbj.xianshikeji.com/documentservice@2x.png'></image>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>
+<!-- <view class='separated'></view>
+<view style="width:100%;position:relative;height:100%;background:gray;">
+  <official-account></official-account>
+</view> -->
+
+
+<block wx:if="{{handpickActivity != null}}">
+
+  <view class='separated'></view>
+  <view class='activity-area'>
+    <view class='title-group'>
+      <view class='main-title'>
+        <text>精选活动</text>
+      </view>
+      <!-- <block wx:if="{{handpickActivity[2]}}">
+        <view class='sub-title' bindtap='bindActivityList'>
+          <text>更多</text>
+        </view>
+      </block> -->
+    </view>
+
+    <view class='activity-group'>
+        <view class='activity-main' bindtap='bindActivityDetail' data-activityid='{{handpickActivity[0].activityId}}'>
+          <image src='http://imgbj.xianshikeji.com/315background.jpg' mode='aspectFill'></image>
+        </view>
+        <view class='activity-name'>
+          <view class='activity-title'>
+          </view>
+          <view class='activity-title-text'>
+            <text>你安心买买买，我们负责帮你维权！</text>
+          </view>
+        </view>
+    </view>
+
+
+    <!-- <view class='activity-group'>
+      <block wx:if="{{handpickActivity[0]}}">
+        <view class='activity-main' bindtap='bindActivityDetail' data-activityid='{{handpickActivity[0].activityId}}'>
+          <image src='{{handpickActivity[0].imageUrl}}' mode='aspectFill'></image>
+        </view>
+        <view class='activity-name'>
+          <view class='activity-title'>
+          </view>
+          <view class='activity-title-text'>
+            <text>{{handpickActivity[0].activityName}}</text>
+          </view>
+        </view>
+      </block>
+      <view class='activity-minor'>
+        <block wx:if="{{handpickActivity[1]}}">
+          <view class='first-main'>
+            <view class='first' bindtap='bindActivityDetail' data-activityiD='{{handpickActivity[1].activityId}}'>
+              <image src='{{handpickActivity[1].imageUrl}}' mode='aspectFill'></image>
+            </view>
+            <view class='activity-name'>
+              <view class='activity-title-first'>
+              </view>
+              <view class='activity-title-text-first'>
+                <text>{{handpickActivity[1].activityName}}</text>
+              </view>
+            </view>
+          </view>
+        </block>
+        <block wx:if="{{handpickActivity[2]}}">
+          <view class='second-main'>
+            <view class='second' bindtap='bindActivityDetail' data-activityid='{{handpickActivity[2].activityId}}'>
+              <image src='{{handpickActivity[2].imageUrl}}' mode='aspectFill'></image>
+            </view>
+            <view class='activity-name'>
+              <view class='activity-title-first'>
+              </view>
+              <view class='activity-title-text-first'>
+                <text>{{handpickActivity[2].activityName}}</text>
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view> -->
+  </view>
+
+</block>

@@ -1,0 +1,290 @@
+/* pages/special/list/list.wxss */
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-image {
+	width: 750rpx;
+	height: 350rpx;
+}
+
+.header-image image {
+	width: 750rpx;
+	height: 350rpx;
+}
+
+.header-order {
+	position: absolute;
+	top: 272rpx;
+	left: 282rpx;
+}
+
+.header-order image {
+	width: 186rpx;
+	height: 48rpx;
+}
+
+.header-title {
+	display: flex;
+	margin-top: 30rpx;
+	width: 690rpx;
+	margin-left: 30rpx;
+}
+
+.header-title-text {
+	font-size: 36rpx;
+	color: #000000;
+	width: 600rpx;
+}
+
+.header-title-share {
+	/* width: 40rpx;
+	height: 40rpx; */
+	margin-left: 90rpx;
+}
+
+.header-title-share image {
+	width: 40rpx;
+	height: 40rpx;
+}
+
+.header-introduce {
+  margin-top: 20rpx;
+  margin-bottom: 40rpx;
+  width: 690rpx;
+  margin-left: 30rpx;
+  color: #808080;
+  font-size: 28rpx;
+}
+
+.article-list-orderly {
+	
+  margin-left: 35rpx;
+  margin-top: 65rpx;
+  margin-bottom: 50rpx;
+	width: 685rpx;
+	display: flex;
+  flex-direction: column;
+}
+
+.article-line{
+  display: flex;
+  flex-direction: row;
+  margin-top: -13rpx;
+  
+}
+
+.article-line-point {
+  width: 1rpx;
+  background-color: #000000;
+  margin-top: 15rpx;
+  padding-left: 3rpx;
+}
+
+.article-line-main {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30rpx;
+  margin-bottom: 60rpx;
+}
+
+.origin {
+  width: 12rpx;
+  height: 13rpx;
+  position: relative;
+  top:-14rpx;
+  left: 8rpx;
+}
+.origin image {
+  width: 12rpx;
+  height: 13rpx;
+}
+
+.subtitle {
+  font-size: 28rpx;
+  color: #808080;
+}
+
+.article-line-title {
+  font-size: 30rpx;
+  color: #000000;
+  margin-top: 25rpx;
+}
+
+.article-line-main-lastline {
+  margin-bottom: 0rpx;
+}
+
+
+.hot-line {
+  margin-left: 30rpx;
+}
+
+.hot-line-left {
+  width: 446rpx;
+}
+
+.hot-line-father {
+  display: flex;
+  margin-top: 30rpx;
+}
+
+.hot-line-right {
+  margin-left: 30rpx;
+}
+
+.hot-line-right image{
+  width: 214rpx;
+  height: 164rpx;
+  border-radius: 5rpx;
+}
+
+.hot-title-line {
+  color: #010101;
+  font-size: 32rpx;
+  min-height: 105rpx;
+  line-height: 52rpx;
+}
+
+.share-button {
+  background-color: white;
+  border: 0rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.share-button::after {
+  border: 0rpx;
+}
+
+.marks {
+  z-index: 666;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.8;
+  position:fixed;
+  left: 0rpx;
+  top: 0rpx;
+}
+
+.share-choose {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position:fixed;
+  z-index: 999;
+  bottom: 0rpx;
+  left: 0rpx;
+}
+
+.share-choose-main {
+  
+  width: 750rpx;
+  height: 240rpx;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.special-button {
+  border: 0rpx;
+  padding-left: 0rpx;
+  padding-right: 0rpx;
+  border-radius: 0rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.special-button::after {
+  border: 0rpx;
+  border-radius: 0rpx;
+}
+
+.main-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-icon image {
+  width: 53rpx;
+  height: 44rpx;
+}
+
+.main-icon text {
+  /* margin-top: 26rpx; */
+  font-size: 24rpx;
+  color: #333333;
+  margin-top: 10rpx;
+}
+
+
+.mask{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top:0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.8;
+}
+
+.mask-image {
+  position: fixed;
+  top:70rpx;
+  bottom: 0;
+  right: 0;
+  left: 150rpx;
+  margin-left:auto;
+  margin-right:auto;
+  opacity: 1;
+}
+
+.mask-image image {
+  width: 450rpx;
+  height: 911rpx;
+  opacity: 1;
+}
+
+.mask-button {
+  position: fixed;
+  top:1070rpx;
+  bottom: 0;
+  right: 0;
+  left: 0rpx;
+  margin-left:auto;
+  margin-right:auto;
+  opacity: 1;
+}
+
+.mask-button button {
+  width: 245rpx;
+  height: 70rpx;
+  border-radius: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26rpx;
+  background-color: #ff7e00;
+  color: white;
+}
+
+.mask-button button image{
+    width: 25rpx;
+    height: 25rpx;
+}
+
+.mask-button button text{
+    padding-left: 10rpx;
+}

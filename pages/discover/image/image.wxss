@@ -1,0 +1,42 @@
+/* pages/discover/image/image.wxss */
+
+page {
+  background-color: #7f7f7f;
+}
+
+.main {
+  width: 750rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.image {
+  width: 690rpx;
+  height: 1000rpx;
+  margin-top: 20rpx;
+}
+
+.image image {
+  width: 690rpx;
+  height: 1000rpx;
+}
+
+.save-button {
+  width: 300rpx;
+  height: 80rpx;
+  border: 2rpx solid rgba(255, 255, 255, 1);
+  border-radius: 10rpx;
+  font-size: 32rpx;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40rpx;
+}
+
+.bindSaveImage {
+  
+}

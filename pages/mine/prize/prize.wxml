@@ -1,0 +1,102 @@
+<!--pages/mine/prize/prize.wxml-->
+<view class='main'>
+
+  <view class='background'>
+    <image src='/image/mine-prize-background.png'></image>
+  </view>
+
+  <view class='content-area'>
+
+    <view class='record-list'>
+      <!-- <scroll-view scroll-y style="height: 880rpx;">
+        <view class='record-line'>
+          <view class='record-title-line'>
+            <text class='record-title-text'>律兜钥匙扣</text>
+            <text class='record-title-status'>待领取</text>
+          </view>
+          <view class='record-info-line'>
+            <text>中奖时间：2018-12-23 10:09:02</text>
+            <text>兑奖时间：2018-12-23 10:09:02</text>
+          </view>
+        </view>
+        <view class='record-line'>
+          <view class='record-title-line'>
+            <text class='record-title-text'>律兜钥匙扣</text>
+            <text class='record-title-status'>待领取</text>
+          </view>
+          <view class='record-info-line'>
+            <text>中奖时间：2018-12-23 10:09:02</text>
+            <text>兑奖时间：2018-12-23 10:09:02</text>
+          </view>
+        </view>
+        <view class='record-line'>
+          <view class='record-title-line'>
+            <text class='record-title-text'>律兜钥匙扣</text>
+            <text class='record-title-status'>待领取</text>
+          </view>
+          <view class='record-info-line'>
+            <text>中奖时间：2018-12-23 10:09:02</text>
+            <text>兑奖时间：2018-12-23 10:09:02</text>
+          </view>
+        </view>
+        <view class='record-line'>
+          <view class='record-title-line'>
+            <text class='record-title-text'>律兜钥匙扣</text>
+            <text class='record-title-status'>待领取</text>
+          </view>
+          <view class='record-info-line'>
+            <text>中奖时间：2018-12-23 10:09:02</text>
+            <text>兑奖时间：2018-12-23 10:09:02</text>
+          </view>
+        </view>
+        <view class='record-line'>
+          <view class='record-title-line'>
+            <text class='record-title-text'>律兜钥匙扣</text>
+            <text class='record-title-status'>待领取</text>
+          </view>
+          <view class='record-info-line'>
+            <text>中奖时间：2018-12-23 10:09:02</text>
+            <text>兑奖时间：2018-12-23 10:09:02</text>
+          </view>
+        </view>
+        <view class='record-line'>
+          <view class='record-title-line'>
+            <text class='record-title-text'>律兜钥匙扣</text>
+            <text class='record-title-status'>待领取</text>
+          </view>
+          <view class='record-info-line'>
+            <text>中奖时间：2018-12-23 10:09:02</text>
+            <text>兑奖时间：2018-12-23 10:09:02</text>
+          </view>
+        </view>
+        <view class='record-line'>
+          <view class='record-title-line'>
+            <text class='record-title-text'>律兜钥匙扣</text>
+            <text class='record-title-status'>待领取</text>
+          </view>
+          <view class='record-info-line'>
+            <text>中奖时间：2018-12-23 10:09:02</text>
+            <text>兑奖时间：2018-12-23 10:09:02</text>
+          </view>
+        </view>
+        <view class='record-line'>
+          <view class='record-title-line'>
+            <text class='record-title-text'>律兜钥匙扣</text>
+            <text class='record-title-status'>待领取</text>
+          </view>
+          <view class='record-info-line'>
+            <text>中奖时间：2018-12-23 10:09:02</text>
+            <text>兑奖时间：2018-12-23 10:09:02</text>
+          </view>
+        </view>
+      </scroll-view> -->
+      <view class='no-record'>
+        <text>空空如也~</text>
+        <text>赶紧去参加活动吧</text>
+      </view>
+    </view>
+    <view class='copyright-info'>
+      <text>该活动解释权最终归无锡中铠信息咨询服务有限公司所有</text>
+    </view>
+  </view>
+</view>
