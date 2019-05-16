@@ -1,4 +1,4 @@
-<view class='law-area'>
+<!-- <view class='law-area'>
   <view class='title'>
     <text>法律服务</text>
   </view>
@@ -23,7 +23,7 @@
       </navigator>
     </view>
   </view>
-</view>
+</view> -->
 <!-- <view class='separated'></view>
 <view style="width:100%;position:relative;height:100%;background:gray;">
   <official-account></official-account>
@@ -32,7 +32,7 @@
 
 <block wx:if="{{handpickActivity != null}}">
 
-  <view class='separated'></view>
+  <!-- <view class='separated'></view> -->
   <view class='activity-area'>
     <view class='title-group'>
       <view class='main-title'>
